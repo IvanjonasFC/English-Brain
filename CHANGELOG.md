@@ -17,6 +17,18 @@ All notable changes to English Brain are documented here. The format is based on
   and docs now read `BASE_URL`, `API_KEY`, `JWT_SECRET`, IPs and SSH targets from
   environment variables with placeholder defaults — no real domain, key or
   internal IP is committed.
+- OTA flow now documented and run through the `shorebird` CLI (via `make
+  shorebird-patch` / `make shorebird-release`) instead of Windows `.bat` wrappers.
+
+### Removed
+- **Repo trimmed to what's reproducible.** Dropped personal/host-specific helper
+  scripts (`sync_nas.ps1`, `chequeo_65.bat`, `precarga_nas.*`, `build_apk.*`,
+  `dev_run.bat`, `shorebird_*.bat`, `gestor_contenido.bat`, `_clean_empty.bat`),
+  internal working notes (handoff/audit/review docs), personal tooling
+  (`project-ai.json`, `Ingles.code-workspace`) and duplicates (root `Caddyfile`
+  and `SHOREBIRD.md`; `app/shorebird_patch.bat`). The self-hosted stack lives in
+  `nas/`, the GPU workers in `Portatil/`, and the content tooling in
+  `cargar contenido/`.
 
 ## [1.0.1+4] — 2026-09
 

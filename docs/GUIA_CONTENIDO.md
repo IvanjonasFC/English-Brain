@@ -62,8 +62,8 @@ Consecuencia práctica (clave para tu flujo):
 | Qué cambias | ¿Requiere recompilar APK? |
 |-------------|---------------------------|
 | Contenido nuevo en el **backend** (seeds + rebuild backend) | **NO.** Aparece con *pull-to-refresh* en la app ya instalada |
-| Que la **línea base offline** (recién instalado / sin red) traiga el contenido nuevo | Sí: `sync_offline_seeds.py` + `shorebird_patch.bat` (o APK) |
-| Código Dart (pantallas, lógica) | Sí (`shorebird_patch.bat` o hot reload en desarrollo, ver §6) |
+| Que la **línea base offline** (recién instalado / sin red) traiga el contenido nuevo | Sí: `sync_offline_seeds.py` + `make shorebird-patch` (o APK) |
+| Código Dart (pantallas, lógica) | Sí (`make shorebird-patch` o hot reload en desarrollo, ver §6) |
 
 Es decir: **para cargar contenido no necesitas generar un APK cada vez.** Subes
 al backend y refrescas. El APK solo se rehace de vez en cuando para actualizar
@@ -195,7 +195,7 @@ fuente** del texto, y **revisión humana** antes de subir (ver el pipeline en
    ```
    Tras esto, el contenido ya aparece en la app con **pull-to-refresh**.
 4. **(Opcional) Refrescar offline empaquetado vía OTA:**
-   Doble clic a `shorebird_patch.bat` para enviar los nuevos seeds a los móviles ya instalados sin reinstalar.
+   Ejecuta `make shorebird-patch` para enviar los nuevos seeds a los móviles ya instalados sin reinstalar.
 
 ---
 
@@ -207,7 +207,7 @@ Tres caminos según qué cambies:
 Subes al backend (§5) y haces *pull-to-refresh* en la app instalada. Nada más.
 
 **B) Código Dart en desarrollo: hot reload.**
-Usa `dev_run.bat` (creado en la raíz del repo). Con el móvil conectado por USB
+Usa `flutter run` (creado en la raíz del repo). Con el móvil conectado por USB
 (o wireless debugging) y depuración USB activada:
 - `r` = hot reload (aplica cambios al instante), `R` = restart, `q` = salir.
 Wireless (una vez, con el móvil y el PC en la misma red):
@@ -215,18 +215,18 @@ Wireless (una vez, con el móvil y el PC en la misma red):
 adb tcpip 5555
 adb connect IP_DEL_MOVIL:5555
 ```
-y luego `dev_run.bat`.
+y luego `flutter run`.
 
 **C) App instalada (release) que se auto-actualiza por internet: Shorebird (OTA).**
 Empuja cambios de Dart y de assets a la app ya instalada sin reinstalar ni pasar por la tienda.
 Uso directo con los scripts del repositorio:
-- **Actualizar código / hornear offline:** Doble clic a `shorebird_patch.bat` (sincroniza seeds y envía el parche).
-- **Nuevo APK base parcheable (si cambias nativo):** Doble clic a `shorebird_release.bat` (copia el nuevo `English_Coach.apk` al Escritorio).
+- **Actualizar código / hornear offline:** Ejecuta `make shorebird-patch` (sincroniza seeds y envía el parche).
+- **Nuevo APK base parcheable (si cambias nativo):** Ejecuta `make shorebird-release` (copia el nuevo `English_Coach.apk` al Escritorio).
 - Consulta [`SHOREBIRD.md`](SHOREBIRD.md) para todos los detalles técnicos.
 
-**D) Baseline release manual:** `build_apk.bat` (como hasta ahora), cuando quieras un APK firmado nuevo tradicional sin OTA.
+**D) Baseline release manual:** `make build-release-apk` (como hasta ahora), cuando quieras un APK firmado nuevo tradicional sin OTA.
 
-Recomendación para tu caso (te vas a centrar en contenido): trabaja por **A** (backend + pull-to-refresh, cero APKs). Usa **C (`shorebird_patch.bat`)** para empujar de vez en cuando el offline baseline y los retoques de código sin reinstalar. Usa **B** solo cuando desarrolles pantallas interactivas.
+Recomendación para tu caso (te vas a centrar en contenido): trabaja por **A** (backend + pull-to-refresh, cero APKs). Usa **C (`make shorebird-patch`)** para empujar de vez en cuando el offline baseline y los retoques de código sin reinstalar. Usa **B** solo cuando desarrolles pantallas interactivas.
 
 ---
 

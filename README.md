@@ -175,11 +175,13 @@ See [`docs/NAS_DEPLOYMENT.md`](docs/NAS_DEPLOYMENT.md) for reverse proxy, TLS, W
 ### 4. Ship OTA updates (Shorebird)
 
 ```bash
-shorebird_release.bat   # first time: builds a patchable APK
-shorebird_patch.bat     # afterwards: pushes Dart+asset patches over the air
+# from the repo root — needs the `shorebird` CLI on your PATH
+make shorebird-release   # first time: build a patchable release APK
+make shorebird-patch     # afterwards: push Dart + asset patches over the air
 ```
 
-Full flow in [`docs/SHOREBIRD.md`](docs/SHOREBIRD.md).
+Both wrap the `shorebird` CLI and inject `BASE_URL` / `API_KEY` via
+`--dart-define`. Full flow (and the raw commands) in [`docs/SHOREBIRD.md`](docs/SHOREBIRD.md).
 
 > [!IMPORTANT]
 > Icon or font/asset changes require a **full Shorebird release**, not a patch — patches carry Dart + existing assets only. Bump `version` in `pubspec.yaml` for every new release.

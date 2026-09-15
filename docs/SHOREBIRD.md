@@ -2,103 +2,106 @@
 
 Guía de referencia para el sistema de actualizaciones en caliente (**Code Push / OTA**) con **Shorebird** en **English Brain**.
 
+Todos los comandos usan el CLI oficial `shorebird`. El `BASE_URL` y el `API_KEY`
+se inyectan con `--dart-define`; expórtalos como variables de entorno o pásalos
+en línea (usa **tus** valores reales, nunca los subas al repo).
+
 ---
 
-## 📌 Estado de la Configuración Activa
+## 📌 Estado de la configuración
 
 | Parámetro | Valor |
 |---|---|
-| **App ID en Shorebird** | `da1527cf-2245-414f-bffb-0d4a68c3155d` (definido en `app/shorebird.yaml`) |
-| **Cuenta vinculada** | `ivanjonasfc@gmail.com` |
-| **Release Base Activa** | `1.0.0+1` (generada y publicada) |
-| **APK Parcheable** | `English_Coach.apk` (~80.2 MB, copiado al Escritorio) |
-| **Endpoints inyectados** | `BASE_URL=https://ingles.ivanjonasfc.dev`, `API_KEY=super-secret-key-123` |
+| **App ID en Shorebird** | definido en `app/shorebird.yaml` |
+| **Cuenta vinculada** | tu cuenta de Shorebird |
+| **Release base** | la que publiques con `shorebird release` |
+| **Endpoints inyectados** | `BASE_URL` + `API_KEY` vía `--dart-define` (placeholders en el repo) |
 
 > [!IMPORTANT]
-> **Para recibir actualizaciones OTA**: Debes tener instalado en el móvil el APK parcheable (`English_Coach.apk` generado por Shorebird). Si tenías instalada una versión anterior generada con `flutter build apk` o `build_apk.bat`, desinstálala o instala `English_Coach.apk` encima.
+> **Para recibir actualizaciones OTA** el móvil debe tener instalado el APK
+> **parcheable** generado por `shorebird release`. Si tenías una versión hecha
+> con `flutter build apk`, desinstálala o instala el APK de Shorebird encima.
 
 ---
 
-## 🚀 Flujo Diario de Trabajo
+## 🚀 Flujo diario de trabajo
 
-### Caso 1: Solo añades contenido nuevo al Backend (¡Sin tocar el APK ni Shorebird!)
-La app está diseñada con arquitectura **Local-First con revalidación en background**:
+### Caso 1: Solo añades contenido nuevo al backend (sin tocar el APK ni Shorebird)
+La app usa arquitectura **local-first con revalidación en background**:
 1. Editas los JSON en `backend/app/seed/*.json`.
-2. Haces rebuild del backend en el NAS / local.
-3. Abres la app en el móvil y haces **pull-to-refresh** (deslizar hacia abajo).
-4. El contenido nuevo se descarga y queda **cacheado automáticamente en SharedPreferences** para uso offline.
+2. Rebuild del backend (NAS o local).
+3. En el móvil, **pull-to-refresh** (deslizar hacia abajo).
+4. El contenido nuevo se descarga y queda **cacheado** para uso offline.
 
 ### Caso 2: Cambios de código Dart o refresco de seeds offline empaquetados (OTA)
-Cuando modifiques código Flutter (pantallas, lógica, temas) o quieras que la copia base de los assets offline (`app/assets/seed/`) esté al día desde el minuto cero:
-1. Ejecuta con doble clic:
-   ```cmd
-   shorebird_patch.bat
-   ```
-2. El script realiza dos pasos automáticamente:
-   - **Paso 1**: Sincroniza `backend/app/seed/*.json` -> `app/assets/seed/*.json` (`python tools\sync_offline_seeds.py`).
-   - **Paso 2**: Envía el parche OTA a los servidores de Shorebird.
-3. **En el móvil**: El parche se descarga silenciosamente en segundo plano la próxima vez que se abra la app, y se **aplica automáticamente en el siguiente arranque**.
+Cuando cambies código Flutter (pantallas, lógica, temas) o quieras hornear la
+copia base de los assets offline (`app/assets/seed/`):
 
-### Caso 3: Cambios nativos de Android (Requiere nuevo Release)
-Solo es necesario generar un nuevo Release e instalar el nuevo APK si:
-- Añades o cambias plugins nativos con código Java/Kotlin/C++ en `pubspec.yaml`.
-- Modificas permisos o configuraciones en `AndroidManifest.xml`.
-- Cambias el icono de la app, el Splash Screen nativo o la versión de Flutter.
-
-Para este caso:
-```cmd
-shorebird_release.bat
-```
-Generará el nuevo APK base parcheable, lo publicará en Shorebird y dejará `English_Coach.apk` en el Escritorio para instalarlo en el dispositivo.
-
----
-
-## 🛠️ Resumen de Scripts Disponibles
-
-| Script | Propósito | Cuándo usarlo |
-|---|---|---|
-| `shorebird_patch.bat` | Sincroniza seeds offline y publica parche OTA | **Día a día** tras editar código Dart o querer hornear seeds |
-| `shorebird_release.bat` | Genera versión base completa y copia APK al Escritorio | Solo al cambiar dependencias nativas o versión mayor |
-| `shorebird_setup.bat` | Instalación inicial del CLI, login y doctor | Una sola vez en una máquina nueva |
-
----
-
-## 🔍 Incidencias Resueltas y Detalles Técnicos
-
-### 1. Wrapper de Windows (`shorebird.bat` vs `shorebird.ps1`)
-- **Problema**: En sistemas Windows, el archivo por lotes intermediario `shorebird.bat` descartaba el delimitador `--` necesario para pasar argumentos de compilación a Flutter (`--dart-define`, `--no-tree-shake-icons`).
-- **Solución implementada**: Los scripts `.bat` del proyecto llaman directamente a PowerShell ejecutando el script oficial `%USERPROFILE%\.shorebird\bin\shorebird.ps1`.
-
-### 2. Error en compilación "failed to strip debug symbols"
-- **Problema**: Al compilar para Android, Shorebird requiere las herramientas de línea de comandos de Android SDK para optimizar los binarios nativos.
-- **Solución implementada**: Instalado el componente `cmdline-tools/latest` en el Android SDK.
-
-### 3. Imports faltantes en `profile_screen.dart`
-- **Problema**: Faltaban `dart:async` y `package:flutter/services.dart` para operaciones de UI/portapapeles.
-- **Solución implementada**: Corregidos en `app/lib/features/profile/profile_screen.dart`. Verificación con `dart analyze .` completada con 0 errores.
-
----
-
-## 📋 Tabla Resumen: ¿Qué requiere cada cambio?
-
-| Tipo de Cambio | Pull-to-Refresh | `shorebird_patch.bat` (OTA) | `shorebird_release.bat` (Reinstalar) |
-|---|:---:|:---:|:---:|
-| Contenido en Backend (`seed/*.json`) | ✅ **Inmediato** | Opcional (para offline base) | ❌ |
-| Pantallas, Widgets, Temas Dart | ❌ | ✅ **Automático** | ❌ |
-| Algoritmos de Pedagogía / FSRS en Dart | ❌ | ✅ **Automático** | ❌ |
-| Assets locales / Iconos SVG / Seeds en App | ❌ | ✅ **Automático** | ❌ |
-| Nuevos paquetes nativos / Permisos Android | ❌ | ❌ | ✅ **Requerido** |
-
----
-
-## ℹ️ Comandos Útiles de Diagnóstico
-
-Si necesitas comprobar el estado del entorno o de los parches desde la terminal:
 ```bash
-# Diagnóstico de herramientas Shorebird y Flutter
+# 1) Sincroniza los seeds offline (backend -> assets)
+python tools/sync_offline_seeds.py
+
+# 2) Publica el parche OTA
+cd app
+shorebird patch android -- --no-tree-shake-icons \
+  --dart-define=BASE_URL="$BASE_URL" --dart-define=API_KEY="$API_KEY"
+```
+
+O con el atajo del Makefile (desde la raíz): `make shorebird-patch`.
+
+El parche se descarga en segundo plano y se **aplica en el siguiente arranque**
+de la app.
+
+### Caso 3: Cambios nativos de Android (requiere nuevo release)
+Solo hace falta un nuevo release + reinstalar el APK si:
+- Añades/cambias plugins nativos con código Java/Kotlin/C++.
+- Modificas permisos o `AndroidManifest.xml`.
+- Cambias el icono, el splash nativo o la versión de Flutter.
+
+```bash
+python tools/sync_offline_seeds.py
+cd app
+shorebird release android --artifact apk -- --no-tree-shake-icons \
+  --dart-define=BASE_URL="$BASE_URL" --dart-define=API_KEY="$API_KEY"
+```
+
+O con el atajo: `make shorebird-release`. Instala ese APK en el móvil **una vez**;
+después actualiza con `shorebird patch`.
+
+> [!NOTE]
+> En Windows, si el wrapper `shorebird.bat` descarta el delimitador `--`, llama
+> directamente al script de PowerShell:
+> `& "$env:USERPROFILE\.shorebird\bin\shorebird.ps1" patch android '--' ...`.
+
+---
+
+## 📋 ¿Qué requiere cada cambio?
+
+| Tipo de cambio | Pull-to-Refresh | `shorebird patch` (OTA) | `shorebird release` (reinstalar) |
+|---|:---:|:---:|:---:|
+| Contenido en backend (`seed/*.json`) | ✅ **Inmediato** | Opcional (para offline base) | ❌ |
+| Pantallas, widgets, temas Dart | ❌ | ✅ **Automático** | ❌ |
+| Algoritmos de pedagogía / FSRS en Dart | ❌ | ✅ **Automático** | ❌ |
+| Assets locales / iconos / seeds en la app | ❌ | ✅ **Automático** | ❌ |
+| Nuevos paquetes nativos / permisos Android | ❌ | ❌ | ✅ **Requerido** |
+
+---
+
+## ℹ️ Comandos útiles de diagnóstico
+
+```bash
+# Puesta en marcha en una máquina nueva (una sola vez)
+shorebird login
 shorebird doctor
 
-# Ver información de la app y releases registrados
+# Diagnóstico e info de la app / releases
 cd app
+shorebird doctor
 shorebird info
 ```
+
+### Notas técnicas
+- **"failed to strip debug symbols"**: Shorebird necesita las command-line tools
+  del Android SDK; instala el componente `cmdline-tools/latest`.
+- **`--no-tree-shake-icons`** es necesario porque los iconos de los packs se
+  cargan por codepoint (IconData dinámico) y no se pueden tree-shakear.

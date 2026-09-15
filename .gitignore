@@ -93,6 +93,24 @@ node_modules/
 scratch/
 Claude outputs/
 
+# Ficheros personales / de un solo uso (no van al repo público). Su lugar de
+# verdad es la copia de trabajo del escritorio, no este repo replicable.
+*.code-workspace
+project-ai.json
+/sync_nas.ps1
+/chequeo_65.bat
+/precarga_nas.bat
+/precarga_nas.py
+/gestor_contenido.bat
+/build_apk.bat
+/build_apk.ps1
+/dev_run.bat
+/_clean_empty.bat
+/shorebird_setup.bat
+/shorebird_patch.bat
+/shorebird_release.bat
+/Caddyfile
+
 # Despliegue con artefactos pesados (deploy-nas son 230 MB).
 # La CONFIG de despliegue (docker-compose, Caddyfile, .env.example) se versiona
 # aparte; aquí ignoramos la carpeta pesada. Si dentro hay scripts que quieras

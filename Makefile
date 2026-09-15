@@ -1,4 +1,8 @@
-.PHONY: help run-app run-app-web run-app-windows run-backend nas-up nas-down nas-logs nas-ps test test-backend test-app analyze-app sync-api build-release-apk
+.PHONY: help run-app run-app-web run-app-windows run-backend nas-up nas-down nas-logs nas-ps test test-backend test-app analyze-app sync-api build-release-apk shorebird-patch shorebird-release
+
+# Backend inyectado en el APK. Expórtalos o pásalos: make shorebird-patch BASE_URL=... API_KEY=...
+BASE_URL ?= https://ingles.tudominio.dev
+API_KEY  ?= CHANGE_ME_api_key
 
 help:
 	@echo "English Brain - Comandos disponibles:"
@@ -58,9 +62,11 @@ analyze-app:
 build-release-apk:
 	cd app && flutter build apk --release --obfuscate --split-debug-info=./build/symbols
 
+# --- Shorebird (OTA). Requiere el CLI `shorebird` en el PATH. ---
 shorebird-patch:
-	cmd /c shorebird_patch.bat
+	python tools/sync_offline_seeds.py
+	cd app && shorebird patch android -- --no-tree-shake-icons --dart-define=BASE_URL=$(BASE_URL) --dart-define=API_KEY=$(API_KEY)
 
 shorebird-release:
-	cmd /c shorebird_release.bat
-
+	python tools/sync_offline_seeds.py
+	cd app && shorebird release android --artifact apk -- --no-tree-shake-icons --dart-define=BASE_URL=$(BASE_URL) --dart-define=API_KEY=$(API_KEY)
