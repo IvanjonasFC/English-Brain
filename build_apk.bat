@@ -4,10 +4,11 @@ REM ==========================================================================
 REM  English Brain - genera el APK release y lo deja en el Escritorio.
 REM  Doble clic. La copia al Escritorio (incl. OneDrive) la hace build_apk.ps1.
 REM ==========================================================================
-set "BASE_URL=https://ingles.ivanjonasfc.dev"
-REM  Alternativa publica (LAN + datos moviles, requiere Caddy arriba):
-REM  set "BASE_URL=http://192.168.0.200:8092"
-set "API_KEY=super-secret-key-123"
+REM  Configura tu backend aqui, o exporta BASE_URL / API_KEY como variables de
+REM  entorno antes de ejecutar (estas lineas respetan lo que ya este definido).
+if not defined BASE_URL set "BASE_URL=https://ingles.tudominio.dev"
+REM  Alternativa LAN (requiere Caddy arriba):  set "BASE_URL=http://TU_NAS_IP:8092"
+if not defined API_KEY set "API_KEY=CHANGE_ME_api_key"
 
 cd /d "%~dp0"
 echo == English Brain - build APK ==

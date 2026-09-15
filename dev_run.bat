@@ -10,6 +10,8 @@ cd /d "%~dp0app"
 echo Dispositivos detectados:
 flutter devices
 echo.
+if not defined BASE_URL set "BASE_URL=https://ingles.tudominio.dev"
+if not defined API_KEY set "API_KEY=CHANGE_ME_api_key"
 echo Iniciando en modo hot-reload contra el backend HTTPS...
-flutter run --dart-define=BASE_URL=https://ingles.ivanjonasfc.dev --dart-define=API_KEY=super-secret-key-123
+flutter run --dart-define=BASE_URL=%BASE_URL% --dart-define=API_KEY=%API_KEY%
 pause

@@ -45,8 +45,8 @@ services:
       - SPEACHES_URL=http://speaches:8000/v1
       - DB_PATH=/data/coach.db
       - AUDIO_CACHE_DIR=/audio
-      - API_KEY=${API_KEY:-super-secret-key-123}
-      - JWT_SECRET=${JWT_SECRET:-super-secret-jwt-key-xyz-789-secure-token}
+      - API_KEY=${API_KEY:-CHANGE_ME_api_key}
+      - JWT_SECRET=${JWT_SECRET:-CHANGE_ME_jwt_secret}
       - LOG_LEVEL=${LOG_LEVEL:-INFO}
       - LOG_FILE_PATH=/data/logs/app.log
     volumes:

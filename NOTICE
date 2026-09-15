@@ -1,0 +1,44 @@
+English Brain
+Copyright (c) 2026 Iván Jonás Fernández Correa
+
+This product is licensed under the MIT License (see LICENSE).
+
+--------------------------------------------------------------------------------
+Third-party components
+--------------------------------------------------------------------------------
+
+English Brain builds on, or interoperates with, the following open-source
+projects. Each is the property of its respective authors and is distributed
+under its own license. They are NOT bundled in this repository unless noted;
+they are fetched or run as separate services.
+
+Client (Flutter / Dart)
+  - Flutter & Dart SDK ............ BSD-3-Clause .......... https://flutter.dev
+  - Riverpod ...................... MIT .................. https://riverpod.dev
+  - go_router, drift, just_audio,
+    record, flutter_tts, fl_chart,
+    google_fonts, shared_preferences,
+    path_provider, connectivity_plus,
+    dio (+ smart_retry), intl ...... MIT / BSD (per package) ... https://pub.dev
+  - shorebird_code_push ........... MIT .................. https://shorebird.dev
+
+Backend (Python)
+  - FastAPI ....................... MIT .................. https://fastapi.tiangolo.com
+  - Uvicorn ....................... BSD-3-Clause ......... https://www.uvicorn.org
+  - py-fsrs ....................... MIT .................. https://github.com/open-spaced-repetition/py-fsrs
+  - httpx ......................... BSD-3-Clause ......... https://www.python-httpx.org
+
+AI services (run as separate containers/processes)
+  - Ollama ........................ MIT .................. https://ollama.com
+  - Speaches (Faster-Whisper) ..... MIT / MIT ............ https://github.com/speaches-ai/speaches
+  - Kokoro-82M (TTS) .............. Apache-2.0 ........... https://huggingface.co/hexgrad/Kokoro-82M
+  - wav2vec2 (via transformers) ... Apache-2.0 / MIT ..... https://github.com/huggingface/transformers
+  - Montreal Forced Aligner ....... MIT .................. https://montreal-forced-aligner.readthedocs.io
+
+Infrastructure
+  - Docker / Docker Compose ....... Apache-2.0 ........... https://www.docker.com
+  - Caddy ......................... Apache-2.0 ........... https://caddyserver.com
+
+For the exact license text of each dependency, refer to that project's
+repository. Version pins live in `app/pubspec.yaml`, `backend/requirements.txt`
+and `nas/docker-compose.yml`.

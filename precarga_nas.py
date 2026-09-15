@@ -25,8 +25,11 @@ por LAN, con el portatil .65 encendido (workers de voz).
 import os, re, json, sys, time, urllib.request, urllib.error
 
 # --- Configuracion ---
-NAS   = "http://192.168.0.200:8092"             # backend del NAS
-LIB   = r"C:\Users\IvN\Desktop\Ingles\app\lib"  # codigo de la app (contenido .dart)
+# Exporta NAS_URL / APP_LIB como variables de entorno, o edita los defaults.
+NAS   = os.environ.get("NAS_URL", "http://TU_NAS_IP:8092")   # backend del NAS
+# Por defecto, el codigo de la app relativo a este script (…/app/lib).
+LIB   = os.environ.get("APP_LIB") or os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "app", "lib")  # contenido .dart
 # assets/seed vive al lado de lib/ (…\app\assets\seed). Se deduce solo:
 SEED  = os.path.join(os.path.dirname(LIB), "assets", "seed")
 VOICE = "am_michael"                            # voz unica de la app (la mejor)

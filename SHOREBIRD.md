@@ -9,10 +9,10 @@ Guía de referencia para el sistema de actualizaciones en caliente (**Code Push 
 | Parámetro | Valor |
 |---|---|
 | **App ID en Shorebird** | `da1527cf-2245-414f-bffb-0d4a68c3155d` (definido en `app/shorebird.yaml`) |
-| **Cuenta vinculada** | `ivanjonasfc@gmail.com` |
+| **Cuenta vinculada** | `tu-cuenta@ejemplo.com` |
 | **Release Base Activa** | `1.0.0+1` (generada y publicada) |
 | **APK Parcheable** | `English_Coach.apk` (~80.2 MB, copiado al Escritorio) |
-| **Endpoints inyectados** | `BASE_URL=https://ingles.ivanjonasfc.dev`, `API_KEY=super-secret-key-123` |
+| **Endpoints inyectados** | `BASE_URL=https://ingles.tudominio.dev`, `API_KEY=CHANGE_ME_api_key` |
 
 > [!IMPORTANT]
 > **Para recibir actualizaciones OTA**: Debes tener instalado en el móvil el APK parcheable (`English_Coach.apk` generado por Shorebird). Si tenías instalada una versión anterior generada con `flutter build apk` o `build_apk.bat`, desinstálala o instala `English_Coach.apk` encima.

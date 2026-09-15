@@ -1,20 +1,25 @@
 # ============================================================================
 #  Despliegue del backend al NAS (Docker) — robusto e idempotente.
 #
-#  Flujo por cada fichero:  repo local C:  ->  NAS (W:\App Ingles)  ->  contenedor
+#  Flujo por cada fichero:  repo local  ->  NAS (unidad mapeada)  ->  contenedor
 #  Así el contenedor SIEMPRE recibe la versión actual del repo local (no depende
-#  de que W: estuviera al día). Al final: restart del contenedor.
+#  de que la unidad estuviera al día). Al final: restart del contenedor.
 #
-#  Requisitos: clave SSH en %USERPROFILE%\.ssh\lifeos_nas y W: mapeado al NAS.
+#  Config por variables de entorno (o edita los valores por defecto de abajo):
+#    NAS_SSH       usuario@host del NAS         (ej. usuario@TU_NAS_IP)
+#    NAS_SSH_KEY   ruta a la clave SSH privada
+#    NAS_CONTAINER nombre del contenedor Docker del backend
+#    NAS_DRIVE     backend en la unidad mapeada (ej. W:\App Ingles\backend)
+#    NAS_DOCKER    ruta del backend dentro del NAS (para docker cp)
 # ============================================================================
 $ErrorActionPreference = 'Stop'
 
-$key       = Join-Path $env:USERPROFILE '.ssh\lifeos_nas'
-$hostIp    = 'vagabond@192.168.0.200'
-$container = 'english_coach_backend'
-$srcRoot   = 'C:\Users\IvN\Desktop\Ingles\backend'   # repo local (fuente de verdad)
-$nasRoot   = 'W:\App Ingles\backend'                 # despliegue NAS (mapeado)
-$nasDocker = '/volume1/docker/App Ingles/backend'    # ruta del NAS (para docker cp)
+$key       = if ($env:NAS_SSH_KEY)   { $env:NAS_SSH_KEY }   else { Join-Path $env:USERPROFILE '.ssh\id_nas' }
+$hostIp    = if ($env:NAS_SSH)       { $env:NAS_SSH }       else { 'usuario@TU_NAS_IP' }
+$container = if ($env:NAS_CONTAINER) { $env:NAS_CONTAINER } else { 'english_coach_backend' }
+$srcRoot   = Join-Path $PSScriptRoot 'backend'   # repo local (fuente de verdad)
+$nasRoot   = if ($env:NAS_DRIVE)     { $env:NAS_DRIVE }     else { 'W:\App Ingles\backend' }  # unidad mapeada
+$nasDocker = if ($env:NAS_DOCKER)    { $env:NAS_DOCKER }    else { '/volume1/docker/App Ingles/backend' }  # ruta NAS (docker cp)
 
 # Ficheros a desplegar (rutas relativas bajo backend/). Añade aquí lo que toques.
 $files = @(

@@ -4,8 +4,10 @@ chcp 65001 >NUL
 title Chequeo Cluster IA (.65) + Backend NAS
 color 0B
 
-set P65=192.168.0.65
-set NAS=192.168.0.200:8092
+REM  Exporta P65 (IP del portatil GPU) y NAS (IP:puerto del backend) como
+REM  variables de entorno, o edita los valores por defecto de abajo.
+if not defined P65 set P65=TU_GPU_IP
+if not defined NAS set NAS=TU_NAS_IP:8092
 
 echo ============================================================
 echo    CHEQUEO CLUSTER IA  -  portatil .65 + Backend NAS

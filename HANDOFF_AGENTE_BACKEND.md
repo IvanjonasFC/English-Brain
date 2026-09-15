@@ -18,8 +18,8 @@ El portátil funciona como un **nodo de aceleración GPU (stateless)** de alta v
 
 | Parámetro | Valor Configurado |
 | :--- | :--- |
-| **IP del Portátil (Ethernet LAN)** | `192.168.0.65` (Fijada en DHCP del router) |
-| **IP del NAS Synology (Pesoz)** | `192.168.0.200:8092` (Backend FastAPI en Docker) |
+| **IP del Portátil (Ethernet LAN)** | `TU_GPU_IP` (Fijada en DHCP del router) |
+| **IP del NAS Synology (Pesoz)** | `TU_NAS_IP:8092` (Backend FastAPI en Docker) |
 | **Modo de Red en NAS** | Bridge MTU 1400 (Compilación con `DOCKER_BUILDKIT=0 docker build --network=host`) |
 | **Resiliencia / Fallback** | Si el portátil está apagado, el backend degrada a heurísticas y algoritmos locales sin romperse |
 
@@ -27,19 +27,19 @@ El portátil funciona como un **nodo de aceleración GPU (stateless)** de alta v
 
 ## 2. Exposición de Red y Endpoints Disponibles
 
-Todos los servicios del portátil escuchan en `0.0.0.0` y admiten tráfico directo desde la subred local `192.168.0.0/24`.
+Todos los servicios del portátil escuchan en `0.0.0.0` y admiten tráfico directo desde la subred local `tu subred LAN`.
 
-### 2.1. Endpoints del Portátil (`192.168.0.65`)
+### 2.1. Endpoints del Portátil (`TU_GPU_IP`)
 
 | Endpoint | Método | Worker | Uso |
 | :--- | :--- | :--- | :--- |
-| `http://192.168.0.65:11434/api/tags` | `GET` | Ollama | Health check y lista de modelos activos |
-| `http://192.168.0.65:11434/api/generate` | `POST` | Ollama | Corrección gramatical estructurada |
-| `http://192.168.0.65:8001/v1/models` | `GET` | Speaches | Verificación de Whisper y Kokoro cargados |
-| `http://192.168.0.65:8001/v1/audio/transcriptions` | `POST` | Speaches | STT de voz del usuario a texto |
-| `http://192.168.0.65:8001/v1/audio/speech` | `POST` | Speaches | Síntesis TTS Kokoro-82M en MP3 |
-| `http://192.168.0.65:8100/health` | `GET` | Fonemas | Estado del modelo Wav2Vec2 (`device: cuda`) |
-| `http://192.168.0.65:8200/health` | `GET` | MFA | Estado del alineador acústico |
+| `http://TU_GPU_IP:11434/api/tags` | `GET` | Ollama | Health check y lista de modelos activos |
+| `http://TU_GPU_IP:11434/api/generate` | `POST` | Ollama | Corrección gramatical estructurada |
+| `http://TU_GPU_IP:8001/v1/models` | `GET` | Speaches | Verificación de Whisper y Kokoro cargados |
+| `http://TU_GPU_IP:8001/v1/audio/transcriptions` | `POST` | Speaches | STT de voz del usuario a texto |
+| `http://TU_GPU_IP:8001/v1/audio/speech` | `POST` | Speaches | Síntesis TTS Kokoro-82M en MP3 |
+| `http://TU_GPU_IP:8100/health` | `GET` | Fonemas | Estado del modelo Wav2Vec2 (`device: cuda`) |
+| `http://TU_GPU_IP:8200/health` | `GET` | MFA | Estado del alineador acústico |
 
 ---
 
@@ -50,13 +50,13 @@ El agente o desarrollador en el NAS puede verificar el circuito en menos de 1 mi
 ### Paso 1: Comprobar conectividad básica y modelos disponibles
 Ejecutar en la terminal del NAS (o contenedor Docker del backend):
 ```bash
-curl -s http://192.168.0.66:11434/api/tags | jq .
+curl -s http://TU_GPU_IP:11434/api/tags | jq .
 ```
 **Respuesta esperada:** Un JSON con código HTTP 200 listando `qwen3:4b` y `phi4-mini:latest`.
 
 ### Paso 2: Probar inferencia en caliente y medir velocidad
 ```bash
-curl -s http://192.168.0.66:11434/api/generate \
+curl -s http://TU_GPU_IP:11434/api/generate \
   -H "Content-Type: application/json" \
   -d '{
     "model": "qwen3:4b",
@@ -76,7 +76,7 @@ import asyncio
 import httpx
 import time
 
-WORKER_URL = "http://192.168.0.66:11434"
+WORKER_URL = "http://TU_GPU_IP:11434"
 MODEL = "qwen3:4b"
 
 async def test_full_flow():
@@ -123,12 +123,12 @@ if __name__ == "__main__":
 ## 4. Configuración en el Backend del NAS
 
 ### 4.1. Variables de Entorno (`.env` del Backend en el NAS)
-Coloca estos parámetros en el archivo `.env` del backend FastAPI (IP detectada del NAS: `192.168.0.200`):
+Coloca estos parámetros en el archivo `.env` del backend FastAPI (IP detectada del NAS: `TU_NAS_IP`):
 
 ```env
 # Integración Worker GPU
 GPU_WORKER_ENABLED=true
-OLLAMA_URL=http://192.168.0.66:11434
+OLLAMA_URL=http://TU_GPU_IP:11434
 OLLAMA_MODEL=qwen3:4b
 GPU_WORKER_TIMEOUT=4.0
 GPU_WORKER_HEALTH_TTL=15
@@ -335,7 +335,7 @@ Cuando se disponga de más de 500 interacciones de alta calidad:
 
 Sigue estos 4 pasos para verificar que todo el circuito está activo y degradando correctamente:
 
-1. **Test A (Conectividad Básica):** Desde el NAS, correr `curl -s http://192.168.0.66:11434/api/tags`. Debe devolver HTTP 200 con `qwen3:4b`.
+1. **Test A (Conectividad Básica):** Desde el NAS, correr `curl -s http://TU_GPU_IP:11434/api/tags`. Debe devolver HTTP 200 con `qwen3:4b`.
 2. **Test B (Script E2E):** Ejecutar en el backend `python test_worker_e2e.py` (código en Sección 3). Debe retornar una respuesta pedagógica en < 1 segundo a > 55 tokens/s.
 3. **Test C (App en Vivo con GPU):** Realizar un turno de prueba en la app móvil. El turno debe registrarse en `llm_interaction_logs` con `engine_used: "fast"`.
 4. **Test D (Prueba de Resiliencia / Degradación Elegante):** Suspender temporalmente el portátil o desconectar el Wi-Fi. Realizar otro turno en la app: debe responder sin demoras ni errores con `engine_used: "standard"` (reglas locales del NAS). Volver a encender el portátil y comprobar que se recupera automáticamente en < 15 segundos sin reiniciar el backend.

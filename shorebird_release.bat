@@ -8,13 +8,15 @@ REM  NOTA: llamamos a shorebird.ps1 directamente porque el wrapper shorebird.bat
 REM  descarta el separador "--" en Windows.
 REM ==========================================================================
 cd /d "%~dp0"
+if not defined BASE_URL set "BASE_URL=https://ingles.tudominio.dev"
+if not defined API_KEY set "API_KEY=CHANGE_ME_api_key"
 echo [1/2] Sincronizando seeds offline (backend -> assets)...
 python tools\sync_offline_seeds.py
 if errorlevel 1 ( echo. & echo *** SYNC FALLIDO *** & pause & exit /b 1 )
 cd /d "%~dp0app"
 echo.
 echo [2/2] Shorebird release (apk)...
-powershell -NoProfile -ExecutionPolicy Bypass -Command "& '%USERPROFILE%\.shorebird\bin\shorebird.ps1' release android --artifact apk '--' --no-tree-shake-icons --dart-define=BASE_URL=https://ingles.ivanjonasfc.dev --dart-define=API_KEY=super-secret-key-123"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "& '%USERPROFILE%\.shorebird\bin\shorebird.ps1' release android --artifact apk '--' --no-tree-shake-icons --dart-define=BASE_URL=%BASE_URL% --dart-define=API_KEY=%API_KEY%"
 if errorlevel 1 ( echo. & echo *** RELEASE FALLIDO *** & pause & exit /b 1 )
 powershell -NoProfile -Command "$apk=Get-ChildItem -Recurse -Filter app-release.apk build\app\outputs 2>$null | Select-Object -First 1; if($apk){Copy-Item $apk.FullName (Join-Path ([Environment]::GetFolderPath('Desktop')) 'English_Coach.apk') -Force; Write-Host ('APK copiado al Escritorio: English_Coach.apk (' + ('{0:N1} MB' -f ($apk.Length/1MB)) + ')')}"
 echo.

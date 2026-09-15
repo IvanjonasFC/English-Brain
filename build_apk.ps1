@@ -5,9 +5,9 @@
   backend and, optionally, installs it on a connected phone via ADB.
 
 .DESCRIPTION
-  The APK works over LAN, WireGuard and mobile data. Default backend URL is the
-  public HTTPS domain (https://ingles.ivanjonasfc.dev); for LAN-only speed pass
-  -BaseUrl http://192.168.0.200:8092.
+  The APK works over LAN, WireGuard and mobile data. Default backend URL is your
+  public HTTPS domain (set BASE_URL, or pass -BaseUrl); for LAN-only speed pass
+  -BaseUrl http://TU_NAS_IP:8092.
 
   NOTE: this produces a PLAIN release APK (not updatable over-the-air). For an
   APK you can patch without reinstalling, use shorebird_release.bat (Shorebird);
@@ -18,7 +18,7 @@
   in via --dart-define.
 
 .PARAMETER BaseUrl
-  Backend base URL baked into the APK. Default: https://ingles.ivanjonasfc.dev
+  Backend base URL baked into the APK. Default: $env:BASE_URL or a placeholder.
 
 .PARAMETER ApiKey
   Optional API key baked in as a fallback (matches API_KEY in docker-compose).
@@ -35,11 +35,11 @@
 .EXAMPLE
   .\build_apk.ps1 -Install
 .EXAMPLE
-  .\build_apk.ps1 -BaseUrl "http://192.168.0.200:8000" -ApiKey "super-secret-key-123" -Install
+  .\build_apk.ps1 -BaseUrl "http://TU_NAS_IP:8000" -ApiKey "TU_API_KEY" -Install
 #>
 param(
-  [string]$BaseUrl = "https://ingles.ivanjonasfc.dev",
-  [string]$ApiKey  = "",
+  [string]$BaseUrl = $(if ($env:BASE_URL) { $env:BASE_URL } else { "https://ingles.tudominio.dev" }),
+  [string]$ApiKey  = $(if ($env:API_KEY)  { $env:API_KEY }  else { "" }),
   [switch]$Install,
   [switch]$SkipSync
 )
@@ -110,8 +110,8 @@ if ($Install) {
 }
 
 Write-Host "`nHow to test:" -ForegroundColor Cyan
-Write-Host "  - LAN   : phone on the same network as the NAS (192.168.0.200)."
-Write-Host "  - Remote: connect the 'Loredo' WireGuard tunnel; it routes 192.168.0.0/24,"
+Write-Host "  - LAN   : phone on the same network as the NAS."
+Write-Host "  - Remote: connect your WireGuard tunnel; it routes your LAN subnet,"
 Write-Host "            so the same URL ($BaseUrl) reaches the backend."
 Write-Host "  - If the app was configured earlier with another server, change it in"
 Write-Host "    Settings (or reinstall) to: $BaseUrl"
