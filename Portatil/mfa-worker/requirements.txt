@@ -1,0 +1,4 @@
+fastapi
+uvicorn[standard]
+praatio>=6.0
+python-multipart

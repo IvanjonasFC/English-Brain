@@ -1,0 +1,233 @@
+[
+  {
+    "id": "interview_foundations_a1",
+    "domain": "general",
+    "scenario": "foundations",
+    "subtopic": "Presentación Personal & Rutinas (A1-A2)",
+    "objectiveId": "personal_intro_a1",
+    "band": "a2b1",
+    "mode": "guided",
+    "questionIds": [
+      1,
+      2,
+      5
+    ],
+    "skills": [
+      "present simple",
+      "basic vocabulary",
+      "self-introduction"
+    ],
+    "estMinutes": 6,
+    "feedbackType": "Pronunciación básica + fluidez inicial"
+  },
+  {
+    "id": "general_small_talk",
+    "domain": "general",
+    "scenario": "dailyEnglish",
+    "subtopic": "Small Talk & Socializar (A2-B1)",
+    "objectiveId": "small_talk_social",
+    "band": "a2b1",
+    "mode": "guided",
+    "questionIds": [
+      146,
+      147,
+      106
+    ],
+    "skills": [
+      "greetings",
+      "follow-up questions",
+      "small talk"
+    ],
+    "estMinutes": 6,
+    "feedbackType": "Naturalidad + preguntas de seguimiento"
+  },
+  {
+    "id": "interview_workplace_b1",
+    "domain": "general",
+    "scenario": "workplaceEnglish",
+    "subtopic": "Describir mi Día a Día (A2-B1)",
+    "objectiveId": "describe_daily_work",
+    "band": "a2b1",
+    "mode": "guided",
+    "questionIds": [
+      148,
+      149,
+      150
+    ],
+    "skills": [
+      "daily duties",
+      "past simple",
+      "work vocabulary"
+    ],
+    "estMinutes": 8,
+    "feedbackType": "Vocabulario cotidiano + estructura clara"
+  },
+  {
+    "id": "interview_teamwork_b1",
+    "domain": "general",
+    "scenario": "teamwork",
+    "subtopic": "Reuniones & Opiniones (B1-B2)",
+    "objectiveId": "teamwork_collaboration",
+    "band": "b1b2",
+    "mode": "guided",
+    "questionIds": [
+      106,
+      107,
+      108
+    ],
+    "skills": [
+      "opinions",
+      "active listening",
+      "collaboration"
+    ],
+    "estMinutes": 8,
+    "feedbackType": "Conectores conversacionales + claridad"
+  },
+  {
+    "id": "general_travel_situations",
+    "domain": "general",
+    "scenario": "dailyEnglish",
+    "subtopic": "Viajes & Situaciones Reales (B1-B2)",
+    "objectiveId": "travel_real_situations",
+    "band": "b1b2",
+    "mode": "guided",
+    "questionIds": [
+      6,
+      109,
+      110
+    ],
+    "skills": [
+      "polite requests",
+      "problem solving",
+      "transactional English"
+    ],
+    "estMinutes": 8,
+    "feedbackType": "Cortesía + resolución de situaciones"
+  },
+  {
+    "id": "general_storytelling",
+    "domain": "general",
+    "scenario": "dailyEnglish",
+    "subtopic": "Contar Experiencias & Historias (B2-C1)",
+    "objectiveId": "everyday_storytelling",
+    "band": "b2c1",
+    "mode": "guided",
+    "questionIds": [
+      4,
+      136,
+      137
+    ],
+    "skills": [
+      "narrative tenses",
+      "descriptive adjectives",
+      "keeping attention"
+    ],
+    "estMinutes": 10,
+    "feedbackType": "Fluidez narrativa + tiempos del pasado"
+  },
+  {
+    "id": "general_presenting",
+    "domain": "general",
+    "scenario": "workplaceEnglish",
+    "subtopic": "Presentar & Convencer (C1)",
+    "objectiveId": "presenting_persuading",
+    "band": "c1",
+    "mode": "guided",
+    "questionIds": [
+      138,
+      139,
+      140
+    ],
+    "skills": [
+      "signposting",
+      "persuasion",
+      "handling objections"
+    ],
+    "estMinutes": 12,
+    "feedbackType": "Estructura ejecutiva + persuasión"
+  },
+  {
+    "id": "interview_star_basics",
+    "domain": "tech",
+    "scenario": "hrInterview",
+    "subtopic": "STAR Storytelling & Trayectoria",
+    "objectiveId": "tell_me_about_yourself",
+    "band": "b1b2",
+    "mode": "guided",
+    "questionIds": [
+      3,
+      4,
+      6
+    ],
+    "skills": [
+      "structure",
+      "fluency",
+      "past tenses"
+    ],
+    "estMinutes": 8,
+    "feedbackType": "STAR structure + grammar"
+  },
+  {
+    "id": "interview_debugging_walkthrough",
+    "domain": "tech",
+    "scenario": "debugging",
+    "subtopic": "Incident Walkthrough & Debugging",
+    "objectiveId": "describe_a_bug",
+    "band": "b2c1",
+    "mode": "mock",
+    "questionIds": [
+      56,
+      57,
+      58
+    ],
+    "skills": [
+      "cause/result",
+      "technical vocabulary",
+      "pronunciation"
+    ],
+    "estMinutes": 10,
+    "feedbackType": "STAR + pronunciation + vocabulary"
+  },
+  {
+    "id": "interview_system_design",
+    "domain": "tech",
+    "scenario": "systemsDesign",
+    "subtopic": "Architecture Trade-offs & Scalability",
+    "objectiveId": "defend_tradeoffs",
+    "band": "b2c1",
+    "mode": "guided",
+    "questionIds": [
+      156,
+      157,
+      158
+    ],
+    "skills": [
+      "trade-off evaluation",
+      "scalability",
+      "conditional clauses"
+    ],
+    "estMinutes": 12,
+    "feedbackType": "Clarity + architecture terminology"
+  },
+  {
+    "id": "interview_behavioral_conflict",
+    "domain": "tech",
+    "scenario": "hrInterview",
+    "subtopic": "Handling Disagreements & Conflict",
+    "objectiveId": "resolve_conflict",
+    "band": "b1b2",
+    "mode": "mock",
+    "questionIds": [
+      4,
+      106,
+      111
+    ],
+    "skills": [
+      "diplomatic phrasing",
+      "STAR resolution",
+      "soft skills"
+    ],
+    "estMinutes": 9,
+    "feedbackType": "STAR + diplomatic tone"
+  }
+]

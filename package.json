@@ -1,0 +1,12 @@
+{
+  "name": "english-coach-monorepo",
+  "version": "1.0.0",
+  "description": "English Brain Monorepo - FastAPI Backend & Flutter App",
+  "scripts": {
+    "generate:openapi": "python -c \"import json; from app.main import app; open('backend/openapi.json', 'w').write(json.dumps(app.openapi(), indent=2))\"",
+    "generate:api": "python scripts/generate_dart_models.py",
+    "sync:api": "npm run generate:openapi && npm run generate:api",
+    "test:backend": "pytest backend/tests -v",
+    "analyze:app": "cd app && flutter analyze"
+  }
+}

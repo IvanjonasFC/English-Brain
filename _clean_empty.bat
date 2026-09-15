@@ -1,0 +1,2 @@
+@echo off
+powershell -NoProfile -Command "$d='W:\App Ingles\audio_cache'; $all=Get-ChildItem $d -Filter *.mp3 -ErrorAction SilentlyContinue; $empty=$all | Where-Object { $_.Length -lt 100 }; Write-Output ('total_mp3=' + $all.Count); Write-Output ('junk_lt100=' + $empty.Count); $empty | Remove-Item -Force -ErrorAction SilentlyContinue; $after=Get-ChildItem $d -Filter *.mp3 -ErrorAction SilentlyContinue; Write-Output ('after_delete=' + $after.Count)"

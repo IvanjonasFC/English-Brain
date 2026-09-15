@@ -1,0 +1,123 @@
+[
+  {
+    "id": "numbers_colors",
+    "title": "Numbers & Colors",
+    "description": "Numeros, colores y cantidades basicas.",
+    "iconCodePoint": 983105,
+    "iconFontFamily": "MaterialIcons",
+    "level": "A1 • General",
+    "accentColorValue": 4294210230,
+    "terms": [
+      {
+        "term": "one, two, three",
+        "ipa": "/wʌn tuː θriː/",
+        "definition": "The first basic counting numbers.",
+        "exampleSentence": "I have three brothers and one sister.",
+        "spanishHint": "uno, dos, tres",
+        "category": "numbers",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": null
+      },
+      {
+        "term": "hundred",
+        "ipa": "/ˈhʌn.drəd/",
+        "definition": "The number 100.",
+        "exampleSentence": "This shirt costs one hundred euros.",
+        "spanishHint": "cien / centenar",
+        "category": "numbers",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": null
+      },
+      {
+        "term": "first / second",
+        "ipa": "/fɜːst ˈsek.ənd/",
+        "definition": "Words for order (1st, 2nd).",
+        "exampleSentence": "Take the first street on the left.",
+        "spanishHint": "primero / segundo",
+        "category": "numbers",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": null
+      },
+      {
+        "term": "red",
+        "ipa": "/red/",
+        "definition": "The colour of blood or a tomato.",
+        "exampleSentence": "She is wearing a red jacket.",
+        "spanishHint": "rojo",
+        "category": "colors",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": null
+      },
+      {
+        "term": "blue",
+        "ipa": "/bluː/",
+        "definition": "The colour of the sky on a clear day.",
+        "exampleSentence": "My favourite colour is blue.",
+        "spanishHint": "azul",
+        "category": "colors",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": null
+      },
+      {
+        "term": "How many?",
+        "ipa": "/haʊ ˈmen.i/",
+        "definition": "A question to ask about quantity.",
+        "exampleSentence": "How many people are coming tonight?",
+        "spanishHint": "Cuantos/as?",
+        "category": "numbers",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": null
+      },
+      {
+        "term": "thousand",
+        "ipa": "/ˈθaʊznd/",
+        "definition": "the number 1000",
+        "exampleSentence": "The city has ten thousand people.",
+        "spanishHint": "mil",
+        "category": "numbers",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": null
+      },
+      {
+        "term": "half",
+        "ipa": "/hɑːf/",
+        "definition": "one of two equal parts",
+        "exampleSentence": "Half of the team is remote.",
+        "spanishHint": "mitad",
+        "category": "numbers",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": null
+      },
+      {
+        "term": "dozen",
+        "ipa": "/ˈdʌzn/",
+        "definition": "a group of twelve",
+        "exampleSentence": "I bought a dozen eggs.",
+        "spanishHint": "docena",
+        "category": "numbers",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": null
+      },
+      {
+        "term": "grey",
+        "ipa": "/ɡreɪ/",
+        "definition": "the colour of clouds",
+        "exampleSentence": "He wore a grey suit.",
+        "spanishHint": "gris",
+        "category": "colors",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": null
+      }
+    ]
+  }
+]

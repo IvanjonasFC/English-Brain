@@ -1,0 +1,1425 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "English Brain API",
+    "description": "English Brain Backend - Orchestrator for STT, Ollama LLM, TTS and FSRS Spaced Repetition",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Login",
+        "operationId": "login_api_auth_login_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Token"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/questions": {
+      "get": {
+        "tags": [
+          "questions"
+        ],
+        "summary": "List Questions",
+        "operationId": "list_questions_api_questions_get",
+        "security": [
+          {
+            "APIKeyHeader": []
+          },
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "category",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Filter by category (hr, tech, vocab)",
+              "title": "Category"
+            },
+            "description": "Filter by category (hr, tech, vocab)"
+          },
+          {
+            "name": "difficulty",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Filter by difficulty (junior, mid, senior)",
+              "title": "Difficulty"
+            },
+            "description": "Filter by difficulty (junior, mid, senior)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/QuestionOut"
+                  },
+                  "title": "Response List Questions Api Questions Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/questions/{question_id}": {
+      "get": {
+        "tags": [
+          "questions"
+        ],
+        "summary": "Get Question",
+        "operationId": "get_question_api_questions__question_id__get",
+        "security": [
+          {
+            "APIKeyHeader": []
+          },
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Question Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sessions": {
+      "post": {
+        "tags": [
+          "sessions"
+        ],
+        "summary": "Create Session",
+        "operationId": "create_session_api_sessions_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/SessionCreate"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          },
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/sessions/{session_id}/answer": {
+      "post": {
+        "tags": [
+          "sessions"
+        ],
+        "summary": "Submit Answer",
+        "operationId": "submit_answer_api_sessions__session_id__answer_post",
+        "security": [
+          {
+            "APIKeyHeader": []
+          },
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Session Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_submit_answer_api_sessions__session_id__answer_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurnOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sessions/{session_id}/complete": {
+      "post": {
+        "tags": [
+          "sessions"
+        ],
+        "summary": "Complete Session",
+        "operationId": "complete_session_api_sessions__session_id__complete_post",
+        "security": [
+          {
+            "APIKeyHeader": []
+          },
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Session Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/mistakes": {
+      "get": {
+        "tags": [
+          "mistakes"
+        ],
+        "summary": "List Mistakes",
+        "operationId": "list_mistakes_api_mistakes_get",
+        "security": [
+          {
+            "APIKeyHeader": []
+          },
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "group",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Filter by category (grammar, vocabulary, pronunciation)",
+              "title": "Group"
+            },
+            "description": "Filter by category (grammar, vocabulary, pronunciation)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MistakeOut"
+                  },
+                  "title": "Response List Mistakes Api Mistakes Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cards": {
+      "get": {
+        "tags": [
+          "cards"
+        ],
+        "summary": "List Cards",
+        "operationId": "list_cards_api_cards_get",
+        "security": [
+          {
+            "APIKeyHeader": []
+          },
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "due_only",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "description": "Filter only cards due for review now",
+              "default": false,
+              "title": "Due Only"
+            },
+            "description": "Filter only cards due for review now"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CardOut"
+                  },
+                  "title": "Response List Cards Api Cards Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cards/{card_id}/review": {
+      "post": {
+        "tags": [
+          "cards"
+        ],
+        "summary": "Review Card",
+        "operationId": "review_card_api_cards__card_id__review_post",
+        "security": [
+          {
+            "APIKeyHeader": []
+          },
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "card_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Card Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CardReviewIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CardOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/export/apkg": {
+      "get": {
+        "tags": [
+          "export"
+        ],
+        "summary": "Export Apkg",
+        "operationId": "export_apkg_api_export_apkg_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          },
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/export/ankiconnect": {
+      "post": {
+        "tags": [
+          "export"
+        ],
+        "summary": "Sync Ankiconnect",
+        "operationId": "sync_ankiconnect_api_export_ankiconnect_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          },
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/stats": {
+      "get": {
+        "tags": [
+          "stats"
+        ],
+        "summary": "Get Stats",
+        "operationId": "get_stats_api_stats_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatsOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          },
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/stats/weekly-report": {
+      "get": {
+        "tags": [
+          "stats"
+        ],
+        "summary": "Get Weekly Report",
+        "operationId": "get_weekly_report_api_stats_weekly_report_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WeeklyReportOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          },
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "operationId": "health_check_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/health": {
+      "get": {
+        "summary": "Health Check",
+        "operationId": "health_check_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "Root",
+        "operationId": "root__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Body_submit_answer_api_sessions__session_id__answer_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File",
+            "description": "Audio file of the candidate's spoken response"
+          },
+          "question_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Question Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_submit_answer_api_sessions__session_id__answer_post"
+      },
+      "CardOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "mistake_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mistake Id"
+          },
+          "front": {
+            "type": "string",
+            "title": "Front"
+          },
+          "back": {
+            "type": "string",
+            "title": "Back"
+          },
+          "state": {
+            "type": "integer",
+            "title": "State"
+          },
+          "difficulty": {
+            "type": "number",
+            "title": "Difficulty"
+          },
+          "stability": {
+            "type": "number",
+            "title": "Stability"
+          },
+          "due_date": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Due Date"
+          },
+          "last_review": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Review"
+          },
+          "reps": {
+            "type": "integer",
+            "title": "Reps"
+          },
+          "lapses": {
+            "type": "integer",
+            "title": "Lapses"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "front",
+          "back",
+          "state",
+          "difficulty",
+          "stability",
+          "due_date",
+          "reps",
+          "lapses"
+        ],
+        "title": "CardOut"
+      },
+      "CardReviewIn": {
+        "properties": {
+          "rating": {
+            "type": "integer",
+            "maximum": 4.0,
+            "minimum": 1.0,
+            "title": "Rating",
+            "description": "1=Again, 2=Hard, 3=Good, 4=Easy (FSRS Ratings)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "rating"
+        ],
+        "title": "CardReviewIn"
+      },
+      "GrammarCorrection": {
+        "properties": {
+          "original": {
+            "type": "string",
+            "title": "Original",
+            "description": "The user's original phrase with errors"
+          },
+          "correction": {
+            "type": "string",
+            "title": "Correction",
+            "description": "The grammatically correct version"
+          },
+          "explanation": {
+            "type": "string",
+            "title": "Explanation",
+            "description": "Clear explanation of the grammar rule"
+          }
+        },
+        "type": "object",
+        "required": [
+          "original",
+          "correction",
+          "explanation"
+        ],
+        "title": "GrammarCorrection"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LLMEvaluationResult": {
+        "properties": {
+          "interviewer_reply": {
+            "type": "string",
+            "title": "Interviewer Reply",
+            "description": "Natural follow-up response or question in English by the interviewer"
+          },
+          "grammar_corrections": {
+            "items": {
+              "$ref": "#/components/schemas/GrammarCorrection"
+            },
+            "type": "array",
+            "title": "Grammar Corrections",
+            "description": "List of grammatical errors identified in the user's response"
+          },
+          "vocabulary_suggestions": {
+            "items": {
+              "$ref": "#/components/schemas/VocabularySuggestion"
+            },
+            "type": "array",
+            "title": "Vocabulary Suggestions",
+            "description": "List of vocabulary enrichments and natural expressions"
+          },
+          "overall_score": {
+            "type": "integer",
+            "maximum": 10.0,
+            "minimum": 1.0,
+            "title": "Overall Score",
+            "description": "Performance score from 1 to 10 for this answer"
+          },
+          "fluency_feedback": {
+            "type": "string",
+            "title": "Fluency Feedback",
+            "description": "Constructive note on fluency, pacing, and professional clarity"
+          },
+          "pronunciation_feedback": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PronunciationFeedback"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Pronunciation clarity, tricky phonetics, and speech tips"
+          }
+        },
+        "type": "object",
+        "required": [
+          "interviewer_reply",
+          "overall_score",
+          "fluency_feedback"
+        ],
+        "title": "LLMEvaluationResult"
+      },
+      "LoginIn": {
+        "properties": {
+          "api_key": {
+            "type": "string",
+            "title": "Api Key"
+          }
+        },
+        "type": "object",
+        "required": [
+          "api_key"
+        ],
+        "title": "LoginIn"
+      },
+      "MistakeOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "turn_id": {
+            "type": "integer",
+            "title": "Turn Id"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "original": {
+            "type": "string",
+            "title": "Original"
+          },
+          "correction": {
+            "type": "string",
+            "title": "Correction"
+          },
+          "explanation": {
+            "type": "string",
+            "title": "Explanation"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "turn_id",
+          "category",
+          "original",
+          "correction",
+          "explanation",
+          "timestamp"
+        ],
+        "title": "MistakeOut"
+      },
+      "PronunciationFeedback": {
+        "properties": {
+          "score": {
+            "type": "integer",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Score",
+            "description": "Pronunciation clarity score 0-100",
+            "default": 85
+          },
+          "clarity": {
+            "type": "string",
+            "title": "Clarity",
+            "description": "Rating: Excellent, Good, Moderate, Needs Practice",
+            "default": "Good"
+          },
+          "mispronounced_or_difficult_words": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Mispronounced Or Difficult Words",
+            "description": "Technical words with complex phonetics detected in answer"
+          },
+          "phonetic_tips": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Phonetic Tips",
+            "description": "IPA phonetic guides and tips for difficult words"
+          },
+          "filler_words_detected": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Filler Words Detected",
+            "description": "Filler words detected (um, uh, like, you know)"
+          }
+        },
+        "type": "object",
+        "title": "PronunciationFeedback"
+      },
+      "QuestionOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "difficulty": {
+            "type": "string",
+            "title": "Difficulty"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "model_answer": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model Answer"
+          },
+          "tips": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tips"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "difficulty",
+          "title",
+          "text"
+        ],
+        "title": "QuestionOut"
+      },
+      "SessionCreate": {
+        "properties": {
+          "category": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Category",
+            "default": "tech"
+          },
+          "initial_question_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Initial Question Id"
+          }
+        },
+        "type": "object",
+        "title": "SessionCreate"
+      },
+      "SessionOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "user_id": {
+            "type": "string",
+            "title": "User Id"
+          },
+          "started_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Started At"
+          },
+          "completed_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Completed At"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "initial_question": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/QuestionOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "initial_audio_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Initial Audio Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "user_id",
+          "started_at",
+          "status"
+        ],
+        "title": "SessionOut"
+      },
+      "StatsOut": {
+        "properties": {
+          "total_sessions": {
+            "type": "integer",
+            "title": "Total Sessions"
+          },
+          "total_turns": {
+            "type": "integer",
+            "title": "Total Turns"
+          },
+          "total_mistakes": {
+            "type": "integer",
+            "title": "Total Mistakes"
+          },
+          "cards_due_today": {
+            "type": "integer",
+            "title": "Cards Due Today"
+          },
+          "total_cards": {
+            "type": "integer",
+            "title": "Total Cards"
+          },
+          "streak_days": {
+            "type": "integer",
+            "title": "Streak Days"
+          },
+          "mistakes_by_category": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Mistakes By Category"
+          },
+          "weekly_activity": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Weekly Activity"
+          }
+        },
+        "type": "object",
+        "required": [
+          "total_sessions",
+          "total_turns",
+          "total_mistakes",
+          "cards_due_today",
+          "total_cards",
+          "streak_days",
+          "mistakes_by_category",
+          "weekly_activity"
+        ],
+        "title": "StatsOut"
+      },
+      "Token": {
+        "properties": {
+          "access_token": {
+            "type": "string",
+            "title": "Access Token"
+          },
+          "token_type": {
+            "type": "string",
+            "title": "Token Type",
+            "default": "bearer"
+          }
+        },
+        "type": "object",
+        "required": [
+          "access_token"
+        ],
+        "title": "Token"
+      },
+      "TurnOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "session_id": {
+            "type": "string",
+            "title": "Session Id"
+          },
+          "question_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Question Id"
+          },
+          "transcript": {
+            "type": "string",
+            "title": "Transcript"
+          },
+          "ai_reply_text": {
+            "type": "string",
+            "title": "Ai Reply Text"
+          },
+          "ai_reply_audio_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ai Reply Audio Url"
+          },
+          "evaluation": {
+            "$ref": "#/components/schemas/LLMEvaluationResult"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "session_id",
+          "question_id",
+          "transcript",
+          "ai_reply_text",
+          "ai_reply_audio_url",
+          "evaluation",
+          "created_at"
+        ],
+        "title": "TurnOut"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "VocabularySuggestion": {
+        "properties": {
+          "term": {
+            "type": "string",
+            "title": "Term",
+            "description": "The word or idiom to learn or improve"
+          },
+          "context": {
+            "type": "string",
+            "title": "Context",
+            "description": "Example sentence or context of usage"
+          },
+          "alternatives": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Alternatives",
+            "description": "Natural synonyms or better tech terms"
+          }
+        },
+        "type": "object",
+        "required": [
+          "term",
+          "context"
+        ],
+        "title": "VocabularySuggestion"
+      },
+      "WeeklyReportOut": {
+        "properties": {
+          "week_range": {
+            "type": "string",
+            "title": "Week Range"
+          },
+          "generated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Generated At"
+          },
+          "total_sessions": {
+            "type": "integer",
+            "title": "Total Sessions"
+          },
+          "total_turns": {
+            "type": "integer",
+            "title": "Total Turns"
+          },
+          "total_mistakes": {
+            "type": "integer",
+            "title": "Total Mistakes"
+          },
+          "mistakes_this_week": {
+            "type": "integer",
+            "title": "Mistakes This Week",
+            "default": 0
+          },
+          "mistakes_last_week": {
+            "type": "integer",
+            "title": "Mistakes Last Week",
+            "default": 0
+          },
+          "markdown_report": {
+            "type": "string",
+            "title": "Markdown Report"
+          }
+        },
+        "type": "object",
+        "required": [
+          "week_range",
+          "generated_at",
+          "total_sessions",
+          "total_turns",
+          "total_mistakes",
+          "markdown_report"
+        ],
+        "title": "WeeklyReportOut"
+      }
+    },
+    "securitySchemes": {
+      "APIKeyHeader": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
+      },
+      "HTTPBearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

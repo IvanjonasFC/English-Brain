@@ -1,0 +1,956 @@
+[
+  {
+    "id": "tech_cloud_infra_b2c1",
+    "title": "Cloud & Infrastructure",
+    "description": "Terminos de arquitectura cloud, escalado y fiabilidad para roles senior.",
+    "iconCodePoint": 59403,
+    "iconFontFamily": "MaterialIcons",
+    "level": "B2-C1 • Architecture",
+    "accentColorValue": 4282339765,
+    "terms": [
+      {
+        "term": "horizontal scaling",
+        "ipa": "/ˌhɒr.ɪˈzɒn.təl ˈskeɪ.lɪŋ/",
+        "definition": "Adding more machines to handle load, instead of a bigger one.",
+        "exampleSentence": "We handle traffic spikes with horizontal scaling behind a load balancer.",
+        "spanishHint": "escalado horizontal",
+        "category": "architecture",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "load balancer",
+          "autoscaling"
+        ],
+        "origin": null
+      },
+      {
+        "term": "load balancer",
+        "ipa": "/loʊd ˈbæl.ən.sər/",
+        "definition": "A component that spreads requests across several servers.",
+        "exampleSentence": "The load balancer routes traffic to the healthiest instances.",
+        "spanishHint": "balanceador de carga",
+        "category": "architecture",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "reverse proxy"
+        ],
+        "origin": null
+      },
+      {
+        "term": "failover",
+        "ipa": "/ˈfeɪl.oʊ.vər/",
+        "definition": "Switching automatically to a backup when the main system fails.",
+        "exampleSentence": "The database has automatic failover to a standby replica.",
+        "spanishHint": "conmutacion por error / failover",
+        "category": "reliability",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "replica",
+          "redundancy"
+        ],
+        "origin": null
+      },
+      {
+        "term": "provisioned",
+        "ipa": "/prəˈvɪʒ.ənd/",
+        "definition": "Resources that have been set up and reserved in advance.",
+        "exampleSentence": "We over-provisioned the cluster to absorb Black Friday traffic.",
+        "spanishHint": "aprovisionado / reservado",
+        "category": "infra",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "capacity"
+        ],
+        "origin": null
+      },
+      {
+        "term": "elasticity",
+        "ipa": "/ˌiː.læsˈtɪs.ə.ti/",
+        "definition": "The ability to grow and shrink resources with demand.",
+        "exampleSentence": "Cloud elasticity means we only pay for what we actually use.",
+        "spanishHint": "elasticidad",
+        "category": "architecture",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "autoscaling"
+        ],
+        "origin": null
+      },
+      {
+        "term": "single point of failure",
+        "ipa": "/ˈsɪŋ.ɡəl pɔɪnt əv ˈfeɪl.jər/",
+        "definition": "A part whose failure brings the whole system down.",
+        "exampleSentence": "The shared cache was a single point of failure, so we clustered it.",
+        "spanishHint": "punto unico de fallo",
+        "category": "reliability",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "redundancy"
+        ],
+        "origin": null
+      },
+      {
+        "term": "provisioning drift",
+        "ipa": "/prəˈvɪʒ.ən.ɪŋ drɪft/",
+        "definition": "When live infrastructure no longer matches its declared config.",
+        "exampleSentence": "We detect provisioning drift by running Terraform plan on a schedule.",
+        "spanishHint": "deriva de configuracion",
+        "category": "infra",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "infrastructure as code"
+        ],
+        "origin": null
+      },
+      {
+        "term": "cold start",
+        "ipa": "/koʊld stɑːrt/",
+        "definition": "The extra delay when a serverless function starts from scratch.",
+        "exampleSentence": "We keep functions warm to avoid cold start latency on login.",
+        "spanishHint": "arranque en frio",
+        "category": "performance",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "serverless"
+        ],
+        "origin": null
+      },
+      {
+        "term": "blast radius",
+        "ipa": "/blæst ˈreɪ.di.əs/",
+        "definition": "How much of the system a failure or change can affect.",
+        "exampleSentence": "Splitting the monolith reduced the blast radius of each deploy.",
+        "spanishHint": "radio de impacto",
+        "category": "architecture",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "isolation"
+        ],
+        "origin": null
+      },
+      {
+        "term": "reverse proxy",
+        "ipa": "/rɪˈvɜːrs ˈprɒk.si/",
+        "definition": "A server that sits in front of others and forwards client requests to them.",
+        "exampleSentence": "The reverse proxy handles TLS and routes traffic to the right service.",
+        "spanishHint": "proxy inverso",
+        "category": "infra",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "load balancer"
+        ],
+        "origin": null
+      },
+      {
+        "term": "content delivery network",
+        "ipa": "/ˈkɒn.tɛnt dɪˈlɪv.ər.i ˈnɛt.wɜːrk/",
+        "definition": "A network of edge servers that caches content close to users.",
+        "exampleSentence": "A content delivery network cut image load times across regions.",
+        "spanishHint": "red de distribucion de contenido (CDN)",
+        "category": "infra",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "edge",
+          "cache"
+        ],
+        "origin": null
+      },
+      {
+        "term": "autoscaling",
+        "ipa": "/ˈɔː.toʊˌskeɪ.lɪŋ/",
+        "definition": "Automatically adding or removing instances based on load.",
+        "exampleSentence": "Autoscaling spun up four more workers during the traffic spike.",
+        "spanishHint": "autoescalado",
+        "category": "infra",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "elasticity"
+        ],
+        "origin": null
+      }
+    ]
+  },
+  {
+    "id": "tech_security_auth_b2c1",
+    "title": "Security & Authentication",
+    "description": "Terminos de seguridad, autenticacion y proteccion de datos.",
+    "iconCodePoint": 59403,
+    "iconFontFamily": "MaterialIcons",
+    "level": "B2-C1 • Security",
+    "accentColorValue": 4291766816,
+    "terms": [
+      {
+        "term": "encryption at rest",
+        "ipa": "/ɪnˈkrɪp.ʃən æt rɛst/",
+        "definition": "Encrypting stored data so it is unreadable if disks are stolen.",
+        "exampleSentence": "All customer data uses encryption at rest and in transit.",
+        "spanishHint": "cifrado en reposo",
+        "category": "security",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "in transit"
+        ],
+        "origin": null
+      },
+      {
+        "term": "token",
+        "ipa": "/ˈtoʊ.kən/",
+        "definition": "A signed credential that proves identity for a while.",
+        "exampleSentence": "The access token expires after fifteen minutes for safety.",
+        "spanishHint": "token de acceso",
+        "category": "security",
+        "difficulty": "mid",
+        "relatedTerms": [
+          "JWT",
+          "refresh token"
+        ],
+        "origin": null
+      },
+      {
+        "term": "sanitize",
+        "ipa": "/ˈsæn.ɪ.taɪz/",
+        "definition": "To clean input so it cannot inject harmful code.",
+        "exampleSentence": "We sanitize user input to prevent SQL injection.",
+        "spanishHint": "sanear / limpiar entradas",
+        "category": "security",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "injection"
+        ],
+        "origin": null
+      },
+      {
+        "term": "rotate",
+        "ipa": "/ˈroʊ.teɪt/",
+        "definition": "To replace keys or secrets regularly.",
+        "exampleSentence": "We rotate the API keys every ninety days automatically.",
+        "spanishHint": "rotar (claves/secretos)",
+        "category": "security",
+        "difficulty": "mid",
+        "relatedTerms": [
+          "secret"
+        ],
+        "origin": null
+      },
+      {
+        "term": "hardening",
+        "ipa": "/ˈhɑːr.dən.ɪŋ/",
+        "definition": "Reducing a system's attack surface with stricter config.",
+        "exampleSentence": "Server hardening closed every port we were not using.",
+        "spanishHint": "endurecimiento / hardening",
+        "category": "security",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "attack surface"
+        ],
+        "origin": null
+      },
+      {
+        "term": "two-factor authentication",
+        "ipa": "/ˈtuː ˌfæk.tər ɔːˌθɛn.tɪˈkeɪ.ʃən/",
+        "definition": "Requiring a second proof of identity besides the password.",
+        "exampleSentence": "We enforce two-factor authentication for all admin accounts.",
+        "spanishHint": "autenticacion en dos pasos",
+        "category": "security",
+        "difficulty": "mid",
+        "relatedTerms": [
+          "MFA"
+        ],
+        "origin": null
+      },
+      {
+        "term": "audit trail",
+        "ipa": "/ˈɔː.dɪt treɪl/",
+        "definition": "A record of who did what and when.",
+        "exampleSentence": "The audit trail showed exactly which service changed the record.",
+        "spanishHint": "registro de auditoria",
+        "category": "security",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "logging"
+        ],
+        "origin": null
+      },
+      {
+        "term": "attack surface",
+        "ipa": "/əˈtæk ˈsɜːr.fɪs/",
+        "definition": "All the points where an attacker could try to get in.",
+        "exampleSentence": "Removing unused endpoints shrank our attack surface.",
+        "spanishHint": "superficie de ataque",
+        "category": "security",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "hardening"
+        ],
+        "origin": null
+      },
+      {
+        "term": "penetration test",
+        "ipa": "/ˌpɛn.ɪˈtreɪ.ʃən tɛst/",
+        "definition": "An authorized simulated attack to find weaknesses.",
+        "exampleSentence": "The penetration test found a way to bypass the login rate limit.",
+        "spanishHint": "test de penetracion / pentest",
+        "category": "security",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "vulnerability"
+        ],
+        "origin": null
+      },
+      {
+        "term": "cross-site scripting",
+        "ipa": "/krɒs saɪt ˈskrɪp.tɪŋ/",
+        "definition": "An attack that injects malicious scripts into a web page.",
+        "exampleSentence": "We escape output to prevent cross-site scripting.",
+        "spanishHint": "scripting entre sitios (XSS)",
+        "category": "security",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "sanitize"
+        ],
+        "origin": null
+      },
+      {
+        "term": "mutual TLS",
+        "ipa": "/ˈmjuː.tʃu.əl ˌtiː.ɛlˈɛs/",
+        "definition": "Both client and server verify each other with certificates.",
+        "exampleSentence": "Services talk over mutual TLS so neither side can be impersonated.",
+        "spanishHint": "TLS mutuo (mTLS)",
+        "category": "security",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "certificate"
+        ],
+        "origin": null
+      }
+    ]
+  },
+  {
+    "id": "tech_data_engineering_b2c1",
+    "title": "Advanced Databases & Data",
+    "description": "Consultas, indices y motores de datos a nivel senior.",
+    "iconCodePoint": 59403,
+    "iconFontFamily": "MaterialIcons",
+    "level": "B2-C1 • Data",
+    "accentColorValue": 4284513675,
+    "terms": [
+      {
+        "term": "query optimizer",
+        "ipa": "/ˈkwɪər.i ˈɒp.tɪ.maɪ.zər/",
+        "definition": "The database part that picks the fastest way to run a query.",
+        "exampleSentence": "The query optimizer ignored our index until we updated the statistics.",
+        "spanishHint": "optimizador de consultas",
+        "category": "databases",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "query plan"
+        ],
+        "origin": null
+      },
+      {
+        "term": "covering index",
+        "ipa": "/ˈkʌv.ər.ɪŋ ˈɪn.dɛks/",
+        "definition": "An index that already holds every column a query needs.",
+        "exampleSentence": "A covering index let the query skip the table entirely.",
+        "spanishHint": "indice cubridor",
+        "category": "databases",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "index"
+        ],
+        "origin": null
+      },
+      {
+        "term": "connection pool",
+        "ipa": "/kəˈnɛk.ʃən puːl/",
+        "definition": "A set of reusable database connections shared by the app.",
+        "exampleSentence": "Under load the connection pool ran out and requests queued up.",
+        "spanishHint": "pool de conexiones",
+        "category": "databases",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "pooling"
+        ],
+        "origin": null
+      },
+      {
+        "term": "isolation level",
+        "ipa": "/ˌaɪ.səˈleɪ.ʃən ˈlɛv.əl/",
+        "definition": "How much one transaction can see another's uncommitted changes.",
+        "exampleSentence": "We raised the isolation level to stop the phantom reads.",
+        "spanishHint": "nivel de aislamiento",
+        "category": "databases",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "transaction"
+        ],
+        "origin": null
+      },
+      {
+        "term": "materialized view",
+        "ipa": "/məˈtɪər.i.ə.laɪzd vjuː/",
+        "definition": "A precomputed, stored result of a query for fast reads.",
+        "exampleSentence": "We built a materialized view so the dashboard loads instantly.",
+        "spanishHint": "vista materializada",
+        "category": "databases",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "cache"
+        ],
+        "origin": null
+      },
+      {
+        "term": "partition key",
+        "ipa": "/pɑːrˈtɪʃ.ən kiː/",
+        "definition": "The field that decides which shard a row goes to.",
+        "exampleSentence": "Choosing user id as the partition key spread the load evenly.",
+        "spanishHint": "clave de particion",
+        "category": "databases",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "sharding"
+        ],
+        "origin": null
+      },
+      {
+        "term": "bloat",
+        "ipa": "/bloʊt/",
+        "definition": "Wasted space left by deleted or updated rows.",
+        "exampleSentence": "Table bloat slowed the scans until we ran a vacuum.",
+        "spanishHint": "hinchazon / espacio muerto",
+        "category": "databases",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "vacuum"
+        ],
+        "origin": null
+      },
+      {
+        "term": "ingest",
+        "ipa": "/ɪnˈdʒɛst/",
+        "definition": "To take in and store large amounts of incoming data.",
+        "exampleSentence": "The pipeline can ingest a million events per minute.",
+        "spanishHint": "ingerir / ingestar datos",
+        "category": "data",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "pipeline"
+        ],
+        "origin": null
+      },
+      {
+        "term": "schema evolution",
+        "ipa": "/ˈskiː.mə ˌiː.vəˈluː.ʃən/",
+        "definition": "Changing a data schema over time without breaking readers.",
+        "exampleSentence": "We handle schema evolution by keeping fields optional.",
+        "spanishHint": "evolucion de esquema",
+        "category": "data",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "migration"
+        ],
+        "origin": null
+      },
+      {
+        "term": "data lineage",
+        "ipa": "/ˈdeɪ.tə ˈlɪn.i.ɪdʒ/",
+        "definition": "A record of where data came from and how it was transformed.",
+        "exampleSentence": "Data lineage helped us trace the bad number back to one job.",
+        "spanishHint": "linaje / trazabilidad de datos",
+        "category": "data",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "provenance"
+        ],
+        "origin": null
+      },
+      {
+        "term": "denormalize",
+        "ipa": "/diːˈnɔːr.mə.laɪz/",
+        "definition": "To duplicate data on purpose to make reads faster.",
+        "exampleSentence": "We denormalized the feed table to avoid expensive joins.",
+        "spanishHint": "desnormalizar",
+        "category": "databases",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "normalization"
+        ],
+        "origin": null
+      },
+      {
+        "term": "hot path",
+        "ipa": "/hɒt pæθ/",
+        "definition": "The most performance-critical code that runs most often.",
+        "exampleSentence": "We keep allocations off the hot path to reduce latency.",
+        "spanishHint": "ruta caliente / camino critico",
+        "category": "performance",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "bottleneck"
+        ],
+        "origin": null
+      }
+    ]
+  },
+  {
+    "id": "tech_cloud_reliability_c1",
+    "title": "Cloud Reliability & SRE",
+    "description": "Lexico de fiabilidad, SRE y operacion a escala para roles senior/lead.",
+    "iconCodePoint": 59403,
+    "iconFontFamily": "MaterialIcons",
+    "level": "C1 • SRE",
+    "accentColorValue": 4278419080,
+    "terms": [
+      {
+        "term": "error budget",
+        "ipa": "/ˈɛr.ər ˈbʌdʒ.ɪt/",
+        "definition": "The amount of downtime a service is allowed before you must slow feature work.",
+        "exampleSentence": "We paused new releases because we had burned the error budget.",
+        "spanishHint": "presupuesto de error",
+        "category": "sre",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "SLO"
+        ],
+        "origin": null
+      },
+      {
+        "term": "service level objective",
+        "ipa": "/ˈsɜːr.vɪs ˈlɛv.əl əbˈdʒɛk.tɪv/",
+        "definition": "A target for reliability, like 99.9 percent uptime.",
+        "exampleSentence": "Our service level objective is a p99 latency under three hundred milliseconds.",
+        "spanishHint": "objetivo de nivel de servicio (SLO)",
+        "category": "sre",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "SLA"
+        ],
+        "origin": null
+      },
+      {
+        "term": "toil",
+        "ipa": "/tɔɪl/",
+        "definition": "Repetitive manual work that should be automated.",
+        "exampleSentence": "We cut toil by automating the certificate renewals.",
+        "spanishHint": "trabajo manual repetitivo (toil)",
+        "category": "sre",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "automation"
+        ],
+        "origin": null
+      },
+      {
+        "term": "runbook",
+        "ipa": "/ˈrʌn.bʊk/",
+        "definition": "A step-by-step guide for handling a specific operational task or incident.",
+        "exampleSentence": "The on-call engineer followed the runbook to fail over the database.",
+        "spanishHint": "runbook / guia de operacion",
+        "category": "sre",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "playbook"
+        ],
+        "origin": null
+      },
+      {
+        "term": "postmortem",
+        "ipa": "/ˌpoʊstˈmɔːr.təm/",
+        "definition": "A write-up after an incident explaining causes and fixes.",
+        "exampleSentence": "The blameless postmortem focused on the process, not the person.",
+        "spanishHint": "postmortem / analisis tras incidente",
+        "category": "sre",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "root cause"
+        ],
+        "origin": null
+      },
+      {
+        "term": "mean time to recovery",
+        "ipa": "/miːn taɪm tuː rɪˈkʌv.ər.i/",
+        "definition": "The average time to restore service after a failure.",
+        "exampleSentence": "Automating failover cut our mean time to recovery in half.",
+        "spanishHint": "tiempo medio de recuperacion (MTTR)",
+        "category": "sre",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "MTTR"
+        ],
+        "origin": null
+      },
+      {
+        "term": "chaos engineering",
+        "ipa": "/ˈkeɪ.ɒs ˌɛn.dʒɪˈnɪər.ɪŋ/",
+        "definition": "Deliberately injecting failures to test resilience.",
+        "exampleSentence": "Through chaos engineering we found a hidden dependency on one node.",
+        "spanishHint": "ingenieria del caos",
+        "category": "sre",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "resilience"
+        ],
+        "origin": null
+      },
+      {
+        "term": "saturation",
+        "ipa": "/ˌsætʃ.əˈreɪ.ʃən/",
+        "definition": "How full a resource is, such as CPU or memory.",
+        "exampleSentence": "The alert fired when memory saturation crossed ninety percent.",
+        "spanishHint": "saturacion de recursos",
+        "category": "sre",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "utilization"
+        ],
+        "origin": null
+      },
+      {
+        "term": "alert fatigue",
+        "ipa": "/əˈlɜːrt fəˈtiːɡ/",
+        "definition": "When too many alerts make engineers stop paying attention.",
+        "exampleSentence": "We tuned the thresholds to reduce alert fatigue on the team.",
+        "spanishHint": "fatiga de alertas",
+        "category": "sre",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "noise"
+        ],
+        "origin": null
+      },
+      {
+        "term": "on-call",
+        "ipa": "/ˈɒn.kɔːl/",
+        "definition": "Being responsible for responding to incidents during a shift.",
+        "exampleSentence": "I am on-call this week, so I carry the pager.",
+        "spanishHint": "de guardia",
+        "category": "sre",
+        "difficulty": "mid",
+        "relatedTerms": [
+          "rotation"
+        ],
+        "origin": null
+      },
+      {
+        "term": "escalate",
+        "ipa": "/ˈɛs.kə.leɪt/",
+        "definition": "To raise an issue to a more senior or specialized person.",
+        "exampleSentence": "If the database is down for ten minutes, we escalate to the DBA.",
+        "spanishHint": "escalar (un incidente)",
+        "category": "sre",
+        "difficulty": "mid",
+        "relatedTerms": [
+          "on-call"
+        ],
+        "origin": null
+      },
+      {
+        "term": "degrade gracefully",
+        "ipa": "/dɪˈɡreɪd ˈɡreɪs.fəl.i/",
+        "definition": "To keep essential features working when parts fail.",
+        "exampleSentence": "The app degrades gracefully to read-only mode during maintenance.",
+        "spanishHint": "degradarse de forma controlada",
+        "category": "sre",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "fallback"
+        ],
+        "origin": null
+      }
+    ]
+  },
+  {
+    "id": "tech_architecture_tradeoffs_c1",
+    "title": "Architecture Trade-offs",
+    "description": "Conceptos avanzados de sistemas distribuidos para justificar decisiones a nivel staff.",
+    "iconCodePoint": 59403,
+    "iconFontFamily": "MaterialIcons",
+    "level": "C1 • Architect",
+    "accentColorValue": 4287790550,
+    "terms": [
+      {
+        "term": "quorum",
+        "ipa": "/ˈkwɔːr.əm/",
+        "definition": "The minimum number of nodes that must agree for a write to count.",
+        "exampleSentence": "The cluster needs a quorum of three nodes to accept writes.",
+        "spanishHint": "quorum / mayoria de nodos",
+        "category": "distributed",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "consensus"
+        ],
+        "origin": null
+      },
+      {
+        "term": "leader election",
+        "ipa": "/ˈliː.dər ɪˈlɛk.ʃən/",
+        "definition": "The process of choosing one node to coordinate the others.",
+        "exampleSentence": "When the primary died, leader election promoted a replica in seconds.",
+        "spanishHint": "eleccion de lider",
+        "category": "distributed",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "failover"
+        ],
+        "origin": null
+      },
+      {
+        "term": "split-brain",
+        "ipa": "/splɪt breɪn/",
+        "definition": "When a cluster splits and two nodes both think they are the leader.",
+        "exampleSentence": "Fencing prevents split-brain when the network partitions.",
+        "spanishHint": "cerebro dividido (split-brain)",
+        "category": "distributed",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "partition"
+        ],
+        "origin": null
+      },
+      {
+        "term": "tail latency",
+        "ipa": "/teɪl ˈleɪ.tən.si/",
+        "definition": "The slowest responses, like the p99, that hurt user experience.",
+        "exampleSentence": "We optimized tail latency because the p99 mattered more than the average.",
+        "spanishHint": "latencia de cola (p99)",
+        "category": "performance",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "percentile"
+        ],
+        "origin": null
+      },
+      {
+        "term": "write-ahead log",
+        "ipa": "/raɪt əˈhɛd lɒɡ/",
+        "definition": "A log written before applying changes so data survives a crash.",
+        "exampleSentence": "The write-ahead log lets the database recover after a power loss.",
+        "spanishHint": "registro de escritura anticipada (WAL)",
+        "category": "databases",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "durability"
+        ],
+        "origin": null
+      },
+      {
+        "term": "fan-out",
+        "ipa": "/ˈfæn.aʊt/",
+        "definition": "Sending one event to many consumers or writing to many places.",
+        "exampleSentence": "The notification service has a huge fan-out to every follower.",
+        "spanishHint": "fan-out / difusion masiva",
+        "category": "distributed",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "pub-sub"
+        ],
+        "origin": null
+      },
+      {
+        "term": "hot partition",
+        "ipa": "/hɒt pɑːrˈtɪʃ.ən/",
+        "definition": "One shard receiving far more traffic than the others.",
+        "exampleSentence": "A celebrity account created a hot partition that overloaded one node.",
+        "spanishHint": "particion caliente",
+        "category": "databases",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "sharding"
+        ],
+        "origin": null
+      },
+      {
+        "term": "capacity planning",
+        "ipa": "/kəˈpæs.ə.ti ˈplæn.ɪŋ/",
+        "definition": "Estimating the resources a system will need as it grows.",
+        "exampleSentence": "Capacity planning told us we needed two more nodes before the launch.",
+        "spanishHint": "planificacion de capacidad",
+        "category": "architecture",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "forecast"
+        ],
+        "origin": null
+      },
+      {
+        "term": "cardinality",
+        "ipa": "/ˌkɑːr.dɪˈnæl.ə.ti/",
+        "definition": "The number of distinct values in a set, e.g. of a metric label.",
+        "exampleSentence": "High cardinality tags blew up the cost of our metrics.",
+        "spanishHint": "cardinalidad",
+        "category": "data",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "dimension"
+        ],
+        "origin": null
+      },
+      {
+        "term": "idempotency key",
+        "ipa": "/aɪˌdɛm.pəˈtɛn.si kiː/",
+        "definition": "A unique token that lets a retried request run only once.",
+        "exampleSentence": "The client sends an idempotency key so a retry never double-charges.",
+        "spanishHint": "clave de idempotencia",
+        "category": "apis",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "retry"
+        ],
+        "origin": null
+      },
+      {
+        "term": "back-of-the-envelope",
+        "ipa": "/bæk əv ði ˈɛn.və.loʊp/",
+        "definition": "A quick, rough calculation to size a design.",
+        "exampleSentence": "A back-of-the-envelope estimate showed we needed about ten gigabytes a day.",
+        "spanishHint": "calculo aproximado / a ojo",
+        "category": "architecture",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "estimate"
+        ],
+        "origin": null
+      }
+    ]
+  },
+  {
+    "id": "tech_tech_leadership_c1",
+    "title": "Technical Leadership",
+    "description": "Lenguaje ejecutivo para liderar decisiones, prioridades y stakeholders.",
+    "iconCodePoint": 59403,
+    "iconFontFamily": "MaterialIcons",
+    "level": "C1 • Executive",
+    "accentColorValue": 4293564240,
+    "terms": [
+      {
+        "term": "roadmap",
+        "ipa": "/ˈroʊd.mæp/",
+        "definition": "A high-level plan of what a team will deliver over time.",
+        "exampleSentence": "The migration is the top item on next quarter's roadmap.",
+        "spanishHint": "hoja de ruta",
+        "category": "leadership",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "milestone"
+        ],
+        "origin": null
+      },
+      {
+        "term": "scope creep",
+        "ipa": "/skoʊp kriːp/",
+        "definition": "Uncontrolled growth of a project's requirements.",
+        "exampleSentence": "We froze the requirements to avoid scope creep before the release.",
+        "spanishHint": "expansion descontrolada del alcance",
+        "category": "leadership",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "scope"
+        ],
+        "origin": null
+      },
+      {
+        "term": "technical debt",
+        "ipa": "/ˈtɛk.nɪ.kəl dɛt/",
+        "definition": "Extra future work caused by taking shortcuts today.",
+        "exampleSentence": "We booked a sprint to pay down the technical debt in the auth layer.",
+        "spanishHint": "deuda tecnica",
+        "category": "leadership",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "refactor"
+        ],
+        "origin": null
+      },
+      {
+        "term": "buy-in",
+        "ipa": "/ˈbaɪ.ɪn/",
+        "definition": "Genuine agreement and support from others for a plan.",
+        "exampleSentence": "I got buy-in from the team before changing the branching strategy.",
+        "spanishHint": "apoyo / adhesion al plan",
+        "category": "leadership",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "alignment"
+        ],
+        "origin": null
+      },
+      {
+        "term": "trade-off analysis",
+        "ipa": "/ˈtreɪd.ɒf əˈnæl.ə.sɪs/",
+        "definition": "Weighing the pros and cons of competing options.",
+        "exampleSentence": "My trade-off analysis compared cost, latency and complexity.",
+        "spanishHint": "analisis de compromisos",
+        "category": "leadership",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "decision"
+        ],
+        "origin": null
+      },
+      {
+        "term": "bandwidth",
+        "ipa": "/ˈbænd.wɪdθ/",
+        "definition": "The time and capacity a person or team has for work.",
+        "exampleSentence": "I don't have the bandwidth to take on the audit this week.",
+        "spanishHint": "capacidad / disponibilidad",
+        "category": "leadership",
+        "difficulty": "mid",
+        "relatedTerms": [
+          "capacity"
+        ],
+        "origin": null
+      },
+      {
+        "term": "align",
+        "ipa": "/əˈlaɪn/",
+        "definition": "To get people to agree on goals and approach.",
+        "exampleSentence": "Let's align on the priorities before we split the work.",
+        "spanishHint": "alinear / consensuar",
+        "category": "leadership",
+        "difficulty": "mid",
+        "relatedTerms": [
+          "buy-in"
+        ],
+        "origin": null
+      },
+      {
+        "term": "unblock",
+        "ipa": "/ʌnˈblɒk/",
+        "definition": "To remove what is stopping someone from making progress.",
+        "exampleSentence": "I reviewed the PR quickly to unblock the release.",
+        "spanishHint": "desbloquear",
+        "category": "leadership",
+        "difficulty": "mid",
+        "relatedTerms": [
+          "blocker"
+        ],
+        "origin": null
+      },
+      {
+        "term": "raise a concern",
+        "ipa": "/reɪz ə kənˈsɜːrn/",
+        "definition": "To point out a possible problem constructively.",
+        "exampleSentence": "I raised a concern about the timeline being too aggressive.",
+        "spanishHint": "plantear una preocupacion",
+        "category": "leadership",
+        "difficulty": "senior",
+        "relatedTerms": [
+          "feedback"
+        ],
+        "origin": null
+      },
+      {
+        "term": "sign off",
+        "ipa": "/saɪn ɒf/",
+        "definition": "To formally approve that something is ready.",
+        "exampleSentence": "Security has to sign off before we go live.",
+        "spanishHint": "dar el visto bueno / aprobar",
+        "category": "leadership",
+        "difficulty": "mid",
+        "relatedTerms": [
+          "approve"
+        ],
+        "origin": null
+      }
+    ]
+  }
+]

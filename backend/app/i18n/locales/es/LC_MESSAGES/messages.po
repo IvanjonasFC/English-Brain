@@ -1,0 +1,138 @@
+﻿# English Brain - Spanish translations
+# msgid is used in code; msgstr is the Spanish translation
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# ========== Authentication ==========
+msgid "auth.invalid_credentials"
+msgstr "Credenciales incorrectas. Por favor, verifica tu usuario y contraseña."
+
+msgid "auth.session_expired"
+msgstr "Tu sesión ha expirado. Por favor, inicia sesión de nuevo."
+
+msgid "auth.unauthorized"
+msgstr "No tienes permiso para realizar esta acción."
+
+msgid "auth.user_not_found"
+msgstr "Usuario no encontrado."
+
+msgid "auth.token_invalid"
+msgstr "Token de autenticación inválido."
+
+msgid "auth.password_too_short"
+msgstr "La contraseña debe tener al menos 8 caracteres."
+
+# ========== General Errors ==========
+msgid "error.not_found"
+msgstr "Recurso no encontrado."
+
+msgid "error.internal"
+msgstr "Error interno del servidor. Por favor, inténtalo de nuevo."
+
+msgid "error.validation"
+msgstr "Error de validación en los datos enviados."
+
+msgid "error.timeout"
+msgstr "La solicitud tardó demasiado. Por favor, inténtalo de nuevo."
+
+msgid "error.service_unavailable"
+msgstr "El servicio no está disponible temporalmente."
+
+# ========== Sessions ==========
+msgid "session.created"
+msgstr "Sesión iniciada correctamente."
+
+msgid "session.completed"
+msgstr "Sesión completada. ¡Buen trabajo!"
+
+msgid "session.not_found"
+msgstr "Sesión no encontrada."
+
+msgid "session.already_completed"
+msgstr "Esta sesión ya ha sido completada."
+
+msgid "session.feedback_processing"
+msgstr "Procesando tu respuesta con IA..."
+
+msgid "session.feedback_ready"
+msgstr "Feedback disponible."
+
+msgid "session.no_audio"
+msgstr "No se recibió audio. Por favor, graba tu respuesta."
+
+# ========== Questions ==========
+msgid "question.not_found"
+msgstr "Pregunta no encontrada."
+
+msgid "question.no_questions_for_category"
+msgstr "No hay preguntas disponibles para esta categoría."
+
+msgid "question.category_required"
+msgstr "La categoría es obligatoria."
+
+# ========== Pronunciation ==========
+msgid "pronunciation.analyzing"
+msgstr "Analizando tu pronunciación..."
+
+msgid "pronunciation.excellent"
+msgstr "¡Pronunciación excelente!"
+
+msgid "pronunciation.good"
+msgstr "Buena pronunciación. ¡Sigue practicando!"
+
+msgid "pronunciation.needs_improvement"
+msgstr "Tu pronunciación necesita mejorar. Escucha el audio modelo e inténtalo de nuevo."
+
+msgid "pronunciation.service_unavailable"
+msgstr "El servicio de pronunciación no está disponible. Inténtalo más tarde."
+
+msgid "pronunciation.audio_too_short"
+msgstr "El audio es demasiado corto. Por favor, habla durante al menos 2 segundos."
+
+# ========== TTS ==========
+msgid "tts.generating"
+msgstr "Generando audio..."
+
+msgid "tts.service_unavailable"
+msgstr "El servicio de síntesis de voz no está disponible."
+
+msgid "tts.text_too_long"
+msgstr "El texto es demasiado largo para sintetizar."
+
+# ========== Cards / FSRS ==========
+msgid "card.created"
+msgstr "Tarjeta creada en tu mazo de repaso."
+
+msgid "card.reviewed"
+msgstr "Tarjeta revisada correctamente."
+
+msgid "card.not_found"
+msgstr "Tarjeta no encontrada."
+
+msgid "card.exported"
+msgstr "Mazo exportado a formato Anki correctamente."
+
+# ========== Sync ==========
+msgid "sync.queued"
+msgstr "Acción guardada offline. Se sincronizará cuando haya conexión."
+
+msgid "sync.completed"
+msgstr "Sincronización completada."
+
+msgid "sync.error"
+msgstr "Error durante la sincronización. Se reintentará automáticamente."
+
+# ========== Profile ==========
+msgid "profile.updated"
+msgstr "Perfil actualizado correctamente."
+
+msgid "profile.not_found"
+msgstr "Perfil de usuario no encontrado."
+
+msgid "profile.achievement_unlocked"
+msgstr "¡Nuevo logro desbloqueado!"

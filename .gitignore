@@ -1,0 +1,100 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+
+# Environment
+.env
+*.env
+.env.*
+!.env.example
+
+# SQLite & Data
+*.db
+*.sqlite
+*.sqlite3
+data/
+**/data/
+
+# Cache Directories
+audio_cache/
+**/audio_cache/
+models_cache/
+**/models_cache/
+
+# Flutter / Dart
+app/.dart_tool/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/.packages
+app/.pub-cache/
+app/.pub/
+app/build/
+app/android/app/debug/
+app/android/app/profile/
+app/android/app/release/
+
+# IDE & Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ==========================================================================
+# Artefactos y morralla que NO deben ir a GitHub (repo limpio y replicable)
+# ==========================================================================
+
+# Comprimidos y binarios grandes (backend.rar son 106 MB -> GitHub rechaza >100 MB)
+*.rar
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+
+# APK / AAB de la app y otros binarios de build
+*.apk
+*.aab
+*.app
+English Brain.apk
+
+# Logs de crash/replay de la JVM, salidas de build y volcados
+hs_err_pid*.log
+replay_pid*.log
+*.log
+build.out.txt
+build.err.txt
+backend.txt
+
+# Backups locales
+_backend_backups/
+_frontend_backups/
+*.bak
+*.bak.*
+
+# Node
+node_modules/
+**/node_modules/
+
+# Metadatos de herramientas / IA / scratch
+.ai/
+.claude/
+.claudesync/
+scratch/
+Claude outputs/
+
+# Despliegue con artefactos pesados (deploy-nas son 230 MB).
+# La CONFIG de despliegue (docker-compose, Caddyfile, .env.example) se versiona
+# aparte; aquí ignoramos la carpeta pesada. Si dentro hay scripts que quieras
+# versionar, dímelo y los añadimos explícitamente con `git add -f`.
+deploy-nas/

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "unit-1-junior",
+    "level": "Level 1: Junior",
+    "title": "Unit 1: Past Simple in STAR Stories",
+    "tag": "A2 - B1",
+    "subtitle": "Cómo narrar tus proyectos y bugs pasados con precisión temporal",
+    "ruleSummary": "En entrevistas, usa SIEMPRE Past Simple (built, refactored, resolved) para eventos en un momento específico del pasado (ej. 'in 2023', 'last quarter'). Usa Present Perfect (have worked) SOLAMENTE para experiencias sin fecha o que siguen activas hoy.",
+    "comparisonExamples": [
+      {
+        "wrong": "In 2023, I have redesigned our payment microservice.",
+        "right": "In 2023, I redesigned our payment microservice.",
+        "tip": "Una fecha concreta en el pasado (2023) exige Past Simple."
+      },
+      {
+        "wrong": "I work at this company since two years.",
+        "right": "I have been working at this company for two years.",
+        "tip": "Para estados continuados hasta hoy, usa Present Perfect Continuous con 'for'."
+      }
+    ],
+    "questions": [
+      {
+        "id": 101,
+        "prompt": "When our Redis cluster crashed last month, I _____ the traffic to the fallback replica.",
+        "contextSentence": "STAR Situation/Action: Specific past event (last month).",
+        "options": [
+          "have rerouted",
+          "rerouted",
+          "am rerouting",
+          "had reroute"
+        ],
+        "correctAnswer": "rerouted",
+        "spanishExplanation": "Con 'last month' (fecha específica), la regla exige Past Simple ('rerouted').",
+        "audioText": "When our Redis cluster crashed last month, I rerouted the traffic to the fallback replica."
+      },
+      {
+        "id": 102,
+        "prompt": "Throughout my career, I _____ distributed backends in Python and Go.",
+        "contextSentence": "General career experience with no specific past timestamp.",
+        "options": [
+          "built",
+          "have built",
+          "was building",
+          "builded"
+        ],
+        "correctAnswer": "have built",
+        "spanishExplanation": "'Throughout my career' expresa experiencia acumulada; requiere Present Perfect.",
+        "audioText": "Throughout my career, I have built distributed backends in Python and Go."
+      },
+      {
+        "id": 103,
+        "prompt": "Yesterday the QA engineer _____ a critical memory leak in the parser.",
+        "contextSentence": "Specific completed time marker: Yesterday.",
+        "options": [
+          "has identified",
+          "identified",
+          "is identifying",
+          "identifies"
+        ],
+        "correctAnswer": "identified",
+        "spanishExplanation": "'Yesterday' exige Past Simple ('identified'). Nunca 'has identified' con marcadores cerrados.",
+        "audioText": "Yesterday the QA engineer identified a critical memory leak in the parser."
+      },
+      {
+        "id": 104,
+        "prompt": "We _____ that legacy monolithic repository for over three years now.",
+        "contextSentence": "Ongoing activity starting in the past and continuing today.",
+        "options": [
+          "maintained",
+          "have been maintaining",
+          "maintain",
+          "were maintaining"
+        ],
+        "correctAnswer": "have been maintaining",
+        "spanishExplanation": "'For over three years now' indica acción continuada hasta hoy (Present Perfect Continuous).",
+        "audioText": "We have been maintaining that legacy monolithic repository for over three years now."
+      }
+    ]
+  }
+]

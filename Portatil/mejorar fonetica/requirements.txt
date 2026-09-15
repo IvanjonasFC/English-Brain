@@ -1,0 +1,11 @@
+# Un solo entorno (conda 'fonetica') para los dos workers del portátil.
+# MFA se instala por conda (montreal-forced-aligner); esto es lo pip:
+fastapi
+uvicorn[standard]
+python-multipart
+numpy
+praatio>=6.0
+transformers>=4.40
+# torch: instálalo con CUDA aparte (ver SETUP.md):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+torch

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "gen_a2b1_flatmate",
+    "domain": "general",
+    "band": "A2-B1",
+    "category": "Vida diaria",
+    "title": "A note for a new flatmate",
+    "estMinutes": 4,
+    "body": "Hi Marco, welcome to the flat! A few things to make your first week easier. The recycling is collected on Tuesday mornings, so please take the blue bin out on Monday night. The heating is on a timer: it comes on at seven and goes off at eleven, but you can change it with the dial in the hallway if you are cold. The wifi password is on the fridge. One favour: the walls are thin, so try to keep the music down after eleven — our neighbour works early shifts and she has already complained twice. If anything breaks, message me before you call the landlord; last time he charged us for a repair we could have done ourselves. Make yourself at home!",
+    "bodyEs": "Hola Marco, ¡bienvenido al piso! Unas cosas para que tu primera semana sea más fácil. El reciclaje se recoge los martes por la mañana, así que saca el cubo azul el lunes por la noche. La calefacción va con temporizador: se enciende a las siete y se apaga a las once, pero puedes cambiarla con el dial del pasillo si tienes frío. La contraseña del wifi está en la nevera. Un favor: las paredes son finas, así que intenta bajar la música después de las once — nuestra vecina trabaja en turnos de mañana y ya se ha quejado dos veces. Si algo se rompe, escríbeme antes de llamar al casero; la última vez nos cobró por un arreglo que podríamos haber hecho nosotros mismos. ¡Estás en tu casa!",
+    "questions": [
+      {
+        "type": "mcq",
+        "prompt": "When should the blue bin go out?",
+        "explanationEs": "La recogida es el martes, pero pide sacarlo \"Monday night\" (la noche anterior).",
+        "options": [
+          "Tuesday morning",
+          "Monday night",
+          "Any day"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "mcq",
+        "prompt": "Why does the writer ask about the music?",
+        "explanationEs": "Inferencia: \"the walls are thin... our neighbour works early shifts and she has already complained twice\".",
+        "options": [
+          "They dislike music",
+          "A neighbour on early shifts has complained",
+          "It breaks the wifi"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "mcq",
+        "prompt": "What does \"make yourself at home\" suggest here?",
+        "explanationEs": "Es una expresión de bienvenida: siéntete cómodo, como en tu casa.",
+        "options": [
+          "Feel free and comfortable",
+          "Do repairs yourself",
+          "Stay only one week"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "type": "spoken",
+        "prompt": "In one or two sentences, explain what to do if something breaks in the flat.",
+        "explanationEs": "Idea clave: avisar al compañero (message) antes de (before) llamar al casero (landlord).",
+        "keywords": [
+          "message",
+          "before",
+          "landlord"
+        ],
+        "modelAnswer": "You should message the flatmate before calling the landlord, because he once charged for a repair they could have done themselves."
+      }
+    ]
+  }
+]

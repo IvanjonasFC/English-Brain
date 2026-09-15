@@ -1,0 +1,2152 @@
+[
+  {
+    "id": 1,
+    "category": "hr",
+    "difficulty": "junior",
+    "title": "Tell me about yourself",
+    "text": "Can you walk me through your background, your main technical interests, and what brings you to this role?",
+    "model_answer": "I have been focusing on full-stack software development with Python and Flutter, building scalable backend services and responsive client interfaces. I thrive when solving complex architectural problems and delivering clean, well-tested code.",
+    "tips": "Use the Present, Past, Future structure: what you do now, past relevant projects, and why this role matches your career trajectory.",
+    "cefr": "B1"
+  },
+  {
+    "id": 2,
+    "category": "hr",
+    "difficulty": "junior",
+    "title": "Greatest Strength",
+    "text": "What would you say is your greatest technical or professional strength?",
+    "model_answer": "My greatest strength is my systematic problem-solving mindset. When faced with an unfamiliar bug or legacy codebase, I isolate root causes with reproducible benchmarks rather than guessing.",
+    "tips": "Back your claim with a concrete, concise technical story.",
+    "cefr": "B1"
+  },
+  {
+    "id": 3,
+    "category": "hr",
+    "difficulty": "junior",
+    "title": "Area for Improvement",
+    "text": "What is an area where you feel you need improvement, and what steps are you taking to address it?",
+    "model_answer": "In the past, I tended to optimize edge cases before gathering feedback. Now, I share early architectural design docs and prototypes with the team to align sooner.",
+    "tips": "Pick a real professional skill, show active remediation, and avoid cliché non-answers.",
+    "cefr": "B1"
+  },
+  {
+    "id": 4,
+    "category": "hr",
+    "difficulty": "mid",
+    "title": "Handling Disagreement",
+    "text": "Describe a situation where you had a technical disagreement with a colleague. How did you resolve it?",
+    "model_answer": "We debated whether to use PostgreSQL or a document store for our event log. Rather than arguing subjectively, I drafted a quick benchmark comparing our read/write patterns, and we decided collaboratively based on data.",
+    "tips": "Focus on emotional intelligence, objective evidence, and constructive compromise.",
+    "cefr": "B1"
+  },
+  {
+    "id": 5,
+    "category": "hr",
+    "difficulty": "junior",
+    "title": "Why This Company",
+    "text": "Why are you interested in joining our engineering team specifically?",
+    "model_answer": "I admire your team's commitment to clean architecture, high reliability, and self-hosted infrastructure. Building robust solutions that directly impact users is exactly the environment I thrive in.",
+    "tips": "Demonstrate knowledge of their product and engineering philosophy.",
+    "cefr": "B1"
+  },
+  {
+    "id": 6,
+    "category": "hr",
+    "difficulty": "mid",
+    "title": "Tight Deadlines",
+    "text": "Tell me about a time when a deadline was approaching and you realized you wouldn't be able to finish all scope.",
+    "model_answer": "I immediately audited the task backlog to separate core MVP deliverables from nice-to-have features, communicated transparently with the product lead, and delivered the critical user journey on schedule.",
+    "tips": "Highlight proactive communication and ruthless prioritization.",
+    "cefr": "B1"
+  },
+  {
+    "id": 7,
+    "category": "hr",
+    "difficulty": "junior",
+    "title": "A Mistake You Made",
+    "text": "Can you share an experience where you made a mistake on a project and how you resolved it?",
+    "model_answer": "Early on, I missed a migration script before deploying a minor update, causing launch crashes. I quickly rolled back, corrected the schema migration, and added an automated CI check to prevent regressions.",
+    "tips": "Own the mistake, emphasize rapid resolution, and demonstrate the lesson learned.",
+    "cefr": "B1"
+  },
+  {
+    "id": 8,
+    "category": "hr",
+    "difficulty": "mid",
+    "title": "Learning Quickly",
+    "text": "Tell me about a time you had to master a new tool or framework under tight time constraints.",
+    "model_answer": "I needed to integrate Docker and local speech-to-text models within three days. I read official docs, inspected open-source samples, built a minimal proof of concept, and successfully containerized the pipeline.",
+    "tips": "Emphasize your learning methodology and hands-on resourcefulness.",
+    "cefr": "B1"
+  },
+  {
+    "id": 9,
+    "category": "hr",
+    "difficulty": "senior",
+    "title": "Mentoring Others",
+    "text": "How do you approach sharing knowledge or onboarding new members into a codebase?",
+    "model_answer": "I believe in clear documentation and pair programming. I maintain up-to-date architectural diagrams and walk newcomers through real pull requests to build confidence.",
+    "tips": "Show patience, leadership, and structured communication.",
+    "cefr": "B2"
+  },
+  {
+    "id": 10,
+    "category": "hr",
+    "difficulty": "mid",
+    "title": "Three Year Vision",
+    "text": "Where do you envision your career progressing over the next two to three years?",
+    "model_answer": "I want to become a well-rounded senior engineer capable of designing distributed backend architectures and driving end-to-end features with high autonomy.",
+    "tips": "Align your ambition with engineering depth and business impact.",
+    "cefr": "B1"
+  },
+  {
+    "id": 11,
+    "category": "hr",
+    "difficulty": "junior",
+    "title": "Handling Feedback",
+    "text": "How do you handle critical code review feedback on your pull requests?",
+    "model_answer": "I view code reviews as a collaborative learning mechanism. If a reviewer points out a cleaner pattern or edge case, I thank them and apply the fix. If I disagree, I explain the trade-offs respectfully with benchmarks.",
+    "tips": "Show humility and technical rigor.",
+    "cefr": "B1"
+  },
+  {
+    "id": 12,
+    "category": "hr",
+    "difficulty": "mid",
+    "title": "Managing Ambiguity",
+    "text": "Describe how you proceed when product requirements are vague or incomplete.",
+    "model_answer": "I schedule a brief alignment call with the product manager, list the key user assumptions and boundary conditions, document them in a RFC or user story, and obtain sign-off before writing code.",
+    "tips": "Highlight proactive stakeholder communication.",
+    "cefr": "B1"
+  },
+  {
+    "id": 13,
+    "category": "hr",
+    "difficulty": "senior",
+    "title": "Working with Non-Tech Stakeholders",
+    "text": "How do you explain technical debt or complex infrastructure to business executives?",
+    "model_answer": "I use business analogies: technical debt is like financial interest that slows down our feature delivery speed. I quantify the impact in terms of maintenance costs and uptime risk.",
+    "tips": "Avoid engineering jargon; speak in terms of revenue, risk, and velocity.",
+    "cefr": "B2"
+  },
+  {
+    "id": 14,
+    "category": "hr",
+    "difficulty": "mid",
+    "title": "Overcoming Burnout / Pressure",
+    "text": "How do you maintain code quality and personal focus during intense production sprints?",
+    "model_answer": "I rely on disciplined time-blocking, automated test coverage, and frequent communication with my lead so that scope adjustments happen before quality is compromised.",
+    "tips": "Show emotional resilience and mature planning habits.",
+    "cefr": "B2"
+  },
+  {
+    "id": 15,
+    "category": "hr",
+    "difficulty": "senior",
+    "title": "Leading an Initiative",
+    "text": "Have you ever initiated an improvement that was not explicitly assigned to you?",
+    "model_answer": "Yes, our test suite took 25 minutes in CI. I analyzed the bottlenecks, parallelized the test runners, and reduced execution time to 6 minutes, saving hours across the team every week.",
+    "tips": "Focus on initiative, quantifiable team impact, and proactive ownership.",
+    "cefr": "B2"
+  },
+  {
+    "id": 16,
+    "category": "hr",
+    "difficulty": "senior",
+    "title": "Cross-functional Conflict",
+    "text": "How do you handle tension between engineering best practices and sales wanting rapid hacks?",
+    "model_answer": "I separate immediate customer validation from long-term stability. We implement a lightweight feature flag for validation, with an agreed sprint allocated for refactoring if adopted.",
+    "tips": "Demonstrate balanced business acumen.",
+    "cefr": "B2"
+  },
+  {
+    "id": 17,
+    "category": "hr",
+    "difficulty": "mid",
+    "title": "Handling Legacy Code",
+    "text": "What is your mindset when taking over an undocumented legacy codebase?",
+    "model_answer": "I start by writing characterization unit tests around critical user paths. Once I understand the existing behavior, I refactor incrementally without introducing regressions.",
+    "tips": "Emphasize safety, testing, and incremental improvement.",
+    "cefr": "B1"
+  },
+  {
+    "id": 18,
+    "category": "hr",
+    "difficulty": "junior",
+    "title": "Remote Work Discipline",
+    "text": "How do you stay aligned and productive in an asynchronous, remote-first team?",
+    "model_answer": "I over-communicate in written form: clear PR descriptions, detailed tickets, Loom screen recordings when helpful, and daily status summaries to eliminate blockers.",
+    "tips": "Highlight written clarity and autonomous execution.",
+    "cefr": "B1"
+  },
+  {
+    "id": 19,
+    "category": "hr",
+    "difficulty": "senior",
+    "title": "Failing a Production SLA",
+    "text": "How did you react during a major customer-facing outage you were responsible for?",
+    "model_answer": "I stayed calm, focused immediately on mitigation and rollback, kept the incident commander updated, and later led a blameless post-mortem to patch the root cause.",
+    "tips": "Emphasize composure, blameless culture, and systemic fixes.",
+    "cefr": "B2"
+  },
+  {
+    "id": 20,
+    "category": "hr",
+    "difficulty": "mid",
+    "title": "Salary & Role Expectations",
+    "text": "What are your expectations regarding ownership and technical scope in your next role?",
+    "model_answer": "I am looking for an environment where I have end-to-end ownership of services, where code reviews are rigorous, and where technical excellence is recognized and cultivated.",
+    "tips": "Be clear, positive, and aligned with company stage.",
+    "cefr": "B1"
+  },
+  {
+    "id": 21,
+    "category": "technical",
+    "difficulty": "junior",
+    "title": "OOP Core Principles",
+    "text": "Can you explain the four core pillars of Object-Oriented Programming and give a brief example of polymorphism?",
+    "model_answer": "The four pillars are Encapsulation, Abstraction, Inheritance, and Polymorphism. Polymorphism allows different classes to implement the same interface or method signature with custom behavior, like a Shape interface with different draw() implementations.",
+    "tips": "Keep definitions crisp and provide a real-world coding analogy.",
+    "cefr": "B1"
+  },
+  {
+    "id": 22,
+    "category": "technical",
+    "difficulty": "junior",
+    "title": "Git: Rebase vs Merge",
+    "text": "What is the key difference between git merge and git rebase, and when would you choose one over the other?",
+    "model_answer": "Git merge creates a new commit that joins two histories together, preserving the chronological sequence. Git rebase rewrites project history by moving feature branch commits onto the tip of main, producing a clean, linear git log. I use rebase for local feature branches before making a PR, and merge for main integration.",
+    "tips": "Mention history rewriting and the Golden Rule of Rebase.",
+    "cefr": "B1"
+  },
+  {
+    "id": 23,
+    "category": "technical",
+    "difficulty": "junior",
+    "title": "REST API Constraints & HTTP Methods",
+    "text": "What makes an API RESTful, and how do you differentiate between PUT and PATCH methods?",
+    "model_answer": "A REST API relies on stateless HTTP verbs, resource-oriented URIs, and standard status codes. PUT is idempotent and typically replaces the entire resource representation, while PATCH applies partial updates to specific fields.",
+    "tips": "Explicitly mention idempotence and resource representation.",
+    "cefr": "B1"
+  },
+  {
+    "id": 24,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "Relational vs NoSQL Databases",
+    "text": "When would you choose a Relational Database like PostgreSQL over a Document Store like MongoDB?",
+    "model_answer": "I choose relational databases when data integrity, ACID compliance, and structured relations across multiple entities are paramount. I prefer NoSQL document stores when dealing with polymorphic, rapidly shifting schemas or high-throughput write streams where horizontal sharding is essential.",
+    "tips": "Discuss ACID, schema predictability, and query complexity.",
+    "cefr": "B2"
+  },
+  {
+    "id": 25,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "Indexing in SQL Databases",
+    "text": "How do database indexes work internally, and what is the trade-off of adding too many indexes?",
+    "model_answer": "Indexes generally use B-Tree data structures to locate rows in logarithmic time O(log n) rather than scanning entire tables O(n). The trade-off is that every INSERT, UPDATE, and DELETE becomes slower because all relevant index trees must be updated, and they consume extra storage space.",
+    "tips": "Explain B-Trees and the read vs write performance trade-off.",
+    "cefr": "B1"
+  },
+  {
+    "id": 26,
+    "category": "technical",
+    "difficulty": "junior",
+    "title": "Unit vs Integration vs E2E Testing",
+    "text": "Explain the testing pyramid: what is the difference between unit tests, integration tests, and end-to-end tests?",
+    "model_answer": "Unit tests isolate individual functions or classes using mocks. Integration tests verify that multiple modules work together, such as an API route communicating with a test database. E2E tests validate the complete user journey through the UI and live services.",
+    "tips": "Talk about execution speed, cost of maintenance, and confidence level.",
+    "cefr": "B2"
+  },
+  {
+    "id": 27,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "Asynchronous Programming and the Event Loop",
+    "text": "How does asynchronous I/O work in languages like Python (asyncio) or Dart, and why does it improve concurrency without multi-threading?",
+    "model_answer": "It relies on a single-threaded event loop that schedules tasks. When an I/O operation like a network call or database query is waiting, the event loop yields control to execute other pending tasks, maximizing CPU utilization without the overhead and race conditions of multi-threading.",
+    "tips": "Contrast I/O bound vs CPU bound workloads.",
+    "cefr": "B1"
+  },
+  {
+    "id": 28,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "Docker Containers vs Virtual Machines",
+    "text": "What is the architectural difference between a Docker container and a traditional Virtual Machine?",
+    "model_answer": "Virtual Machines package an entire guest operating system and virtualize hardware via a hypervisor. Docker containers share the host Linux kernel and isolate processes using namespaces and cgroups, making them much lighter, faster to boot, and resource-efficient.",
+    "tips": "Highlight the shared kernel vs hypervisor difference.",
+    "cefr": "B1"
+  },
+  {
+    "id": 29,
+    "category": "technical",
+    "difficulty": "senior",
+    "title": "Microservices vs Modular Monolith",
+    "text": "What are the benefits and pitfalls of moving from a monolith to microservices?",
+    "model_answer": "Microservices offer independent deployments, technological flexibility, and isolation for individual teams. However, they introduce immense operational complexity: network latency, distributed transactions, observability hurdles, and deployment orchestration. A well-designed modular monolith is often the better starting choice.",
+    "tips": "Demonstrate pragmatic engineering maturity over hype.",
+    "cefr": "B2"
+  },
+  {
+    "id": 30,
+    "category": "technical",
+    "difficulty": "senior",
+    "title": "Designing a Rate Limiter",
+    "text": "How would you design a distributed rate limiter for an API protecting against brute-force or abuse?",
+    "model_answer": "I would implement a Token Bucket or Sliding Window Log algorithm using Redis. Each request increments or checks a key keyed by IP or user ID with an expiration TTL. Redis atomic operations ensure consistency across distributed API worker nodes.",
+    "tips": "Mention Token Bucket algorithm and Redis atomic operations.",
+    "cefr": "B2"
+  },
+  {
+    "id": 31,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "State Management in Frontend / Flutter",
+    "text": "Why do we need specialized state management libraries like Riverpod or Bloc instead of just using setState?",
+    "model_answer": "setState is scoped strictly to a single widget, which leads to prop drilling and hard-to-test monolithic widgets when state must be shared across disparate screens. Libraries like Riverpod decouple business logic from the UI layer, support dependency injection, and optimize rebuilds.",
+    "tips": "Talk about separation of concerns, testability, and rebuild optimization.",
+    "cefr": "B1"
+  },
+  {
+    "id": 32,
+    "category": "technical",
+    "difficulty": "junior",
+    "title": "CI/CD Pipelines",
+    "text": "What is Continuous Integration and Continuous Deployment, and what stages belong in a healthy pipeline?",
+    "model_answer": "Continuous Integration automatically builds and tests code changes on every commit to detect bugs early. Continuous Deployment automates deploying passing builds to staging or production. A healthy pipeline includes linting, unit tests, security scans, artifact creation, and smoke tests.",
+    "tips": "Mention lint, test, build, and deploy stages.",
+    "cefr": "B1"
+  },
+  {
+    "id": 33,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "Caching Strategies",
+    "text": "Explain the difference between Cache-Aside and Write-Through caching patterns.",
+    "model_answer": "In Cache-Aside, the application first queries the cache. On a miss, it fetches data from the database and updates the cache for future requests. In Write-Through, the application writes directly to the cache, which synchronously updates the underlying database.",
+    "tips": "Discuss cache invalidation and data staleness.",
+    "cefr": "B1"
+  },
+  {
+    "id": 34,
+    "category": "technical",
+    "difficulty": "senior",
+    "title": "JWT vs Session Cookies",
+    "text": "How does stateless JWT authentication compare to server-side session cookies in terms of security and scalability?",
+    "model_answer": "JWTs are self-contained and stateless, allowing any backend service to verify the signature without querying a central session database, which scales easily. However, revoking a leaked JWT immediately is challenging unless a blocklist is maintained. Session cookies are easily revocable on the server but require state lookup.",
+    "tips": "Touch upon revocation, token expiration, and CSRF vs XSS.",
+    "cefr": "B2"
+  },
+  {
+    "id": 35,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "Handling Race Conditions",
+    "text": "What is a race condition and how can you mitigate it in a concurrent backend system?",
+    "model_answer": "A race condition occurs when multiple threads or processes access and modify shared data concurrently, producing unpredictable outcomes. It can be mitigated using mutexes, optimistic locking with version columns, or pessimistic database row locks like SELECT FOR UPDATE.",
+    "tips": "Explain optimistic vs pessimistic locking.",
+    "cefr": "B2"
+  },
+  {
+    "id": 36,
+    "category": "technical",
+    "difficulty": "junior",
+    "title": "SQL Joins: Inner vs Left vs Outer",
+    "text": "Briefly explain the differences between INNER JOIN, LEFT JOIN, and FULL OUTER JOIN in SQL.",
+    "model_answer": "INNER JOIN returns only rows where there is a match in both tables. LEFT JOIN returns all rows from the left table and matched rows from the right table, with nulls where there is no match. FULL OUTER JOIN returns all rows from both tables, filling in nulls on either side.",
+    "tips": "Use a mental Venn diagram and mention how NULL handling works.",
+    "cefr": "A2"
+  },
+  {
+    "id": 37,
+    "category": "technical",
+    "difficulty": "junior",
+    "title": "Understanding HTTP Status Codes",
+    "text": "Can you give common examples of 2xx, 3xx, 4xx, and 5xx HTTP response status codes and their semantic meanings?",
+    "model_answer": "200 OK or 201 Created signify success. 301 or 302 indicate redirection. 400 Bad Request, 401 Unauthorized, and 404 Not Found represent client-side errors. 500 Internal Server Error and 503 Service Unavailable represent server-side failures.",
+    "tips": "Emphasize the difference between 401 (unauthenticated) and 403 (forbidden).",
+    "cefr": "B1"
+  },
+  {
+    "id": 38,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "Cross-Origin Resource Sharing (CORS)",
+    "text": "What is CORS, why do browsers enforce it, and how does preflight OPTIONS work?",
+    "model_answer": "CORS is a browser security mechanism that restricts web applications from making requests to a different domain than the one that served it. For non-simple requests, the browser sends an HTTP OPTIONS preflight request to verify server permissions via Access-Control-Allow headers.",
+    "tips": "Clarify that CORS is enforced by browsers, not backends.",
+    "cefr": "B1"
+  },
+  {
+    "id": 39,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "Environment Variables and 12-Factor App",
+    "text": "Why should configuration be strictly separated from code using environment variables?",
+    "model_answer": "Storing configuration such as database credentials and API keys in environment variables prevents secrets from leaking into version control and allows the same codebase to run seamlessly across development, staging, and production environments.",
+    "tips": "Refer to the Twelve-Factor App methodology.",
+    "cefr": "B2"
+  },
+  {
+    "id": 40,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "WebSockets vs HTTP Polling",
+    "text": "When would you implement WebSockets instead of regular HTTP polling or Server-Sent Events (SSE)?",
+    "model_answer": "I use WebSockets when full-duplex, bidirectional, low-latency communication is required, like in multiplayer games or chat apps. For unidirectional server-to-client updates like notification feeds, Server-Sent Events (SSE) is simpler and runs over standard HTTP.",
+    "tips": "Compare full-duplex vs half-duplex and connection overhead.",
+    "cefr": "B1"
+  },
+  {
+    "id": 41,
+    "category": "technical",
+    "difficulty": "senior",
+    "title": "CAP Theorem",
+    "text": "Can you explain the CAP theorem and what choices a distributed system must make during network partitions?",
+    "model_answer": "The CAP theorem states that a distributed system can guarantee at most two out of Consistency, Availability, and Partition Tolerance. Because network partitions are inevitable in real networks, distributed systems must trade off between consistency (CP) and availability (AP).",
+    "tips": "Emphasize that Partition Tolerance is mandatory in distributed networks.",
+    "cefr": "B2"
+  },
+  {
+    "id": 42,
+    "category": "technical",
+    "difficulty": "junior",
+    "title": "What is a Deadlock?",
+    "text": "What causes a deadlock in concurrent software, and what conditions are required for it to occur?",
+    "model_answer": "A deadlock occurs when two or more processes are unable to proceed because each is waiting for a resource locked by the other. It requires mutual exclusion, hold and wait, no preemption, and circular wait conditions.",
+    "tips": "Mention the circular dependency condition and lock ordering solutions.",
+    "cefr": "B1"
+  },
+  {
+    "id": 43,
+    "category": "technical",
+    "difficulty": "senior",
+    "title": "Garbage Collection Mechanisms",
+    "text": "How does automatic memory management work in runtimes like JVM, V8, or Dart?",
+    "model_answer": "Modern runtimes use generational garbage collection. Short-lived objects are allocated in a young generation and quickly collected by scavengers, while long-lived objects are promoted to an old generation and cleaned during mark-and-sweep cycles.",
+    "tips": "Explain generational hypothesis and mark-sweep.",
+    "cefr": "B2"
+  },
+  {
+    "id": 44,
+    "category": "technical",
+    "difficulty": "junior",
+    "title": "Big O Notation & Complexity",
+    "text": "Why is Big O notation essential when selecting data structures for algorithmic tasks?",
+    "model_answer": "Big O describes the upper bound of time or memory growth relative to input size n. It allows engineers to predict whether an algorithm will scale smoothly or degrade into quadratic or exponential slowdowns under production load.",
+    "tips": "Contrast O(1), O(log n), O(n), and O(n^2) with concrete examples.",
+    "cefr": "B1"
+  },
+  {
+    "id": 45,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "Database Connection Pooling",
+    "text": "Why do we use connection pools like HikariCP or SQLAlchemy pooling instead of opening new connections per query?",
+    "model_answer": "Establishing a TCP handshake, TLS negotiation, and database authentication takes 50-100ms. A connection pool keeps pre-warmed sockets open, reducing latency to under a millisecond and preventing database process exhaustion.",
+    "tips": "Highlight socket reuse and connection storm prevention.",
+    "cefr": "B1"
+  },
+  {
+    "id": 46,
+    "category": "technical",
+    "difficulty": "junior",
+    "title": "TCP vs UDP Protocols",
+    "text": "What are the fundamental differences between TCP and UDP, and when is UDP preferred?",
+    "model_answer": "TCP provides connection-oriented, reliable, ordered data delivery with error checking and congestion control. UDP is connectionless, lightweight, and unordered, making it ideal for real-time video streaming, DNS lookups, and gaming where low latency trumps reliability.",
+    "tips": "Contrast reliability/overhead with raw throughput and packet loss tolerance.",
+    "cefr": "B1"
+  },
+  {
+    "id": 47,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "Hash Table Collisions",
+    "text": "How do hash maps handle collisions when two different keys hash to the same bucket?",
+    "model_answer": "Hash maps handle collisions primarily through separate chaining (linked lists or balanced trees at each bucket) or open addressing (linear or quadratic probing into adjacent buckets).",
+    "tips": "Mention worst-case degradation to O(n) and re-hashing.",
+    "cefr": "B1"
+  },
+  {
+    "id": 48,
+    "category": "technical",
+    "difficulty": "senior",
+    "title": "Immutable Infrastructure",
+    "text": "What does immutable infrastructure mean in modern cloud deployments?",
+    "model_answer": "Instead of modifying or patching running servers in-place, servers or containers are never updated. Any code change results in building a new image and replacing the previous instances completely.",
+    "tips": "Discuss drift prevention and reproducible blue-green deployments.",
+    "cefr": "B2"
+  },
+  {
+    "id": 49,
+    "category": "technical",
+    "difficulty": "senior",
+    "title": "Event-Driven Architecture",
+    "text": "What are the benefits of using an asynchronous message broker like RabbitMQ or Kafka between services?",
+    "model_answer": "Message brokers decouple producers from consumers, provide temporal buffer during traffic spikes, and allow multiple services to react to business events independently without direct synchronous coupling.",
+    "tips": "Contrast message queuing (point-to-point) with event streaming (log-based).",
+    "cefr": "B2"
+  },
+  {
+    "id": 50,
+    "category": "technical",
+    "difficulty": "junior",
+    "title": "SQL Injection Prevention",
+    "text": "What causes SQL injection and what is the single most effective defense against it?",
+    "model_answer": "SQL injection occurs when untrusted user input is directly concatenated into SQL query strings. The single most effective defense is using parameterized queries or prepared statements, which separate the SQL code from user data.",
+    "tips": "Emphasize parameterized queries over string sanitization regexes.",
+    "cefr": "B2"
+  },
+  {
+    "id": 51,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "DNS Resolution Process",
+    "text": "What happens step-by-step when your browser resolves a domain name like google.com?",
+    "model_answer": "The browser checks local cache, asks the OS resolver, queries the recursive resolver (ISP/1.1.1.1), which in turn traverses Root servers, TLD servers (.com), and authoritative name servers to retrieve the A or AAAA IP record.",
+    "tips": "Explain recursive vs authoritative DNS lookups.",
+    "cefr": "B2"
+  },
+  {
+    "id": 52,
+    "category": "technical",
+    "difficulty": "mid",
+    "title": "S.O.L.I.D. Principles",
+    "text": "Can you explain the Single Responsibility Principle and Open/Closed Principle with practical software examples?",
+    "model_answer": "Single Responsibility states that a class should have one reason to change, meaning it handles a single concept. Open/Closed states that software entities should be open for extension but closed for modification, typically achieved via abstractions and interfaces.",
+    "tips": "Focus on practical refactoring benefits rather than textbook recitation.",
+    "cefr": "B1"
+  },
+  {
+    "id": 53,
+    "category": "technical",
+    "difficulty": "senior",
+    "title": "Idempotency in Distributed Systems",
+    "text": "What does idempotency mean in payment processing or distributed API calls, and how is it implemented?",
+    "model_answer": "An idempotent operation can be executed multiple times without changing the outcome beyond the initial call. It is implemented using unique idempotency keys sent by clients and tracked in a deduplication cache like Redis.",
+    "tips": "Explain duplicate transaction prevention during network timeouts.",
+    "cefr": "B2"
+  },
+  {
+    "id": 54,
+    "category": "technical",
+    "difficulty": "senior",
+    "title": "Clean Architecture Layers",
+    "text": "How do you organize code layers in Clean Architecture or Hexagonal Architecture?",
+    "model_answer": "Clean Architecture places core business entities and use cases at the center, isolated from external frameworks. Adapters, repositories, controllers, and UI sit in outer rings, depending inwards via interfaces.",
+    "tips": "Mention the Dependency Inversion Principle across layer boundaries.",
+    "cefr": "B2"
+  },
+  {
+    "id": 55,
+    "category": "technical",
+    "difficulty": "senior",
+    "title": "Circuit Breaker Pattern",
+    "text": "What problem does a Circuit Breaker solve in distributed microservices?",
+    "model_answer": "A Circuit Breaker prevents cascading failures when a downstream dependency is down or slow. It fails fast when error thresholds are exceeded, giving the degraded service time to recover and returning fallbacks immediately.",
+    "tips": "Mention closed, open, and half-open states.",
+    "cefr": "B2"
+  },
+  {
+    "id": 56,
+    "category": "debugging",
+    "difficulty": "mid",
+    "title": "Diagnosing High Latency",
+    "text": "How do you systematically troubleshoot an API route that suddenly jumped from 50ms to 2.5s response time?",
+    "model_answer": "I inspect distributed traces and APM metrics to locate the exact bottleneck: database query, external API call, or CPU contention. If it is database-related, I run EXPLAIN ANALYZE on the slow queries to detect missing indexes or sequential table scans.",
+    "tips": "Structure your response: Observability -> Isolation -> Benchmark -> Resolution.",
+    "cefr": "B2"
+  },
+  {
+    "id": 57,
+    "category": "debugging",
+    "difficulty": "senior",
+    "title": "Memory Leak in Long-Running Process",
+    "text": "How do you identify and fix a memory leak in a production backend service?",
+    "model_answer": "I take progressive heap dumps over time and compare retained object allocations. Once I identify which objects fail to get garbage-collected—such as uncleared event listeners, global dictionaries, or open file descriptors—I patch the reference lifecycle.",
+    "tips": "Mention heap profiling tools, retained size, and garbage collection roots.",
+    "cefr": "B2"
+  },
+  {
+    "id": 58,
+    "category": "debugging",
+    "difficulty": "junior",
+    "title": "Handling a 502 Bad Gateway",
+    "text": "A customer reports intermittent 502 Bad Gateway errors on your web app. Where do you begin investigating?",
+    "model_answer": "A 502 means the reverse proxy (like Nginx) received an invalid response or timeout from upstream app workers. I check Nginx error logs, verify upstream worker health, examine CPU/memory spikes, and check socket backlog limits.",
+    "tips": "Clarify the role of reverse proxies vs application servers.",
+    "cefr": "B1"
+  },
+  {
+    "id": 59,
+    "category": "debugging",
+    "difficulty": "mid",
+    "title": "Troubleshooting a Silent Failure",
+    "text": "How do you debug a background job that completes with status OK but doesn't perform the expected database updates?",
+    "model_answer": "I inspect application transaction boundaries to verify whether changes were rolled back or never committed. I review debug logs with correlation IDs, verify exception handling blocks that might be swallowing errors, and replicate with a test fixture.",
+    "tips": "Look for swallowed exceptions and uncommitted database transactions.",
+    "cefr": "B1"
+  },
+  {
+    "id": 60,
+    "category": "debugging",
+    "difficulty": "senior",
+    "title": "Debugging Deadlocks in Production",
+    "text": "Two concurrent requests triggered a deadlock error in PostgreSQL. How do you analyze and resolve it?",
+    "model_answer": "I query pg_stat_activity and the PostgreSQL deadlock log to identify the two competing transactions and the specific row locks involved. I resolve it by enforcing consistent alphabetical lock ordering across all transactions.",
+    "tips": "Explain consistent lock ordering across concurrent code paths.",
+    "cefr": "B2"
+  },
+  {
+    "id": 61,
+    "category": "debugging",
+    "difficulty": "mid",
+    "title": "Fixing Intermittent Flaky Tests",
+    "text": "How do you tackle a CI test suite that fails randomly on 5% of runs?",
+    "model_answer": "I look for shared mutable state, non-deterministic timeouts, unseeded random generators, or race conditions in asynchronous callbacks. I isolate the failing test, run it in a stress loop (e.g. 100 iterations), and replace real timers with virtual clocks.",
+    "tips": "Mention deterministic test environments and async awaiting.",
+    "cefr": "B1"
+  },
+  {
+    "id": 62,
+    "category": "debugging",
+    "difficulty": "junior",
+    "title": "Investigating Disk Space Exhaustion",
+    "text": "A production server disk filled up to 100% and halted the database. How do you recover and ensure it doesn't repeat?",
+    "model_answer": "First, I identify large non-critical files like uncompressed log archives or core dumps to free immediate headroom. Once the service recovers, I configure logrotate with strict size caps, set up disk usage alerts at 80%, and move backups to object storage.",
+    "tips": "Separate immediate triage from long-term preventive automation.",
+    "cefr": "B1"
+  },
+  {
+    "id": 63,
+    "category": "debugging",
+    "difficulty": "senior",
+    "title": "Troubleshooting High CPU Utilization",
+    "text": "An API service is spiking to 100% CPU on all cores. How do you identify which code path is responsible?",
+    "model_answer": "I attach a sampling CPU profiler (like py-spy or perf) to generate a flame graph of the running process. This visually isolates whether CPU time is spent in regex backtracking, JSON parsing, crypto hashing, or tight calculation loops.",
+    "tips": "Mention CPU profiling flame graphs and sampling profilers.",
+    "cefr": "B2"
+  },
+  {
+    "id": 64,
+    "category": "debugging",
+    "difficulty": "mid",
+    "title": "Diagnosing Connection Pool Exhaustion",
+    "text": "Your application logs display 'Timeout waiting for connection from pool'. What are the probable root causes?",
+    "model_answer": "Probable causes include leaked connections not being closed in finally blocks, long-running queries holding connections open while doing slow I/O, or a pool size configured too small for the concurrency level.",
+    "tips": "Highlight connection leaks and holding connections during external I/O.",
+    "cefr": "B1"
+  },
+  {
+    "id": 65,
+    "category": "debugging",
+    "difficulty": "mid",
+    "title": "Investigating Cache Invalidation Bugs",
+    "text": "Users report seeing stale profile data after updating their profile. How do you identify and fix the issue?",
+    "model_answer": "I check whether the cache update relies on TTL expiration rather than event-driven invalidation. I verify whether write operations purge the specific cache key across all replicas and test for race conditions between write and read replicas.",
+    "tips": "Discuss cache invalidation strategies and replication lag.",
+    "cefr": "B1"
+  },
+  {
+    "id": 66,
+    "category": "debugging",
+    "difficulty": "senior",
+    "title": "Handling Broken Third-Party Webhooks",
+    "text": "A payment provider's webhooks stopped being processed 4 hours ago. What is your incident response?",
+    "model_answer": "I check inbound gateway logs to verify whether webhooks arrived and failed signature verification or crashed upstream. Once the parsing bug is fixed, I trigger replay from the provider's dashboard or replay from our raw ingress event queue.",
+    "tips": "Focus on idempotency and replayability of webhook payloads.",
+    "cefr": "B2"
+  },
+  {
+    "id": 67,
+    "category": "debugging",
+    "difficulty": "mid",
+    "title": "Debugging Mobile App Crash on Launch",
+    "text": "Your Flutter/mobile app crashes immediately after launch for 10% of users on a new update. How do you triage?",
+    "model_answer": "I check Crashlytics or Sentry for symbolicated stack traces. If the crash occurs before the first frame, it usually points to corrupted local SQLite migrations, missing native permissions, or null pointer exceptions in local secure storage.",
+    "tips": "Mention crash reporting, local database migrations, and hotfix rollbacks.",
+    "cefr": "B1"
+  },
+  {
+    "id": 68,
+    "category": "debugging",
+    "difficulty": "mid",
+    "title": "Troubleshooting Broken Websocket Connections",
+    "text": "Mobile clients frequently disconnect from your real-time WebSocket server. How do you diagnose?",
+    "model_answer": "I verify keep-alive heartbeat ping/pong intervals, proxy idle timeout settings (like AWS ALB or Cloudflare 60s limit), and inspect client network state transitions (switching from Wi-Fi to cellular).",
+    "tips": "Mention heartbeat intervals and reverse proxy idle timeouts.",
+    "cefr": "B2"
+  },
+  {
+    "id": 69,
+    "category": "debugging",
+    "difficulty": "senior",
+    "title": "Analyzing Corrupted Data in Production",
+    "text": "A bug in a batch job inserted invalid timestamps across 50,000 records. How do you remediate safely?",
+    "model_answer": "I stop the faulty job, back up the affected table, write a targeted SQL remediation script that runs inside an explicit transaction, verify the changes on a staging clone first, and execute in chunks to avoid locking the production table.",
+    "tips": "Emphasize explicit transactions, pre-backup, and chunked updates.",
+    "cefr": "B2"
+  },
+  {
+    "id": 70,
+    "category": "debugging",
+    "difficulty": "junior",
+    "title": "Diagnosing CORS Failures in Single Page Apps",
+    "text": "A frontend client receives 'No Access-Control-Allow-Origin header is present'. How do you resolve it cleanly?",
+    "model_answer": "I check server CORS middleware configuration to ensure the requesting origin, HTTP methods, and custom headers are explicitly allowed. I ensure the backend handles the preflight OPTIONS request before running authentication middleware.",
+    "tips": "Clarify preflight OPTIONS handling and credentials allowance.",
+    "cefr": "B1"
+  },
+  {
+    "id": 71,
+    "category": "debugging",
+    "difficulty": "senior",
+    "title": "Debugging Slow Startup Times",
+    "text": "A containerized microservice takes 3 minutes to pass its initial healthcheck. How do you optimize it?",
+    "model_answer": "I profile the bootstrap phase: heavy synchronous database seeding, blocking network calls to remote config services, or loading huge machine learning models on the main thread. I defer non-essential initializations or run them in parallel.",
+    "tips": "Differentiate bootstrap blocking tasks from lazy loading.",
+    "cefr": "B2"
+  },
+  {
+    "id": 72,
+    "category": "debugging",
+    "difficulty": "junior",
+    "title": "Troubleshooting SSL/TLS Certificate Errors",
+    "text": "An automated cron job fails with 'SSL: CERTIFICATE_VERIFY_FAILED'. What do you verify?",
+    "model_answer": "I check if the server certificate has expired, if the CA bundle in the container runtime is outdated, or if a corporate firewall is intercepting TLS traffic with a custom self-signed certificate.",
+    "tips": "Mention certificate expiration, root CA bundles, and trust stores.",
+    "cefr": "B2"
+  },
+  {
+    "id": 73,
+    "category": "debugging",
+    "difficulty": "senior",
+    "title": "Analyzing Redis Memory Eviction",
+    "text": "Redis memory reached maxmemory and began dropping cached user sessions. How do you fix and prevent this?",
+    "model_answer": "I inspect Redis INFO memory and memory keyspace. If volatile sessions were mixed with static cache, I separate them into different Redis instances, apply an appropriate eviction policy (like volatile-lru), and add Redis cluster alerting.",
+    "tips": "Highlight separating critical state (sessions) from disposable cache.",
+    "cefr": "B2"
+  },
+  {
+    "id": 74,
+    "category": "debugging",
+    "difficulty": "junior",
+    "title": "Debugging Race Conditions in File Uploads",
+    "text": "When users upload two files rapidly, only one file is saved correctly. What could be wrong?",
+    "model_answer": "The backend might be using a static temporary filename instead of generating a unique UUID per upload stream, or there is an unhandled race condition in an asynchronous state variable overwriting the file pointer.",
+    "tips": "Look for non-unique temp paths and shared state pointers.",
+    "cefr": "B1"
+  },
+  {
+    "id": 75,
+    "category": "debugging",
+    "difficulty": "senior",
+    "title": "Writing an Incident Post-Mortem",
+    "text": "What are the core components of an effective blameless incident post-mortem?",
+    "model_answer": "An effective post-mortem includes: executive summary, timeline of events, root cause analysis (5 Whys), impact assessment (users affected, downtime), what went well, what went poorly, and prioritized action items with assignees.",
+    "tips": "Emphasize blameless culture and preventive systemic action items.",
+    "cefr": "B2"
+  },
+  {
+    "id": 76,
+    "category": "databases",
+    "difficulty": "mid",
+    "title": "Database Normalization vs Denormalization",
+    "text": "What are 1NF, 2NF, and 3NF, and when is deliberate denormalization justified?",
+    "model_answer": "1NF eliminates duplicate columns and requires atomic values. 2NF ensures non-key attributes depend on the entire primary key. 3NF removes transitive dependencies. Denormalization is justified in high-read analytical or reporting queries where JOIN overhead creates unacceptable latency.",
+    "tips": "Explain normal forms and read-heavy optimization trade-offs.",
+    "cefr": "B2"
+  },
+  {
+    "id": 77,
+    "category": "databases",
+    "difficulty": "senior",
+    "title": "Database Sharding Strategies",
+    "text": "How does database sharding differ from read replicas, and what key strategies are used?",
+    "model_answer": "Read replicas replicate the entire dataset to scale read capacity. Sharding partitions data horizontally across independent database nodes to scale both write throughput and storage. Strategies include Range-based, Hash-based, and Directory-based sharding.",
+    "tips": "Contrast horizontal scaling of writes vs reads.",
+    "cefr": "B2"
+  },
+  {
+    "id": 78,
+    "category": "databases",
+    "difficulty": "mid",
+    "title": "Optimistic vs Pessimistic Concurrency Control",
+    "text": "When should you use optimistic locking with version columns versus SELECT FOR UPDATE?",
+    "model_answer": "Optimistic locking is ideal for low-contention scenarios because it avoids holding locks and detects conflicts at commit time. Pessimistic locking (SELECT FOR UPDATE) is necessary in high-contention financial transactions where conflicts are frequent and failed retries are unacceptable.",
+    "tips": "Contrast contention levels and retry overhead.",
+    "cefr": "B2"
+  },
+  {
+    "id": 79,
+    "category": "databases",
+    "difficulty": "senior",
+    "title": "PostgreSQL MVCC (Multi-Version Concurrency Control)",
+    "text": "How does MVCC allow PostgreSQL to read data without locking writers?",
+    "model_answer": "MVCC keeps multiple physical versions of rows tagged with transaction IDs (xmin, xmax). Readers see a consistent snapshot of rows committed before their transaction began, allowing concurrent reads and writes without blocking each other.",
+    "tips": "Mention row versions, transaction snapshots, and VACUUM cleanup.",
+    "cefr": "B2"
+  },
+  {
+    "id": 80,
+    "category": "databases",
+    "difficulty": "senior",
+    "title": "Write-Ahead Logging (WAL)",
+    "text": "What is the Write-Ahead Log in relational databases and why is it crucial for durability?",
+    "model_answer": "WAL logs every state modification to append-only disk storage before updating database data pages. If a crash or power failure occurs, the database replays the WAL on reboot to guarantee ACID durability without losing committed transactions.",
+    "tips": "Highlight crash recovery and sequential disk write performance.",
+    "cefr": "B2"
+  },
+  {
+    "id": 81,
+    "category": "databases",
+    "difficulty": "mid",
+    "title": "Designing Database Indexes for Multi-Column Queries",
+    "text": "How does column order matter in a composite database index (A, B, C)?",
+    "model_answer": "A composite index follows the Leftmost Prefix rule. It can accelerate queries filtering on (A), (A, B), or (A, B, C), but cannot optimize queries filtering only on (B) or (C) alone. High-cardinality equality columns should typically come first.",
+    "tips": "Explain the leftmost prefix rule and cardinality considerations.",
+    "cefr": "B2"
+  },
+  {
+    "id": 82,
+    "category": "databases",
+    "difficulty": "senior",
+    "title": "Zero-Downtime Database Migrations",
+    "text": "How do you add a non-nullable column to a table with 100 million rows without downtime?",
+    "model_answer": "I use a multi-step migration: 1) Add the column as nullable. 2) Deploy app code that writes to both new and old fields. 3) Backfill historical rows in small batches. 4) Add the NOT NULL constraint with VALIDATE CONSTRAINT in PostgreSQL. 5) Deploy app reading strictly from new column.",
+    "tips": "Break down the expand-and-contract migration pattern.",
+    "cefr": "B2"
+  },
+  {
+    "id": 83,
+    "category": "databases",
+    "difficulty": "senior",
+    "title": "Replication Lag & Read-Your-Own-Writes Consistency",
+    "text": "How do you guarantee that a user sees their newly published post when querying read replicas with replication lag?",
+    "model_answer": "I route write requests to the primary database, and for a short window after a user write (e.g. 5 seconds), route that specific user's read requests to the primary database rather than the read replica.",
+    "tips": "Explain read-your-own-writes consistency via sticky routing.",
+    "cefr": "B2"
+  },
+  {
+    "id": 84,
+    "category": "databases",
+    "difficulty": "mid",
+    "title": "Time-Series Databases vs Relational",
+    "text": "When would you choose TimescaleDB or InfluxDB over standard PostgreSQL for IoT or metrics?",
+    "model_answer": "Time-series databases specialize in sequential timestamped data. They offer automated chunk partitioning by time, high-throughput ingest rates, automatic data retention policies, and columnar downsampling.",
+    "tips": "Discuss timestamp indexing, continuous aggregates, and retention policies.",
+    "cefr": "B2"
+  },
+  {
+    "id": 85,
+    "category": "databases",
+    "difficulty": "mid",
+    "title": "Handling Soft Deletes vs Hard Deletes",
+    "text": "What are the trade-offs of using soft deletes (is_deleted boolean) in enterprise applications?",
+    "model_answer": "Soft deletes preserve historical audit trails and enable easy undeletes. However, they complicate unique constraints, inflate table sizes, degrade index performance, and require adding 'WHERE is_deleted = false' to every query unless filtered views are used.",
+    "tips": "Mention unique constraint complications and partial indexing.",
+    "cefr": "B1"
+  },
+  {
+    "id": 86,
+    "category": "databases",
+    "difficulty": "senior",
+    "title": "Database Transaction Isolation Levels",
+    "text": "Can you explain Read Uncommitted, Read Committed, Repeatable Read, and Serializable?",
+    "model_answer": "They represent progressive isolation against concurrency anomalies. Read Committed prevents dirty reads. Repeatable Read prevents non-repeatable reads. Serializable prevents phantom reads and serialization anomalies, but has the highest lock contention.",
+    "tips": "Explain dirty reads, non-repeatable reads, and phantom reads.",
+    "cefr": "B2"
+  },
+  {
+    "id": 87,
+    "category": "databases",
+    "difficulty": "mid",
+    "title": "Vector Databases in Modern AI Architectures",
+    "text": "What is the purpose of vector databases like pgvector, Qdrant, or Pinecone in LLM applications?",
+    "model_answer": "Vector databases store high-dimensional embeddings generated by neural models. They use Approximate Nearest Neighbor (ANN) indexing algorithms like HNSW to execute semantic similarity searches in milliseconds.",
+    "tips": "Mention embeddings, high-dimensionality, and HNSW indexing.",
+    "cefr": "B2"
+  },
+  {
+    "id": 88,
+    "category": "databases",
+    "difficulty": "junior",
+    "title": "Managing N+1 Query Problems in ORMs",
+    "text": "What is the N+1 query problem in ORMs like SQLAlchemy or Prisma, and how do you prevent it?",
+    "model_answer": "The N+1 problem occurs when fetching N records triggers N additional individual queries to load related foreign entities. It is resolved using eager loading (joinedload or selectinload in SQLAlchemy) to fetch related entities in a single batch query.",
+    "tips": "Explain lazy loading pitfalls and eager loading solutions.",
+    "cefr": "B1"
+  },
+  {
+    "id": 89,
+    "category": "databases",
+    "difficulty": "mid",
+    "title": "Database Connection Leaks in Microservices",
+    "text": "How do you detect and fix leaked connections in an async Python or Go service?",
+    "model_answer": "I monitor open database connection pool metrics over time. If active connections continuously rise without returning to the pool, I inspect exception handlers to ensure all sessions are wrapped in context managers (with / try-finally blocks).",
+    "tips": "Mention context managers and connection pool telemetry.",
+    "cefr": "B1"
+  },
+  {
+    "id": 90,
+    "category": "databases",
+    "difficulty": "mid",
+    "title": "ETL vs ELT in Data Pipelines",
+    "text": "What is the difference between traditional ETL and modern ELT in cloud data warehouses like BigQuery or Snowflake?",
+    "model_answer": "In ETL, data is transformed by an intermediate server before loading into the warehouse. In ELT, raw data is loaded directly into the cloud data warehouse first, leveraging the warehouse's massive distributed compute engine to execute transformations via SQL (e.g. dbt).",
+    "tips": "Contrast data warehouse scalability with intermediate compute servers.",
+    "cefr": "B1"
+  },
+  {
+    "id": 91,
+    "category": "apis",
+    "difficulty": "mid",
+    "title": "gRPC vs REST APIs",
+    "text": "When would you adopt gRPC with Protocol Buffers instead of standard JSON REST APIs?",
+    "model_answer": "I adopt gRPC for internal service-to-service communication requiring high throughput, low latency, and strict schema contracts. Protobuf encodes binary payloads with minimal serialization overhead, and HTTP/2 enables multiplexing and bidirectional streaming.",
+    "tips": "Compare binary serialization vs JSON and HTTP/2 multiplexing.",
+    "cefr": "B1"
+  },
+  {
+    "id": 92,
+    "category": "apis",
+    "difficulty": "junior",
+    "title": "API Versioning Strategies",
+    "text": "What are the common approaches to API versioning (URI, header, query) and their trade-offs?",
+    "model_answer": "URI path versioning (/v1/users) is transparent, easy to cache, and straightforward for consumers. Header versioning (Accept: application/vnd.app.v1+json) keeps URIs clean and REST-compliant but is harder to test in browsers.",
+    "tips": "Discuss URI path vs header versioning with caching implications.",
+    "cefr": "B2"
+  },
+  {
+    "id": 93,
+    "category": "apis",
+    "difficulty": "mid",
+    "title": "GraphQL vs REST",
+    "text": "What specific architectural pain points does GraphQL resolve compared to REST?",
+    "model_answer": "GraphQL eliminates over-fetching and under-fetching by allowing client queries to specify exact fields needed, and aggregates multiple resource lookups into a single network round-trip. However, it complicates caching and rate-limiting.",
+    "tips": "Discuss over-fetching, under-fetching, and caching complexity.",
+    "cefr": "B1"
+  },
+  {
+    "id": 94,
+    "category": "apis",
+    "difficulty": "senior",
+    "title": "Handling Distributed Transactions: Sagas",
+    "text": "How does the Saga pattern manage data consistency across microservices without two-phase commit (2PC)?",
+    "model_answer": "A Saga executes a sequence of local transactions across individual services. Each transaction updates its own database and publishes an event. If a step fails, the Saga coordinates compensating transactions to undo the previous changes gracefully.",
+    "tips": "Explain choreography vs orchestration and compensating transactions.",
+    "cefr": "B2"
+  },
+  {
+    "id": 95,
+    "category": "apis",
+    "difficulty": "mid",
+    "title": "API Gateway Responsibilities",
+    "text": "What responsibilities belong in an API Gateway like Kong, Envoy, or KrakenD?",
+    "model_answer": "An API Gateway centralizes cross-cutting concerns: SSL termination, client authentication, rate limiting, request routing, telemetry aggregation, and payload transformation, freeing backend microservices from duplicate boilerplate.",
+    "tips": "Highlight cross-cutting concerns and decoupling.",
+    "cefr": "B2"
+  },
+  {
+    "id": 96,
+    "category": "apis",
+    "difficulty": "mid",
+    "title": "BFF Pattern (Backend for Frontend)",
+    "text": "Why would you introduce a Backend for Frontend (BFF) layer in a multi-client application?",
+    "model_answer": "Different clients (mobile, web, smartwatch) have distinct screen sizes, network constraints, and data requirements. A BFF provides dedicated, optimized API endpoints tailored to each client type without bloating core backend microservices.",
+    "tips": "Explain client-specific data shaping and network optimization.",
+    "cefr": "B2"
+  },
+  {
+    "id": 97,
+    "category": "apis",
+    "difficulty": "senior",
+    "title": "OAuth2 Grant Types & PKCE",
+    "text": "Why is Authorization Code Flow with PKCE recommended for Single Page Apps and mobile clients?",
+    "model_answer": "Public clients cannot securely store client secrets without decompilation risk. PKCE (Proof Key for Code Exchange) uses dynamic cryptographically hashed verifiers to ensure the party redeeming the authorization code is the identical party that requested it.",
+    "tips": "Explain public client limitations and cryptographic code verifiers.",
+    "cefr": "B2"
+  },
+  {
+    "id": 98,
+    "category": "apis",
+    "difficulty": "senior",
+    "title": "Designing Idempotent POST Endpoints",
+    "text": "How do you make an order checkout POST endpoint resilient against network retries?",
+    "model_answer": "The client generates a unique UUID idempotency key for the purchase attempt. The server uses an atomic check-and-set in Redis: if the key exists, it returns the cached response; if not, it processes the payment and stores the result.",
+    "tips": "Mention unique client idempotency keys and atomic deduplication.",
+    "cefr": "B2"
+  },
+  {
+    "id": 99,
+    "category": "apis",
+    "difficulty": "mid",
+    "title": "Contract Testing with Pact",
+    "text": "What is Consumer-Driven Contract Testing and how does it prevent broken API integrations?",
+    "model_answer": "Consumer-Driven Contract Testing allows client teams to define expectations (contracts) of API responses. The API provider verifies these contracts against its build pipeline, ensuring breaking schema changes are caught before deployment.",
+    "tips": "Contrast contract testing with end-to-end integration environments.",
+    "cefr": "B2"
+  },
+  {
+    "id": 100,
+    "category": "apis",
+    "difficulty": "senior",
+    "title": "Webhooks vs Polling for Asynchronous Events",
+    "text": "How do you design a reliable outbound webhook delivery system for third parties?",
+    "model_answer": "I publish webhook events to a durable message queue. Dedicated workers send HTTP POST requests with signature verification headers (HMAC). If the recipient returns non-2xx, the worker applies exponential backoff retries and dead-letter queues.",
+    "tips": "Mention durable queuing, exponential backoff, and HMAC signatures.",
+    "cefr": "B2"
+  },
+  {
+    "id": 101,
+    "category": "apis",
+    "difficulty": "junior",
+    "title": "SSE (Server-Sent Events) vs WebSockets",
+    "text": "Why is Server-Sent Events often preferred over WebSockets for AI streaming completions?",
+    "model_answer": "LLM token generation is strictly unidirectional (server to client). SSE runs over standard HTTP/1.1 or HTTP/2, supports automatic browser reconnection out-of-the-box, works seamlessly with existing HTTP proxies, and requires less boilerplate.",
+    "tips": "Highlight unidirectional data flow and standard HTTP proxy compatibility.",
+    "cefr": "B2"
+  },
+  {
+    "id": 102,
+    "category": "apis",
+    "difficulty": "mid",
+    "title": "Securing APIs against OWASP Top 10",
+    "text": "What are the most frequent API vulnerabilities in the OWASP API Top 10?",
+    "model_answer": "The most critical is Broken Object Level Authorization (BOLA), where a user accesses another's resource by manipulating an ID in the URL. Others include Broken Authentication, Unrestricted Resource Consumption, and Mass Assignment.",
+    "tips": "Emphasize BOLA/IDOR and object-level permission verification.",
+    "cefr": "B1"
+  },
+  {
+    "id": 103,
+    "category": "apis",
+    "difficulty": "mid",
+    "title": "Pagination: Offset vs Keyset (Cursor)",
+    "text": "Why should high-volume APIs adopt cursor-based pagination instead of offset and limit?",
+    "model_answer": "Offset pagination requires the database to scan and discard rows (OFFSET 100000), resulting in O(n) slowdowns and duplicate/skipped items when new rows are inserted. Cursor pagination filters with WHERE id > cursor, delivering constant O(1) performance.",
+    "tips": "Contrast scan overhead O(n) with indexed index lookups O(1).",
+    "cefr": "B2"
+  },
+  {
+    "id": 104,
+    "category": "apis",
+    "difficulty": "junior",
+    "title": "Handling Long-Running Tasks in HTTP APIs",
+    "text": "How should an API handle a report generation request that takes 2 minutes to calculate?",
+    "model_answer": "The API should accept the request, enqueue a background task, and immediately return HTTP 202 Accepted with a task ID and a status poll URL (or WebSocket hook). Returning synchronous connections leads to gateway timeouts.",
+    "tips": "Explain HTTP 202 Accepted and async task polling.",
+    "cefr": "B1"
+  },
+  {
+    "id": 105,
+    "category": "apis",
+    "difficulty": "senior",
+    "title": "Observability: Logs, Metrics, and Traces",
+    "text": "How do the three pillars of observability connect during distributed microservice troubleshooting?",
+    "model_answer": "Metrics alert you that a problem exists (e.g. error rate spike). Traces pinpoint which microservice and internal function call is responsible. Logs provide the contextual detail and error message of why that specific execution failed.",
+    "tips": "Connect the three pillars: detection -> localization -> root cause.",
+    "cefr": "B2"
+  },
+  {
+    "id": 106,
+    "category": "teamwork",
+    "difficulty": "mid",
+    "title": "Handling Estimation Pressures",
+    "text": "How do you respond when management asks you to cut a 3-week estimation in half without changing scope?",
+    "model_answer": "I explain that estimation reflects engineering complexity and testing requirements. Cutting calendar time arbitrarily introduces technical debt and defect risks. Instead, I propose scoping down to core MVP deliverables that can safely ship in that timeframe.",
+    "tips": "Defend engineering rigor while offering pragmatic scope alternatives.",
+    "cefr": "B1"
+  },
+  {
+    "id": 107,
+    "category": "teamwork",
+    "difficulty": "mid",
+    "title": "Conducting Effective Code Reviews",
+    "text": "What principles guide your code reviews to ensure they are both rigorous and encouraging?",
+    "model_answer": "I focus on architecture, test coverage, and security rather than cosmetic nitpicks (which should be automated via linters). I explain the 'why' behind suggestions, prefix non-blocking thoughts as 'nit:', and praise clever solutions.",
+    "tips": "Emphasize constructive tone, automated linting, and focus on architecture.",
+    "cefr": "B1"
+  },
+  {
+    "id": 108,
+    "category": "teamwork",
+    "difficulty": "senior",
+    "title": "Managing Technical Debt in Agile Sprints",
+    "text": "How do you convince product managers to allocate sprint capacity for refactoring and tech debt?",
+    "model_answer": "I frame technical debt in terms of business impact: degraded release velocity, higher bug defect rates, and customer churn risk. I advocate for allocating a consistent 15-20% of every sprint to refactoring and stability.",
+    "tips": "Connect technical debt to velocity and product reliability metrics.",
+    "cefr": "B2"
+  },
+  {
+    "id": 109,
+    "category": "teamwork",
+    "difficulty": "senior",
+    "title": "Handling a Toxic or Uncooperative Team Member",
+    "text": "Describe how you navigate working with an engineer who dismisses peers' ideas and creates tension.",
+    "model_answer": "I keep communication objective, documented, and focused strictly on code quality and project goals. I address friction early in private one-on-one conversations with empathy, and if unprofessional behavior persists, escalate constructively to leadership.",
+    "tips": "Demonstrate emotional intelligence and professional boundaries.",
+    "cefr": "B2"
+  },
+  {
+    "id": 110,
+    "category": "teamwork",
+    "difficulty": "senior",
+    "title": "Running Effective Blameless Post-Mortems",
+    "text": "Why is a blameless culture critical for software reliability, and how do you foster it?",
+    "model_answer": "Blameless culture recognizes that humans make mistakes when systems and safety guardrails permit them. If people fear punishment, they hide incidents. Fostering a blameless culture encourages transparent disclosure and systemic process fixes.",
+    "tips": "Highlight psychological safety and systemic process hardening.",
+    "cefr": "B2"
+  },
+  {
+    "id": 111,
+    "category": "teamwork",
+    "difficulty": "junior",
+    "title": "Sprint Retrospectives that Drive Real Change",
+    "text": "How do you ensure sprint retrospectives don't degenerate into repetitive complaining sessions?",
+    "model_answer": "I structure retrospectives around actionable outcomes: each retrospective should produce at most two high-priority action items with assigned owners and measurable check-in criteria for the following sprint.",
+    "tips": "Focus on actionable ownership and measurable follow-up.",
+    "cefr": "B2"
+  },
+  {
+    "id": 112,
+    "category": "teamwork",
+    "difficulty": "mid",
+    "title": "Onboarding Remote Engineers",
+    "text": "What strategies make remote developer onboarding smooth and empowering in the first 30 days?",
+    "model_answer": "I provide a comprehensive README with a single-command setup, assign an onboarding buddy for daily check-ins, maintain an architecture glossary, and assign a small, meaningful PR to be merged within their first 48 hours.",
+    "tips": "Mention automated setups, buddy systems, and quick early wins.",
+    "cefr": "B1"
+  },
+  {
+    "id": 113,
+    "category": "teamwork",
+    "difficulty": "junior",
+    "title": "Pair Programming Effectively",
+    "text": "When is pair programming most beneficial, and how do you make it productive?",
+    "model_answer": "Pair programming is most beneficial during complex architectural refactorings, production incident triages, and knowledge transfers. I structure it using the Driver/Navigator model and swap roles regularly to maintain focus.",
+    "tips": "Explain Driver/Navigator roles and optimal use cases.",
+    "cefr": "B1"
+  },
+  {
+    "id": 114,
+    "category": "teamwork",
+    "difficulty": "junior",
+    "title": "Managing Interruptions and Focus Time",
+    "text": "How do you protect your flow state while remaining accessible for team emergencies?",
+    "model_answer": "I batch asynchronous communications in dedicated intervals, use status indicators on Slack to signal deep work blocks, and establish clear criteria for what constitutes a genuine production emergency requiring an interrupt.",
+    "tips": "Discuss time-blocking and asynchronous communication discipline.",
+    "cefr": "B1"
+  },
+  {
+    "id": 115,
+    "category": "teamwork",
+    "difficulty": "senior",
+    "title": "Writing Clear RFCs / Architectural Proposals",
+    "text": "What key sections belong in a Request for Comments (RFC) document for a major architectural change?",
+    "model_answer": "An RFC should include: Problem Statement, Context & Goals, Non-Goals, Proposed Solution with Architecture Diagrams, Alternative Approaches Considered & Rejected, Trade-offs, Migration Plan, and Security Considerations.",
+    "tips": "Mention Non-Goals, Alternatives Considered, and Migration Plans.",
+    "cefr": "B2"
+  },
+  {
+    "id": 116,
+    "category": "teamwork",
+    "difficulty": "senior",
+    "title": "Working with Junior Engineers",
+    "text": "How do you balance guiding a junior developer without micromanaging or solving the problem for them?",
+    "model_answer": "I ask probing questions that guide their analytical thinking (e.g. 'What happens if this network call fails?'). I encourage them to formulate a hypothesis and test it, stepping in only to validate their direction or explain core concepts.",
+    "tips": "Focus on Socratic guidance, autonomy, and conceptual growth.",
+    "cefr": "B2"
+  },
+  {
+    "id": 117,
+    "category": "teamwork",
+    "difficulty": "mid",
+    "title": "Balancing Speed vs Perfection",
+    "text": "How do you decide when software is 'good enough' to ship to production?",
+    "model_answer": "Software is ready to ship when it solves the core user problem reliably, satisfies security and data integrity requirements, has test coverage for critical paths, and can be monitored and rolled back safely if issues arise.",
+    "tips": "Balance pragmatic delivery with safety guardrails.",
+    "cefr": "B1"
+  },
+  {
+    "id": 118,
+    "category": "teamwork",
+    "difficulty": "mid",
+    "title": "Handling Shifting Priorities Mid-Sprint",
+    "text": "A stakeholder requests an urgent feature pivot halfway through a sprint. How do you respond?",
+    "model_answer": "I evaluate the business urgency with the product owner. If the pivot is truly critical, I explain the trade-off: to pull new work into the active sprint, an equivalent amount of existing sprint scope must be returned to the backlog.",
+    "tips": "Enforce the fundamental trade-off: scope in equals scope out.",
+    "cefr": "B1"
+  },
+  {
+    "id": 119,
+    "category": "teamwork",
+    "difficulty": "senior",
+    "title": "Giving Constructive Upward Feedback",
+    "text": "Have you ever needed to provide critical feedback to your manager or lead? How did you approach it?",
+    "model_answer": "I requested a private 1-on-1, used the Situation-Behavior-Impact framework to present concrete examples without accusatory language, and focused on how adjusting the workflow would help the team meet our shared goals.",
+    "tips": "Use the Situation-Behavior-Impact (SBI) framework.",
+    "cefr": "B2"
+  },
+  {
+    "id": 120,
+    "category": "teamwork",
+    "difficulty": "junior",
+    "title": "Celebrating Team Success and Morale",
+    "text": "How do you contribute to maintaining positive team morale during prolonged difficult milestones?",
+    "model_answer": "I make recognition visible by publicly praising teammates' contributions in standups and Slack channels, organizing casual retro wind-downs, and keeping communication transparent about progress toward the finish line.",
+    "tips": "Highlight peer recognition and positive reinforcement.",
+    "cefr": "B1"
+  },
+  {
+    "id": 121,
+    "category": "devops",
+    "difficulty": "mid",
+    "title": "Blue-Green vs Canary Deployments",
+    "text": "Explain the difference between Blue-Green and Canary deployment strategies.",
+    "model_answer": "Blue-Green maintains two identical production environments; traffic is instantly switched 100% from Blue to Green once validated. Canary releases route a tiny percentage of live traffic (e.g. 2%) to the new version, monitoring error rates before rolling out gradually.",
+    "tips": "Contrast instant all-at-once cutover with progressive percentage rollout.",
+    "cefr": "B1"
+  },
+  {
+    "id": 122,
+    "category": "devops",
+    "difficulty": "mid",
+    "title": "Container Orchestration with Kubernetes",
+    "text": "What problem does Kubernetes solve that Docker alone cannot handle in production?",
+    "model_answer": "Docker manages containers on a single host. Kubernetes orchestrates multi-host clusters, providing automated rolling rollouts, horizontal auto-scaling, self-healing container restarts, service discovery, and declarative load balancing.",
+    "tips": "Highlight multi-node clustering, self-healing, and declarative scaling.",
+    "cefr": "B1"
+  },
+  {
+    "id": 123,
+    "category": "devops",
+    "difficulty": "junior",
+    "title": "Infrastructure as Code (IaC)",
+    "text": "What are the advantages of managing cloud resources with Terraform or OpenTofu instead of manual console clicking?",
+    "model_answer": "IaC provides version-controlled, auditable, and reproducible cloud environments. It eliminates configuration drift, enables code reviews on infrastructure changes, and allows spinning up identical staging and recovery environments in minutes.",
+    "tips": "Mention version control, drift elimination, and reproducible environments.",
+    "cefr": "B1"
+  },
+  {
+    "id": 124,
+    "category": "devops",
+    "difficulty": "mid",
+    "title": "Zero-Downtime Rolling Updates",
+    "text": "How do you ensure an application running in Docker or Kubernetes achieves zero downtime during rolling deploys?",
+    "model_answer": "I configure readiness and liveness probes properly. The orchestrator routes traffic to new pods only after readiness probes succeed, while old pods receive graceful termination signals (SIGTERM) with adequate connection draining time.",
+    "tips": "Explain readiness/liveness probes and graceful connection draining.",
+    "cefr": "B2"
+  },
+  {
+    "id": 125,
+    "category": "devops",
+    "difficulty": "junior",
+    "title": "Secrets Management in Cloud Environments",
+    "text": "Why should secrets never be baked into Docker images, and how should they be injected securely?",
+    "model_answer": "Baking secrets into images exposes them in registry layers, Git histories, and logs. Secrets should be injected at runtime from a dedicated secrets vault (like HashiCorp Vault or AWS Secrets Manager) using environment variables or encrypted volume mounts.",
+    "tips": "Discuss image layer exposure and runtime injection from secret stores.",
+    "cefr": "B1"
+  },
+  {
+    "id": 126,
+    "category": "devops",
+    "difficulty": "senior",
+    "title": "Automated Rollback Strategies",
+    "text": "How do you design an automated CI/CD pipeline to rollback automatically on production failure?",
+    "model_answer": "The deployment pipeline monitors APM error rates and health metrics for 5 minutes post-deploy. If HTTP 5xx errors spike above a predetermined threshold (e.g. 1%), the pipeline triggers an automated rollback to the previous stable release tag.",
+    "tips": "Mention synthetic health monitoring and automated threshold triggers.",
+    "cefr": "B2"
+  },
+  {
+    "id": 127,
+    "category": "devops",
+    "difficulty": "junior",
+    "title": "Log Aggregation Architectures (ELK / Loki)",
+    "text": "Why do distributed microservices require centralized logging like Grafana Loki or Elasticsearch?",
+    "model_answer": "In distributed systems, requests hop across dozens of ephemeral containers. Centralized logging aggregates logs into a searchable index, tagging each line with correlation IDs so engineers can trace a user's journey across all microservices.",
+    "tips": "Highlight correlation IDs and ephemeral container life cycles.",
+    "cefr": "B1"
+  },
+  {
+    "id": 128,
+    "category": "devops",
+    "difficulty": "senior",
+    "title": "Site Reliability Engineering: SLI, SLO, and SLA",
+    "text": "Can you explain the relationship between SLIs, SLOs, and SLAs in production systems?",
+    "model_answer": "An SLI (Service Level Indicator) is a real metric like latency or error rate. An SLO (Service Level Objective) is the internal target the team aims for, like 99.9% uptime. An SLA (Service Level Agreement) is the legal contract with customers with financial consequences if breached.",
+    "tips": "Differentiate measurement (SLI), internal goal (SLO), and legal contract (SLA).",
+    "cefr": "B2"
+  },
+  {
+    "id": 129,
+    "category": "devops",
+    "difficulty": "senior",
+    "title": "Error Budgets in SRE",
+    "text": "What is an Error Budget and how does it balance development velocity against system stability?",
+    "model_answer": "An Error Budget is the allowed unreliability of a service (e.g. 0.1% downtime for a 99.9% SLO). If the budget is intact, teams ship rapidly. If the error budget is exhausted by outages, feature releases freeze and effort shifts strictly to stability.",
+    "tips": "Explain the balance between product velocity and reliability engineering.",
+    "cefr": "B2"
+  },
+  {
+    "id": 130,
+    "category": "devops",
+    "difficulty": "senior",
+    "title": "Continuous Profiling in Production",
+    "text": "What is continuous profiling (like Parca or Pyroscope) and why is it becoming standard in DevOps?",
+    "model_answer": "Continuous profiling samples CPU and memory usage at low overhead directly in production, attributing resource costs to specific code functions. It allows spotting performance regressions and cloud cost inefficiencies that synthetic load tests miss.",
+    "tips": "Mention low-overhead sampling and real-world workload profiling.",
+    "cefr": "B2"
+  },
+  {
+    "id": 131,
+    "category": "devops",
+    "difficulty": "mid",
+    "title": "Securing Container Images (SBOM & Scanning)",
+    "text": "How do you secure container images in a modern CI pipeline against known vulnerabilities?",
+    "model_answer": "I use minimal base images like Alpine or distroless, avoid running containers as root, scan images with tools like Trivy or Grype in CI to block high/critical CVEs, and generate Software Bills of Materials (SBOM) for compliance.",
+    "tips": "Mention minimal distroless bases, non-root users, and automated CVE scanners.",
+    "cefr": "B1"
+  },
+  {
+    "id": 132,
+    "category": "devops",
+    "difficulty": "junior",
+    "title": "Edge Caching and CDNs (Cloudflare / CloudFront)",
+    "text": "How does a Content Delivery Network reduce backend server load and improve international latency?",
+    "model_answer": "A CDN caches static assets and cacheable dynamic API responses across a globally distributed network of edge servers (Points of Presence), terminating TLS and serving responses geographically close to users without hitting origin servers.",
+    "tips": "Explain edge caching, TLS termination, and origin offloading.",
+    "cefr": "B1"
+  },
+  {
+    "id": 133,
+    "category": "devops",
+    "difficulty": "senior",
+    "title": "Chaos Engineering and Resilience Testing",
+    "text": "What is Chaos Engineering and why do companies like Netflix run Chaos Monkey in production?",
+    "model_answer": "Chaos Engineering tests system resilience by deliberately injecting real failures—such as killing random nodes or injecting network latency—to verify that fallback mechanisms, auto-healing, and circuit breakers function as expected.",
+    "tips": "Highlight proactive weakness discovery before organic outages happen.",
+    "cefr": "B2"
+  },
+  {
+    "id": 134,
+    "category": "devops",
+    "difficulty": "senior",
+    "title": "Database Backup & Disaster Recovery (RPO and RTO)",
+    "text": "What do Recovery Point Objective (RPO) and Recovery Time Objective (RTO) mean in disaster recovery?",
+    "model_answer": "RPO defines the maximum acceptable data loss measured in time (e.g. 15 minutes of data). RTO defines the maximum acceptable downtime to restore operations (e.g. 1 hour). They guide backup frequency and failover infrastructure design.",
+    "tips": "Contrast data loss window (RPO) with downtime duration (RTO).",
+    "cefr": "B2"
+  },
+  {
+    "id": 135,
+    "category": "devops",
+    "difficulty": "mid",
+    "title": "GitOps Workflows with ArgoCD",
+    "text": "What is GitOps and how does it improve Kubernetes cluster management?",
+    "model_answer": "GitOps uses Git repositories as the single source of truth for declared infrastructure and application state. Automated reconciliation operators like ArgoCD continuously pull Git changes and synchronize the live cluster state automatically.",
+    "tips": "Explain Git as the single source of truth and automated reconciliation loops.",
+    "cefr": "B1"
+  },
+  {
+    "id": 136,
+    "category": "portfolio",
+    "difficulty": "mid",
+    "title": "Architectural Walkthrough of Your Best Project",
+    "text": "Can you walk me through the architecture of a project you are most proud of building?",
+    "model_answer": "I built a self-hosted full-stack English training platform. The backend orchestrates Whisper for speech-to-text, Ollama for grammar evaluation, and Piper for neural TTS, with an asynchronous SQLite queue and a Flutter client with offline synchronization.",
+    "tips": "Highlight technical autonomy, clean layer separation, and real problems solved.",
+    "cefr": "B1"
+  },
+  {
+    "id": 137,
+    "category": "portfolio",
+    "difficulty": "mid",
+    "title": "Overcoming a Major Technical Roadblock",
+    "text": "What was the most difficult technical roadblock you faced in a recent project, and how did you conquer it?",
+    "model_answer": "We experienced browser audio decoding crashes when streaming raw TTS responses on the web. I traced the issue to attachment headers forcing downloads instead of inline byte-range streaming, patched the headers, and verified with automated browser sessions.",
+    "tips": "Use the STAR method: Situation, Task, Action, and Quantifiable Result.",
+    "cefr": "B1"
+  },
+  {
+    "id": 138,
+    "category": "portfolio",
+    "difficulty": "junior",
+    "title": "Selecting Your Tech Stack",
+    "text": "How did you choose the technologies for your latest application? What alternatives did you reject?",
+    "model_answer": "I chose FastAPI for its native async support and automatic OpenAPI documentation, paired with Flutter for cross-platform web and mobile UI. I considered Next.js, but Flutter provided stronger offline capabilities and unified state management.",
+    "tips": "Explain objective criteria (performance, developer velocity, platform constraints).",
+    "cefr": "B1"
+  },
+  {
+    "id": 139,
+    "category": "portfolio",
+    "difficulty": "junior",
+    "title": "Testing Strategy in Your Portfolio",
+    "text": "How did you structure tests in your personal projects to ensure high confidence without excessive maintenance?",
+    "model_answer": "I adhered to the testing pyramid: comprehensive unit tests for core domain logic and data parsing, API integration tests validating HTTP contracts and status codes, and widget tests verifying state transitions under mock providers.",
+    "tips": "Demonstrate disciplined testing methodology even on personal projects.",
+    "cefr": "B2"
+  },
+  {
+    "id": 140,
+    "category": "portfolio",
+    "difficulty": "senior",
+    "title": "Scaling a Personal Project",
+    "text": "If your current application suddenly scaled to 100,000 daily active users, what would break first and how would you adapt it?",
+    "model_answer": "The local SQLite database and single-threaded TTS inference would saturate. I would migrate to PostgreSQL with read replicas, offload CPU-heavy audio synthesis to a worker pool via RabbitMQ or Celery, and put Cloudflare edge caching in front.",
+    "tips": "Demonstrate architectural foresight and capacity planning.",
+    "cefr": "B2"
+  },
+  {
+    "id": 141,
+    "category": "portfolio",
+    "difficulty": "junior",
+    "title": "Handling User Feedback and Iteration",
+    "text": "Tell me about a feature in your project that evolved significantly based on real user feedback.",
+    "model_answer": "Initially, the app displayed full Spanish translations immediately, but users reported it hampered English immersion. I redesigned the UI to hide Spanish hints behind an explicit reveal toggle and added phonetic IPA guides.",
+    "tips": "Show user empathy and willingness to iterate based on evidence.",
+    "cefr": "B2"
+  },
+  {
+    "id": 142,
+    "category": "portfolio",
+    "difficulty": "mid",
+    "title": "Ensuring Security and Data Privacy",
+    "text": "How do you protect sensitive user credentials and data in your client applications?",
+    "model_answer": "I store API tokens and encryption keys in platform-native secure enclaves via flutter_secure_storage, enforce TLS, sanitize user inputs against injection attacks, and exclude environment secrets from version control.",
+    "tips": "Mention hardware-backed secure storage and secure data pipelines.",
+    "cefr": "B2"
+  },
+  {
+    "id": 143,
+    "category": "portfolio",
+    "difficulty": "mid",
+    "title": "Optimizing Performance on Low-End Devices",
+    "text": "What profiling and optimizations did you perform to keep your app snappy on mobile and web?",
+    "model_answer": "I isolated high-frequency repaints using RepaintBoundary widgets, implemented lazy list view rendering, tree-shook unused icon fonts, and compressed audio payloads, maintaining smooth 60fps animations.",
+    "tips": "Demonstrate hands-on profiling experience with real metrics.",
+    "cefr": "B2"
+  },
+  {
+    "id": 144,
+    "category": "portfolio",
+    "difficulty": "junior",
+    "title": "Open-Source Contributions and Collaboration",
+    "text": "Have you contributed to open-source libraries or learned from community codebases?",
+    "model_answer": "Yes, I frequently inspect open-source implementations to understand idioms—such as examining the official py-fsrs spaced repetition algorithm and exploring Flutter community plugins to benchmark architectural patterns.",
+    "tips": "Show curiosity and respect for the broader engineering ecosystem.",
+    "cefr": "B2"
+  },
+  {
+    "id": 145,
+    "category": "portfolio",
+    "difficulty": "mid",
+    "title": "Lessons Learned from a Scrapped Feature",
+    "text": "Tell me about a feature or prototype you decided to discard, and what you learned from it.",
+    "model_answer": "I prototyped a complex multi-layered audio waveform visualizer, but it consumed excessive battery on mobile devices. I replaced it with a sleek, low-overhead pulsing amplitude indicator, learning that simplicity often outperforms complexity.",
+    "tips": "Show maturity, resource awareness, and willingness to kill darlings.",
+    "cefr": "B2"
+  },
+  {
+    "id": 146,
+    "category": "internships",
+    "difficulty": "junior",
+    "title": "Quickly Getting Up to Speed",
+    "text": "As an entry-level engineer or intern, what is your strategy for ramping up on a massive production codebase?",
+    "model_answer": "I start by running the project locally, exploring the unit tests to see how modules behave, drawing a high-level component diagram, and tackling a well-scoped bug in my first week to learn the deployment pipeline.",
+    "tips": "Show proactive initiative, structured learning, and humbleness.",
+    "cefr": "B1"
+  },
+  {
+    "id": 147,
+    "category": "internships",
+    "difficulty": "junior",
+    "title": "Knowing When to Ask for Help",
+    "text": "How long do you struggle with a technical blocker before asking a senior colleague for guidance?",
+    "model_answer": "I follow the 30-minute rule: I spend 30 minutes researching, checking logs, and formulating hypotheses. If I am still stuck, I approach a senior teammate with a clear summary of what I tried, what happened, and my specific question.",
+    "tips": "Demonstrate respect for senior engineers' time while avoiding being stuck.",
+    "cefr": "B1"
+  },
+  {
+    "id": 148,
+    "category": "internships",
+    "difficulty": "junior",
+    "title": "Managing Academic Knowledge vs Production Reality",
+    "text": "How do you adapt textbook software concepts to real-world code that may not follow ideal design patterns?",
+    "model_answer": "Textbooks teach idealized patterns, but production code balances legacy constraints and delivery deadlines. I adapt by understanding why existing trade-offs were made before proposing incremental refactoring.",
+    "tips": "Show flexibility, pragmatic mindset, and respect for existing code.",
+    "cefr": "B1"
+  },
+  {
+    "id": 149,
+    "category": "internships",
+    "difficulty": "junior",
+    "title": "Receiving Tough Feedback During Evaluations",
+    "text": "Tell me about critical feedback you received during an internship or project review and how you adapted.",
+    "model_answer": "My mentor noted that my commit messages were too brief and lacked context. I adopted the Conventional Commits standard, writing detailed descriptions of the 'why' behind changes, which improved team collaboration.",
+    "tips": "Demonstrate openness to feedback and immediate behavioral correction.",
+    "cefr": "B2"
+  },
+  {
+    "id": 150,
+    "category": "internships",
+    "difficulty": "junior",
+    "title": "Balancing Depth vs Breadth in Tech",
+    "text": "As you start your engineering career, how do you balance mastering one language versus learning multiple tools?",
+    "model_answer": "I adopt a T-shaped learning approach: deep mastery of one backend stack (like Python/FastAPI) and clean software fundamentals, combined with broad working familiarity with frontend frameworks, Docker, and databases.",
+    "tips": "Articulate the T-shaped engineer philosophy.",
+    "cefr": "B2"
+  },
+  {
+    "id": 151,
+    "category": "internships",
+    "difficulty": "junior",
+    "title": "Participating in Daily Standups",
+    "text": "What makes a daily standup update concise, valuable, and non-repetitive?",
+    "model_answer": "A great standup update is focused: what I accomplished yesterday that matters to the team, what I am delivering today, and an immediate callout of any blockers that require assistance.",
+    "tips": "Keep it brief, focused on team impact, and highlight blockers.",
+    "cefr": "B1"
+  },
+  {
+    "id": 152,
+    "category": "internships",
+    "difficulty": "junior",
+    "title": "Taking Responsibility for Bugs in Production",
+    "text": "Imagine a commit you merged breaks an internal tool used by the operations team. What do you do?",
+    "model_answer": "I immediately notify the operations team, revert the offending commit or push a hotfix, verify the tool is operational again, and then write a test case so the bug cannot happen again.",
+    "tips": "Show responsibility, rapid communication, and post-fix testing.",
+    "cefr": "B1"
+  },
+  {
+    "id": 153,
+    "category": "internships",
+    "difficulty": "junior",
+    "title": "Staying Curious and Learning Outside Work",
+    "text": "How do you stay updated with emerging technologies and industry best practices?",
+    "model_answer": "I read engineering blogs from companies like Netflix and Uber, listen to podcasts like Talk Python To Me and Hard Fork, build weekend proofs of concept, and study curated open-source repositories.",
+    "tips": "Demonstrate passion, continuous learning, and curiosity.",
+    "cefr": "B1"
+  },
+  {
+    "id": 154,
+    "category": "internships",
+    "difficulty": "junior",
+    "title": "Effective Written Documentation",
+    "text": "Why is documentation crucial for an engineering team, and what is your approach to writing it?",
+    "model_answer": "Code explains 'how', but documentation explains 'why'. I document architectural decisions, API contracts, and troubleshooting runbooks with clear steps and code snippets so anyone can reproduce the workflow.",
+    "tips": "Emphasize the 'why' behind architectural choices.",
+    "cefr": "B1"
+  },
+  {
+    "id": 155,
+    "category": "internships",
+    "difficulty": "junior",
+    "title": "What Excites You Most About Software Engineering",
+    "text": "Why did you choose software development as your career path?",
+    "model_answer": "I love the power of turning abstract ideas into real, tangible tools that solve genuine human problems. The rapid feedback loop of writing code, testing it, and seeing immediate impact is deeply satisfying.",
+    "tips": "Speak with genuine enthusiasm, authenticity, and passion.",
+    "cefr": "B1"
+  },
+  {
+    "id": 156,
+    "category": "system_design",
+    "difficulty": "mid",
+    "title": "Designing a URL Shortener (Bitly)",
+    "text": "How would you design a highly available and low-latency URL shortening service like Bitly?",
+    "model_answer": "I would start by calculating read versus write throughput. Since it is read-heavy (100:1), I would use a distributed hash table or relational database with an in-memory Redis cache for the top 20% active links. For generating short codes, a Base62 encoding of a distributed snowflake ID guarantees uniqueness without collision checks.",
+    "tips": "Estimate read/write volume first, highlight caching, and explain Base62 encoding.",
+    "cefr": "B1"
+  },
+  {
+    "id": 157,
+    "category": "system_design",
+    "difficulty": "senior",
+    "title": "Mitigating the Thundering Herd Problem",
+    "text": "What is the thundering herd problem in caching systems, and how do you prevent it?",
+    "model_answer": "The thundering herd occurs when a high-traffic cache key expires, causing thousands of concurrent requests to hit the database simultaneously. We mitigate this using probabilistic early expiration (XFetch algorithm), mutex locking (single-flight pattern) so only one thread recomputes the key, or pre-warming background cron workers.",
+    "tips": "Mention single-flight/mutex locks and probabilistic cache expiration.",
+    "cefr": "B2"
+  },
+  {
+    "id": 158,
+    "category": "system_design",
+    "difficulty": "senior",
+    "title": "CAP Theorem Trade-Offs in Practice",
+    "text": "In a distributed payment system, how do you apply the CAP theorem when network partitions occur?",
+    "model_answer": "According to the CAP theorem, during a network partition, you must choose between Consistency and Availability. For financial ledger balances, Consistency must take precedence (CP), rejecting or queuing ambiguous transactions. For product catalogs or viewing transaction history, we can favor Availability (AP) with eventual consistency.",
+    "tips": "Distinguish between financial ledgers (CP) and browsing data (AP).",
+    "cefr": "B2"
+  },
+  {
+    "id": 159,
+    "category": "system_design",
+    "difficulty": "senior",
+    "title": "CQRS and Event Sourcing",
+    "text": "What problems does CQRS solve, and when is it worth the architectural complexity?",
+    "model_answer": "Command Query Responsibility Segregation separates read and write data models. It solves asymmetric read/write loads and complex domain validation. While it adds eventual consistency overhead, it shines in high-scale platforms where query shapes differ radically from write models, such as e-commerce checkouts and financial audits.",
+    "tips": "Balance benefits against the cost of eventual consistency.",
+    "cefr": "B2"
+  },
+  {
+    "id": 160,
+    "category": "system_design",
+    "difficulty": "mid",
+    "title": "Database Sharding Strategies",
+    "text": "How do you decide between range-based sharding and hash-based sharding for user data?",
+    "model_answer": "Range-based sharding groups records by sequential keys, which makes range queries efficient but risks hot spots if traffic concentrates on recent IDs. Hash-based sharding applies a consistent hash function to evenly distribute keys across partitions, preventing hotspots at the expense of more complex scatter-gather range queries.",
+    "tips": "Contrast range queries efficiency with hotspot distribution risk.",
+    "cefr": "B1"
+  },
+  {
+    "id": 161,
+    "category": "system_design",
+    "difficulty": "mid",
+    "title": "Implementing Idempotent APIs",
+    "text": "Why is idempotency essential for payment and order creation endpoints?",
+    "model_answer": "Network timeouts or mobile retries can cause duplicate POST requests. By attaching a client-generated Idempotency-Key header, the server records the key in Redis with a short TTL before processing. If a duplicate key arrives, the server immediately returns the cached original response without charging the customer twice.",
+    "tips": "Explain the Idempotency-Key header and atomic reservation in Redis.",
+    "cefr": "B1"
+  },
+  {
+    "id": 162,
+    "category": "system_design",
+    "difficulty": "senior",
+    "title": "Distributed Locking: Redlock vs Database Locks",
+    "text": "When would you use Redis Redlock versus optimistic database concurrency control?",
+    "model_answer": "Optimistic locking using a version column is ideal when write collisions are rare and transactions are confined to a single database. Redis Redlock is suited for cross-service coordination where multiple distinct microservices must synchronize access to an external resource without long-held database transactions.",
+    "tips": "Highlight version columns for DBs and cross-service coordination for Redis.",
+    "cefr": "B2"
+  },
+  {
+    "id": 163,
+    "category": "system_design",
+    "difficulty": "senior",
+    "title": "Designing a Rate Limiter",
+    "text": "Which algorithm would you select for an API gateway rate limiter: Token Bucket or Sliding Window Log?",
+    "model_answer": "Token Bucket is memory-efficient and allows controlled bursts while maintaining an average rate, making it the industry standard for API gateways. Sliding Window Log provides exact accuracy without edge bursts, but consumes significantly more memory storing timestamps. Token Bucket backed by Redis is usually the superior choice.",
+    "tips": "Compare memory overhead, burst handling, and Redis implementation.",
+    "cefr": "B2"
+  },
+  {
+    "id": 164,
+    "category": "system_design",
+    "difficulty": "mid",
+    "title": "Handling Backpressure in Streaming Systems",
+    "text": "How do you protect downstream microservices from being overwhelmed by high-volume event streams?",
+    "model_answer": "We implement backpressure using reactive pull-based consumers instead of push-based emitters. With Kafka or RabbitMQ, consumers dictate batch fetch size according to their CPU and memory capacity. If queues swell, we scale consumer worker pods horizontally and employ circuit breakers to shed non-critical load.",
+    "tips": "Contrast push vs pull consumers, queue buffering, and horizontal scaling.",
+    "cefr": "B1"
+  },
+  {
+    "id": 165,
+    "category": "system_design",
+    "difficulty": "junior",
+    "title": "Vertical vs Horizontal Scaling Trade-Offs",
+    "text": "When would you choose vertical scaling over horizontal scaling in the early phase of a product?",
+    "model_answer": "Vertical scaling (increasing CPU/RAM) has zero architectural overhead: no distributed state, no network serialization, and simpler database ACID transactions. In early stages, vertical scaling lets the team iterate rapidly. Once single-node limits are approached or high availability demands redundancy, horizontal scaling becomes imperative.",
+    "tips": "Show pragmatic cost-benefit reasoning for early-stage engineering.",
+    "cefr": "B2"
+  },
+  {
+    "id": 166,
+    "category": "system_design",
+    "difficulty": "senior",
+    "title": "Designing a Notification System (Push, Email, SMS)",
+    "text": "How would you architect an omnichannel notification service that handles millions of alerts?",
+    "model_answer": "I would decouple ingestion from delivery using message queues prioritized by urgency (transactional OTPs vs promotional digests). Workers pull from queues, query user communication preferences and deduplication caches, and dispatch to third-party providers (SendGrid, Twilio, APNs) with exponential backoff and dead-letter queues.",
+    "tips": "Use priority queues, rate limit per recipient, and explain Dead Letter Queues (DLQ).",
+    "cefr": "B2"
+  },
+  {
+    "id": 167,
+    "category": "system_design",
+    "difficulty": "mid",
+    "title": "Database Connection Pooling Optimization",
+    "text": "Why do microservices run out of database connections, and how do you resolve connection exhaustion?",
+    "model_answer": "Each container opening its own connection pool can quickly exceed PostgreSQL max_connections. We deploy PgBouncer or an AWS RDS Proxy as an intermediate transaction-level connection pooler, multiplexing thousands of incoming client connections onto a smaller set of warm database server connections.",
+    "tips": "Mention PgBouncer, connection multiplexing, and transaction vs session pooling.",
+    "cefr": "B1"
+  },
+  {
+    "id": 168,
+    "category": "system_design",
+    "difficulty": "senior",
+    "title": "Designing a Distributed Unique ID Generator",
+    "text": "How does Twitter Snowflake generate unique 64-bit integer IDs across multiple datacenters without central coordination?",
+    "model_answer": "Twitter Snowflake splits 64 bits into: 1 sign bit, 41 timestamp bits (millisecond precision), 10 datacenter/worker ID bits, and 12 sequence bits. This allows generating up to 4,096 unique IDs per millisecond per node, sorted chronologically without inter-node network roundtrips.",
+    "tips": "Break down the bit allocation: timestamp, machine ID, sequence counter.",
+    "cefr": "B2"
+  },
+  {
+    "id": 169,
+    "category": "system_design",
+    "difficulty": "junior",
+    "title": "API Gateway vs Reverse Proxy",
+    "text": "What are the core differences between a reverse proxy like Nginx and an API Gateway like Kong?",
+    "model_answer": "A reverse proxy primarily handles layer-7 load balancing, SSL termination, and static caching. An API Gateway builds on top of this by offering application-layer policies: OAuth/JWT validation, dynamic routing, request transformations, centralized rate limiting, and telemetry aggregation.",
+    "tips": "Explain layer-4/7 proxying vs business-logic gateway concerns.",
+    "cefr": "B2"
+  },
+  {
+    "id": 170,
+    "category": "system_design",
+    "difficulty": "senior",
+    "title": "Zero-Downtime Database Schema Migrations",
+    "text": "How do you rename or split a high-traffic database table without taking the application offline?",
+    "model_answer": "We use the expand-and-contract pattern in multiple deploy stages: first, add the new column or table; second, update the application to dual-write to both locations; third, backfill historical data asynchronously; fourth, switch application reads to the new schema; and finally, remove old writes and deprecate the legacy column.",
+    "tips": "Walk through the Expand and Contract phase-by-phase migration pattern.",
+    "cefr": "B2"
+  },
+  {
+    "id": 171,
+    "category": "ai_ml",
+    "difficulty": "mid",
+    "title": "Explaining Retrieval-Augmented Generation (RAG)",
+    "text": "How does RAG differ from fine-tuning when adapting an LLM for private enterprise documentation?",
+    "model_answer": "RAG injects relevant contextual chunks retrieved from an enterprise vector database directly into the prompt at inference time, keeping data fresh without retraining. Fine-tuning alters model weights to learn specific syntax, style, or task formats. RAG is faster, cheaper, avoids hallucinations on dynamic knowledge, and enforces strict document access control.",
+    "tips": "Compare dynamic context injection (RAG) with internal weight adaptation (fine-tuning).",
+    "cefr": "B2"
+  },
+  {
+    "id": 172,
+    "category": "ai_ml",
+    "difficulty": "senior",
+    "title": "Mitigating LLM Hallucinations in Production",
+    "text": "What guardrails do you implement to prevent an AI model from fabricating technical assertions?",
+    "model_answer": "We employ a multi-layered defense: strict system prompt grounding requiring the model to cite retrieved source IDs, low temperature settings (0.0 to 0.2), schema enforcement with JSON mode, and a secondary judge LLM that cross-checks factual alignment between the generated output and the reference passage.",
+    "tips": "Mention grounding citations, temperature control, and LLM-as-a-judge verification.",
+    "cefr": "B2"
+  },
+  {
+    "id": 173,
+    "category": "ai_ml",
+    "difficulty": "mid",
+    "title": "Vector Embeddings and Chunking Strategies",
+    "text": "How do you choose chunk sizes and overlap when indexing technical engineering documents for semantic search?",
+    "model_answer": "Too small chunks lose surrounding semantic context; too large chunks dilute specific answer signals. For technical markdown, a recursive chunker with 500 tokens and 10% overlap (50 tokens) works well. We also preserve header hierarchy in metadata so code blocks and architectural explanations retain their parent context.",
+    "tips": "Explain chunk size trade-offs, token overlap, and hierarchical markdown metadata.",
+    "cefr": "B2"
+  },
+  {
+    "id": 174,
+    "category": "ai_ml",
+    "difficulty": "senior",
+    "title": "Optimizing LLM Inference Latency and Cost",
+    "text": "How do you reduce time-to-first-token (TTFT) and token consumption in an AI-powered conversational application?",
+    "model_answer": "We stream tokens via Server-Sent Events (SSE) so users see immediate progress. We cache frequent query embeddings with semantic caching (e.g. GPTCache), prune verbose conversational chat history, use prompt compression, and route simple classification tasks to smaller distilled models like 8B or 3B parameters.",
+    "tips": "Highlight SSE streaming, semantic caching, and model tiering/routing.",
+    "cefr": "B2"
+  },
+  {
+    "id": 175,
+    "category": "ai_ml",
+    "difficulty": "mid",
+    "title": "Preventing Prompt Injection Attacks",
+    "text": "What techniques do you employ to defend against direct and indirect prompt injection in LLM applications?",
+    "model_answer": "We isolate user inputs in distinct delimiter tags (like XML tags), use input sanitization to strip instruction override phrases, enforce output schemas via constrained grammars or Pydantic models, and never grant autonomous write privileges without explicit human-in-the-loop confirmation.",
+    "tips": "Use input delimiters, output structural constraints, and human-in-the-loop barriers.",
+    "cefr": "B2"
+  },
+  {
+    "id": 176,
+    "category": "ai_ml",
+    "difficulty": "senior",
+    "title": "Quantization (INT8, FP4) and Local Model Serving",
+    "text": "What is model quantization, and what trade-offs does it introduce when deploying open-source models on-premise?",
+    "model_answer": "Quantization converts 16-bit floating point weights into lower-precision formats like 8-bit or 4-bit integers (e.g., GGUF, AWQ). This slashes VRAM requirements by 50% to 75%, allowing larger models to run on consumer GPUs with minimal degradation in perplexity, though it may slightly reduce accuracy in nuanced arithmetic or reasoning.",
+    "tips": "Explain precision reduction, VRAM savings, and minimal perplexity impact.",
+    "cefr": "B2"
+  },
+  {
+    "id": 177,
+    "category": "ai_ml",
+    "difficulty": "mid",
+    "title": "Evaluation Metrics for RAG Systems",
+    "text": "How do you systematically measure whether your RAG pipeline is performing well?",
+    "model_answer": "We use Ragas evaluation framework measuring four core metrics: Context Precision (is retrieved context relevant?), Context Recall (did we find all necessary facts?), Faithfulness (is the answer derived solely from context?), and Answer Relevance (does it directly answer the user query?).",
+    "tips": "Cite the Ragas metrics triad: Context Precision, Faithfulness, and Answer Relevance.",
+    "cefr": "B2"
+  },
+  {
+    "id": 178,
+    "category": "ai_ml",
+    "difficulty": "junior",
+    "title": "Temperature and Top-P Parameters Explained",
+    "text": "How do temperature and top-p sampling affect LLM output during technical code generation?",
+    "model_answer": "Temperature scales the logits before softmax: low temperature (near 0) makes the distribution peaky, picking the most probable tokens for deterministic, factual code. Top-p (nucleus sampling) limits token candidates to the cumulative probability threshold, cutting off low-probability tails while retaining natural phrasing.",
+    "tips": "For coding/technical tasks, recommend temperature 0.0 to 0.2.",
+    "cefr": "B1"
+  },
+  {
+    "id": 179,
+    "category": "ai_ml",
+    "difficulty": "senior",
+    "title": "Designing Autonomous AI Agent Workflows",
+    "text": "What architectural patterns do you use to build multi-step AI agents that call APIs and tools reliably?",
+    "model_answer": "We utilize the ReAct pattern (Reasoning + Acting) with strict state machines. Each tool call is defined with an exact OpenAPI schema. We set maximum recursion limits, require tool validation before execution, and maintain a shared memory scratchpad so the agent can self-correct when an API returns an error status code.",
+    "tips": "Mention ReAct, structured JSON tool schemas, state limits, and error recovery.",
+    "cefr": "B2"
+  },
+  {
+    "id": 180,
+    "category": "ai_ml",
+    "difficulty": "mid",
+    "title": "Context Window Management and Token Truncation",
+    "text": "How do you manage multi-turn chat sessions when conversations exceed model context limits?",
+    "model_answer": "We maintain a sliding window of recent verbatim messages combined with an asynchronous summarization worker that condenses older turns into a consolidated memory prompt. We also prioritize retaining the system instructions and the most recent 3 turns in full fidelity.",
+    "tips": "Explain sliding windows, background summarization, and key context preservation.",
+    "cefr": "B1"
+  },
+  {
+    "id": 181,
+    "category": "ai_ml",
+    "difficulty": "senior",
+    "title": "LoRA (Low-Rank Adaptation) vs Full Fine-Tuning",
+    "text": "Why has LoRA become the predominant method for fine-tuning large language models?",
+    "model_answer": "Full fine-tuning updates billions of parameters, requiring massive distributed GPU clusters. LoRA freezes original model weights and injects trainable rank decomposition matrices into the attention layers. This cuts trainable parameters by over 99% and allows swapping adapter weights dynamically per tenant in memory.",
+    "tips": "Explain frozen base weights, rank decomposition matrices, and dynamic adapter swapping.",
+    "cefr": "B2"
+  },
+  {
+    "id": 182,
+    "category": "ai_ml",
+    "difficulty": "junior",
+    "title": "Tokenization and Why LLMs Struggle with Character Counts",
+    "text": "Why do LLMs struggle to count letters in words like 'strawberry'?",
+    "model_answer": "LLMs do not read characters individually; they process chunks of text called tokens generated by byte-pair encoding (BPE). The word 'strawberry' might be split into subword tokens like ['straw', 'berry']. The model predicts next tokens probabilistically based on semantic vectors, not by counting internal characters.",
+    "tips": "Explain Byte-Pair Encoding (BPE) and subword tokens vs individual characters.",
+    "cefr": "B1"
+  },
+  {
+    "id": 183,
+    "category": "ai_ml",
+    "difficulty": "senior",
+    "title": "Self-Hosting LLMs vs Commercial Cloud APIs",
+    "text": "What criteria decide whether an enterprise should self-host vLLM/Ollama versus calling OpenAI/Anthropic APIs?",
+    "model_answer": "The decision hinges on data privacy regulations (HIPAA/GDPR), inference volume, and specialized latency requirements. Commercial APIs offer state-of-the-art reasoning with zero MLOps burden. Self-hosting with vLLM becomes cost-effective at sustained high query volumes or when proprietary corporate code cannot leave a private VPC.",
+    "tips": "Balance privacy/compliance and high-volume economies of scale against MLOps overhead.",
+    "cefr": "B2"
+  },
+  {
+    "id": 184,
+    "category": "ai_ml",
+    "difficulty": "mid",
+    "title": "Function Calling and Structured Output Generation",
+    "text": "How do modern LLMs guarantee that their output matches an exact Pydantic JSON schema?",
+    "model_answer": "Modern inference engines use constrained decoding (context-free grammar sampling). During token generation, the sampler dynamically masks out any token logits that would violate the expected JSON schema syntax, guaranteeing valid JSON formatting without relying purely on prompt instructions.",
+    "tips": "Explain constrained decoding, grammar masking, and deterministic JSON schemas.",
+    "cefr": "B2"
+  },
+  {
+    "id": 185,
+    "category": "ai_ml",
+    "difficulty": "senior",
+    "title": "Continuous Fine-Tuning and Catastrophic Forgetting",
+    "text": "What is catastrophic forgetting in machine learning, and how do you prevent it when training on specialized datasets?",
+    "model_answer": "Catastrophic forgetting occurs when a neural network trained on new domain data overwrites weights responsible for previously learned general capabilities. We prevent this by mixing general replay datasets into the training corpus, using regularization techniques like weight decay, or applying PEFT/LoRA adapters.",
+    "tips": "Mention replay datasets, parameter-efficient fine-tuning (PEFT), and weight regularization.",
+    "cefr": "B2"
+  },
+  {
+    "id": 186,
+    "category": "security",
+    "difficulty": "mid",
+    "title": "OAuth 2.0 Authorization Code Flow with PKCE",
+    "text": "Why is PKCE (Proof Key for Code Exchange) mandatory for modern single-page and mobile apps?",
+    "model_answer": "Single-page and mobile apps cannot safely keep a client secret confidential. PKCE protects against authorization code interception by generating a cryptographically random Code Verifier on the client, sending its SHA-256 hash (Code Challenge) in the auth request, and proving possession when exchanging the code for tokens.",
+    "tips": "Explain why public clients cannot hold secrets and how Code Verifier/Challenge works.",
+    "cefr": "B1"
+  },
+  {
+    "id": 187,
+    "category": "security",
+    "difficulty": "senior",
+    "title": "Implementing Zero Trust Network Architecture",
+    "text": "What does 'Never Trust, Always Verify' mean in practical cloud infrastructure engineering?",
+    "model_answer": "Zero Trust rejects the old castle-and-moat model where internal network perimeter access implied trust. Every request—even between internal microservices in the same cluster—must be authenticated, authorized via mTLS with short-lived certificates, subjected to least-privilege RBAC, and continuously audited.",
+    "tips": "Contrast perimeter security with microsegmentation, mTLS, and continuous verification.",
+    "cefr": "B2"
+  },
+  {
+    "id": 188,
+    "category": "security",
+    "difficulty": "mid",
+    "title": "Mitigating Cross-Site Scripting (XSS) in Modern Web Apps",
+    "text": "How do you protect a modern frontend from DOM-based and stored XSS attacks?",
+    "model_answer": "We enforce strict Content Security Policy (CSP) headers disallowing inline scripts, rely on modern UI frameworks that escape interpolation by default, sanitize any raw HTML with DOMPurify, and store sensitive authentication session tokens in HttpOnly, SameSite=Strict cookies rather than localStorage.",
+    "tips": "Mention CSP headers, DOMPurify, automatic template escaping, and HttpOnly cookies.",
+    "cefr": "B1"
+  },
+  {
+    "id": 189,
+    "category": "security",
+    "difficulty": "senior",
+    "title": "Managing Cloud Secrets in CI/CD Pipelines",
+    "text": "How do you eliminate hardcoded credentials and long-lived API keys from codebases and CI runners?",
+    "model_answer": "We use OpenID Connect (OIDC) federation between GitHub Actions and cloud providers (AWS IAM / GCP Workload Identity). The CI runner exchanges a short-lived GitHub token for temporary cloud STS credentials. Application runtime secrets are fetched dynamically from HashiCorp Vault or AWS Secrets Manager.",
+    "tips": "Emphasize OIDC workload identity federation and short-lived STS tokens.",
+    "cefr": "B2"
+  },
+  {
+    "id": 190,
+    "category": "security",
+    "difficulty": "mid",
+    "title": "Preventing SQL Injection in ORMs and Raw Queries",
+    "text": "Can SQL injection still occur when using modern ORMs like SQLAlchemy or Prisma?",
+    "model_answer": "Yes. While ORM query builders use parameterized prepared statements by default, developers can introduce vulnerabilities when concatenating user input into raw SQL clauses (such as text() or $queryRaw) or dynamically interpolating table and column names which cannot be parameterized.",
+    "tips": "Explain prepared statement parameterization vs raw string concatenation.",
+    "cefr": "B2"
+  },
+  {
+    "id": 191,
+    "category": "security",
+    "difficulty": "senior",
+    "title": "JWT Revocation and Invalidation Strategies",
+    "text": "Because JSON Web Tokens are stateless, how do you handle immediate logout or compromised token revocation?",
+    "model_answer": "We use short-lived access tokens (5 to 15 minutes) paired with rotating refresh tokens stored in the database. For instant revocation of access tokens before expiry, we maintain a fast Redis denylist of revoked jti (JWT ID) claims, or bump a user security_stamp column that invalidates any older tokens upon token verification.",
+    "tips": "Discuss short TTLs, rotating refresh tokens, and Redis jti denylists.",
+    "cefr": "B2"
+  },
+  {
+    "id": 192,
+    "category": "security",
+    "difficulty": "junior",
+    "title": "Difference Between Authentication and Authorization",
+    "text": "How do you explain the difference between 401 Unauthorized and 403 Forbidden HTTP status codes?",
+    "model_answer": "Authentication (401) verifies 'Who are you?'—the user failed to provide valid credentials. Authorization (403) verifies 'What are you allowed to do?'—the server knows who the user is, but the user lacks sufficient roles or permissions to access the requested resource.",
+    "tips": "Clearly distinguish identity verification (401) from permission checks (403).",
+    "cefr": "B1"
+  },
+  {
+    "id": 193,
+    "category": "security",
+    "difficulty": "senior",
+    "title": "Mitigating Distributed Denial of Service (DDoS) Attacks",
+    "text": "How do you architect protection against Layer 4 SYN floods and Layer 7 HTTP floods?",
+    "model_answer": "Layer 4 attacks are absorbed by Anycast edge networks like Cloudflare or AWS Shield using SYN cookies and massive global bandwidth. Layer 7 floods are mitigated with Web Application Firewalls (WAF) applying rate limits, IP reputation scoring, CAPTCHA challenges, and aggressive edge caching of cacheable endpoints.",
+    "tips": "Distinguish between Layer 4 infrastructure absorption and Layer 7 WAF rate limiting.",
+    "cefr": "B2"
+  },
+  {
+    "id": 194,
+    "category": "security",
+    "difficulty": "mid",
+    "title": "Cross-Site Request Forgery (CSRF) Defenses",
+    "text": "Why are APIs using Bearer tokens generally immune to CSRF, whereas cookie-based sessions require protection?",
+    "model_answer": "Browsers automatically attach cookies to cross-origin requests, allowing malicious sites to submit unauthorized actions. Bearer tokens in Authorization headers are not automatically attached by the browser; JavaScript must explicitly set them. For cookie-based apps, SameSite=Strict/Lax cookies and anti-CSRF synchronizer tokens prevent CSRF.",
+    "tips": "Explain automatic cookie submission by browsers and the SameSite attribute.",
+    "cefr": "B2"
+  },
+  {
+    "id": 195,
+    "category": "security",
+    "difficulty": "senior",
+    "title": "Cryptographic Hashing for Passwords (Argon2 vs BCrypt)",
+    "text": "Why should you never use SHA-256 for password hashing, and why is Argon2 preferred today?",
+    "model_answer": "SHA-256 is designed to be fast and compute-efficient, allowing attackers to test billions of guesses per second on GPUs. Password hashing functions must be intentionally slow and memory-hard. Argon2id (winner of the Password Hashing Competition) requires significant RAM, rendering GPU and ASIC brute-force attacks economically unfeasible.",
+    "tips": "Emphasize memory-hardness, slow iteration costs, and ASIC resistance.",
+    "cefr": "B2"
+  },
+  {
+    "id": 196,
+    "category": "security",
+    "difficulty": "mid",
+    "title": "Role-Based Access Control (RBAC) vs Attribute-Based (ABAC)",
+    "text": "When does simple RBAC break down, requiring migration to ABAC or policy engines like OPA?",
+    "model_answer": "RBAC assigns permissions to static roles (Admin, Editor, Viewer). It breaks down when access depends on dynamic context, such as 'can an editor update this document only during business hours and only if they own the document?'. ABAC evaluates subject, resource, and environmental attributes dynamically, often via Open Policy Agent (OPA).",
+    "tips": "Contrast static role mapping with dynamic contextual attributes evaluated by OPA.",
+    "cefr": "B1"
+  },
+  {
+    "id": 197,
+    "category": "security",
+    "difficulty": "senior",
+    "title": "Handling Security Vulnerability Disclosures (CVEs)",
+    "text": "What is your process when an open-source dependency in production is flagged with a critical Remote Code Execution CVE?",
+    "model_answer": "I immediately assess exploitability in our runtime environment. If vulnerable, I communicate with stakeholders, locate or test patch versions in CI, and deploy an emergency hotfix. If no upstream patch is available yet, I deploy compensating controls at the WAF or API gateway level to block the exploit payload pattern.",
+    "tips": "Walk through triage, risk assessment, patch validation, and WAF compensating controls.",
+    "cefr": "B2"
+  },
+  {
+    "id": 198,
+    "category": "security",
+    "difficulty": "junior",
+    "title": "Principles of Least Privilege in Cloud IAM",
+    "text": "Why is using AdministratorAccess policies dangerous in microservices, and how do you enforce least privilege?",
+    "model_answer": "Broad wildcard permissions mean a single compromised microservice can destroy or exfiltrate all cloud infrastructure. We craft granular IAM policies granting only the specific actions required (e.g. s3:GetObject on a single bucket prefix) and audit unused permissions periodically with AWS IAM Access Analyzer.",
+    "tips": "Advocate for granular ARN resource scoping and automated permission auditing.",
+    "cefr": "B1"
+  },
+  {
+    "id": 199,
+    "category": "security",
+    "difficulty": "senior",
+    "title": "TLS 1.3 Handshake and Mutual TLS (mTLS)",
+    "text": "How does TLS 1.3 improve on TLS 1.2, and how does mTLS establish bidirectional identity between microservices?",
+    "model_answer": "TLS 1.3 reduces the handshake to 1 round-trip time (1-RTT) and eliminates deprecated insecure ciphers. In standard TLS, only the server proves its identity. Mutual TLS (mTLS) requires both client and server to exchange and verify X.509 certificates signed by a trusted internal Certificate Authority, guaranteeing cryptographically verified identity.",
+    "tips": "Highlight 1-RTT latency reduction and bilateral X.509 certificate verification.",
+    "cefr": "B2"
+  },
+  {
+    "id": 200,
+    "category": "security",
+    "difficulty": "mid",
+    "title": "Secure Coding for File Uploads",
+    "text": "What vulnerabilities exist when users upload files, and how do you secure an upload endpoint?",
+    "model_answer": "Attackers can upload malicious executables, SVG files containing XSS scripts, or zip bombs. We validate MIME types by inspecting file magic bytes (not file extensions), re-encode images to strip malicious metadata, store uploaded files in isolated private object storage buckets (S3) with public access blocked, and generate signed URLs for downloads.",
+    "tips": "Check magic bytes, strip EXIF/SVG scripts, and store in private S3 buckets.",
+    "cefr": "B1"
+  },
+  {
+    "id": 201,
+    "category": "cloud_arch",
+    "difficulty": "senior",
+    "title": "Disaster Recovery: RPO and RTO in Practice",
+    "text": "How do you explain Recovery Point Objective (RPO) and Recovery Time Objective (RTO) to executive stakeholders?",
+    "model_answer": "RPO defines how much data loss is tolerable measured in time—for example, an RPO of 5 minutes means we can lose at most the last 5 minutes of data. RTO defines how long the system can remain down before being restored. Lowering RPO and RTO requires multi-region hot-standbys which exponentially increases infrastructure costs.",
+    "tips": "Define RPO as data loss threshold and RTO as recovery duration threshold.",
+    "cefr": "B2"
+  },
+  {
+    "id": 202,
+    "category": "cloud_arch",
+    "difficulty": "senior",
+    "title": "Multi-Region Active-Active Architecture",
+    "text": "What are the primary challenges when designing a multi-region active-active database deployment?",
+    "model_answer": "The speed of light imposes latency on inter-region network links. Synchronous replication guarantees zero data loss but drastically increases write latency. Asynchronous replication provides fast local writes but introduces replication lag and conflict resolution challenges when concurrent writes modify the same record in two regions.",
+    "tips": "Address inter-region latency, replication lag, and conflict resolution (CRDTs).",
+    "cefr": "B2"
+  },
+  {
+    "id": 203,
+    "category": "cloud_arch",
+    "difficulty": "mid",
+    "title": "Serverless vs Containerized Workloads (Fargate/K8s)",
+    "text": "How do you choose between AWS Lambda and containerized services running on Kubernetes?",
+    "model_answer": "Serverless functions are ideal for unpredictable, event-driven workloads with variable traffic, offering automatic scaling to zero and minimal operational maintenance. Containers on Kubernetes are preferred for long-running processes, workloads with steady high throughput where Lambda per-request billing becomes expensive, or services requiring zero cold starts.",
+    "tips": "Compare cost models, cold start latency, and maintenance overhead.",
+    "cefr": "B1"
+  },
+  {
+    "id": 204,
+    "category": "cloud_arch",
+    "difficulty": "senior",
+    "title": "FinOps: Cloud Cost Optimization for High-Scale Apps",
+    "text": "What strategies do you use to reduce AWS or GCP infrastructure spend by 30% without impacting SLAs?",
+    "model_answer": "We purchase Compute Savings Plans and Reserved Instances for baseline capacity, utilize Spot instances for fault-tolerant background worker pools, set lifecycle rules to transition old S3 objects to Glacier, right-size overprovisioned container CPU/memory requests based on historical telemetry, and clean up orphaned EBS volumes.",
+    "tips": "Highlight Savings Plans, Spot instances, S3 lifecycle transitions, and right-sizing.",
+    "cefr": "B2"
+  },
+  {
+    "id": 205,
+    "category": "cloud_arch",
+    "difficulty": "mid",
+    "title": "Infrastructure as Code (IaC) with Terraform Best Practices",
+    "text": "How do you organize Terraform code and state files safely across staging and production environments?",
+    "model_answer": "We isolate state files into distinct remote S3 buckets with DynamoDB state locking per environment, preventing an accidental change in staging from impacting production. We use modular, versioned Terraform modules, follow the principle of immutable infrastructure, and enforce plan reviews in automated CI pipelines.",
+    "tips": "Mention remote backend state locking, environment isolation, and versioned modules.",
+    "cefr": "B1"
+  },
+  {
+    "id": 206,
+    "category": "cloud_arch",
+    "difficulty": "senior",
+    "title": "Chaos Engineering and Fault Injection",
+    "text": "Why is chaos testing (e.g., Chaos Monkey) valuable for verifying high availability?",
+    "model_answer": "Theoretical high availability often fails during real incidents due to hidden cascading dependencies or misconfigured timeouts. Chaos engineering intentionally injects failure—killing random worker nodes, introducing network packet loss, or degrading database latency—to verify that circuit breakers, automatic failovers, and alerts behave as expected.",
+    "tips": "Explain proactive verification of resilience mechanisms and failure modes.",
+    "cefr": "B2"
+  },
+  {
+    "id": 207,
+    "category": "cloud_arch",
+    "difficulty": "junior",
+    "title": "Availability Zones vs Regions Explained",
+    "text": "What is the physical difference between an AWS Region and an Availability Zone (AZ)?",
+    "model_answer": "An AWS Region is a distinct geographic area containing multiple isolated data center locations. An Availability Zone is one or more physical data centers within a region, engineered with independent power, cooling, and low-latency redundant fiber networking. Multi-AZ deployment protects against local power or hardware outages.",
+    "tips": "Explain geographic separation vs isolated data centers connected by high-speed fiber.",
+    "cefr": "B2"
+  },
+  {
+    "id": 208,
+    "category": "cloud_arch",
+    "difficulty": "senior",
+    "title": "Designing Observable Systems (Metrics, Logs, Traces)",
+    "text": "How do you correlate distributed traces with structured logs when debugging latency in microservices?",
+    "model_answer": "We inject a unique W3C traceparent correlation ID at the edge API gateway and propagate it across all internal HTTP and gRPC headers. Application logging libraries include this trace ID in every structured JSON log entry, enabling engineers to jump directly from a slow trace span in OpenTelemetry to the exact matching log lines in Datadog or Grafana.",
+    "tips": "Explain distributed context propagation and W3C traceparent headers.",
+    "cefr": "B2"
+  },
+  {
+    "id": 209,
+    "category": "cloud_arch",
+    "difficulty": "mid",
+    "title": "Circuit Breakers and Graceful Degradation",
+    "text": "How does a circuit breaker protect your frontend when a third-party recommendation service goes down?",
+    "model_answer": "When error rates or response times from the recommendation service exceed a threshold, the circuit breaker trips to the 'Open' state, immediately failing fast or returning cached fallback recommendations without tying up server threads. Periodically, it transitions to 'Half-Open' to test if the service has recovered.",
+    "tips": "Walk through Closed, Open, and Half-Open states with graceful fallback values.",
+    "cefr": "B2"
+  },
+  {
+    "id": 210,
+    "category": "cloud_arch",
+    "difficulty": "junior",
+    "title": "Horizontal Pod Autoscaling (HPA) in Kubernetes",
+    "text": "How does Kubernetes decide when to spin up new pods in response to traffic spikes?",
+    "model_answer": "The Horizontal Pod Autoscaler periodically polls metrics from the Metrics Server. When target CPU or memory utilization (e.g. 70%) is exceeded, HPA calculates the required replica count and scales the Deployment up to a configured maximum. Custom metrics like queue depth can also drive autoscaling.",
+    "tips": "Explain target thresholds, metrics server polling, and custom business metrics.",
+    "cefr": "B1"
+  },
+  {
+    "id": 211,
+    "category": "cloud_arch",
+    "difficulty": "senior",
+    "title": "Blue-Green Deployments vs Canary Releases",
+    "text": "How do you evaluate whether to use Blue-Green deployments or Canary releases for mission-critical services?",
+    "model_answer": "Blue-Green spins up an identical separate environment and flips all router traffic simultaneously, allowing instant rollback but requiring double the infrastructure capacity. Canary releases gradually shift 1% to 10% of real user traffic to the new version while monitoring error rates, catching subtle bugs under real load before full rollout.",
+    "tips": "Compare instant traffic flip (Blue-Green) with progressive risk monitoring (Canary).",
+    "cefr": "B2"
+  },
+  {
+    "id": 212,
+    "category": "cloud_arch",
+    "difficulty": "mid",
+    "title": "Cloud Object Storage Consistency Models",
+    "text": "Why was S3's transition to strong read-after-write consistency a breakthrough for big data workloads?",
+    "model_answer": "Previously, S3 had eventual consistency for overwrite PUTs and DELETEs, requiring complex coordination or external locking to avoid reading stale data. Strong read-after-write consistency guarantees that immediately after a successful upload, any subsequent GET request returns the new object, drastically simplifying data pipelines.",
+    "tips": "Explain strong read-after-write consistency versus previous eventual consistency.",
+    "cefr": "B1"
+  },
+  {
+    "id": 213,
+    "category": "cloud_arch",
+    "difficulty": "senior",
+    "title": "Dead Letter Queues (DLQ) and Poison Pill Messages",
+    "text": "What is a poison pill message, and how do you handle it in message consumer pipelines?",
+    "model_answer": "A poison pill is a malformed message that causes consumers to crash repeatedly upon processing. Without proper handling, the message is repeatedly requeued, blocking the entire queue. We configure a maximum retry count (e.g., 3 retries with exponential backoff); upon exhaustion, the message is routed to a Dead Letter Queue for inspection and alerting.",
+    "tips": "Explain repeated consumer crashing, retry exhaustion, and routing to a DLQ.",
+    "cefr": "B2"
+  },
+  {
+    "id": 214,
+    "category": "cloud_arch",
+    "difficulty": "junior",
+    "title": "CDN Edge Caching Strategies",
+    "text": "How do Cache-Control headers dictate what is cached at CDN edge locations?",
+    "model_answer": "The Cache-Control header contains directives: 'public' allows CDN caching, 'max-age' sets TTL in seconds, 's-maxage' overrides TTL specifically for shared caches like CDNs, and 'stale-while-revalidate' serves cached content instantly while asynchronously fetching fresh content from the origin.",
+    "tips": "Detail max-age, s-maxage, public vs private, and stale-while-revalidate.",
+    "cefr": "B1"
+  },
+  {
+    "id": 215,
+    "category": "cloud_arch",
+    "difficulty": "senior",
+    "title": "Immutable Infrastructure vs Configuration Management",
+    "text": "Why has the cloud industry moved away from in-place server patching (Ansible/Puppet) toward immutable golden AMIs/containers?",
+    "model_answer": "In-place configuration management leads to configuration drift, where two servers that were supposed to be identical behave differently due to historical patch order or partial network failures. Immutable infrastructure treats servers as disposable: any update generates a brand-new container image or AMI that is verified and replaced atomically.",
+    "tips": "Emphasize configuration drift, snowflake servers, and atomic disposable replacements.",
+    "cefr": "B2"
+  }
+]

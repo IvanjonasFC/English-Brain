@@ -1,0 +1,32 @@
+Matriz Fonética y Acústica Ampliada (Arquitectura Robusta)
+A continuación se detalla la matriz completa de procesamiento de voz en toda la plataforma:
+
+Módulo y Pestaña	Modalidad de Audio	Pipeline / Motores de IA	Métricas Acústicas y Fonéticas	Corrección y Transferencia
+Entrevistas STAR & Tech	Discurso Libre Continuo	• Whisper STT Large
+• Ollama (Evaluador STAR)
+• Extractor de Pitch (YIN/Praat)	• Curva F0 de Entonación
+• Ritmo WPM (120-150 meta)
+• Detección de Muletillas (uhm/like)
+• Índice de Asertividad	Sugerencia de estructuración STAR, eliminación de rodeos y corrección gramatical directa.
+Listening & Reading (Comprensión)	Audio Nativo + Respuesta Explicativa	• Kokoro Neural TTS
+• Whisper STT
+• Evaluador Semántico	• Coherencia de respuesta libre
+• Fidelidad acústica si se hace shadowing
+• Pitch DTW vs modelo nativo	Preguntas de seguimiento, contraste de ideas y verificación de comprensión auditiva.
+Verbos Irregulares & Phrasal Verbs	Shadowing + Producción Guiada	• Kokoro HD Multi-Speaker
+• Whisper STT
+• GOP Phoneme Alignment
+• Pitch DTW Contour	• Goodness of Pronunciation (GOP)
+• Connected speech & linking
+• Curva de entonación superpuesta
+• Formas V1/V2/V3 o Separabilidad	Envío de errores a cola FSRS y sugerencia de fonemas directos hacia el Laboratorio HVPT.
+Laboratorio Fonético (HVPT)	Discriminación Perceptual A/B	• Kokoro HD (Voces M/F)
+• Motor Drift Local
+• Cálculo $d'$ (Signal Detection)	• Contraste de Formantes F1/F2
+• Longitud vocálica (/ɪ/ vs /iː/)
+• Índice de Sensibilidad $d'$ ($>2.0$ = Nativo)	Reentrenamiento de los 44 fonemas del inglés mediante repetición de alta variabilidad.
+Vocabulario Técnico & Flashcards	Término Aislado + Frase Contextual	• Whisper STT
+• Clasificador Fonético GOP
+• Comparador de Curva Pitch	• Precisión fonema a fonema
+• Acentuación silábica (stress)
+• Esqueleto fonético vs texto	Chip clickeable con el fonema errado (/θ/, /æ/, etc.) para practicarlo al instante.

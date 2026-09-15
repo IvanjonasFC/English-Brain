@@ -1,0 +1,14 @@
+[
+  {
+    "id": 105,
+    "category": "technicalInterview",
+    "difficulty": "senior",
+    "cefr": "B2-C1",
+    "title": "Handling Critical Memory Leaks Under Peak Traffic",
+    "text": "Tell me about a situation where a service was experiencing severe memory pressure in production and how you diagnosed and mitigated it.",
+    "text_es": "Cuéntame una situación en la que un servicio experimentó una grave saturación de memoria en producción y cómo lo diagnosticaste y mitigaste.",
+    "model_answer": "In my previous role, our message ingestion microservice started crashing due to out-of-memory errors during a major product launch. I immediately captured heap profiles and analyzed memory allocations, identifying an unbounded in-memory cache without TTL expiration. I mitigated the immediate outage by tuning container memory limits and rolling out a patch that replaced the local cache with a distributed Redis cluster featuring LRU eviction. This reduced crash rates to zero and preserved system throughput.",
+    "model_answer_es": "En mi puesto anterior, nuestro microservicio de ingesta de mensajes comenzó a fallar por errores de memoria durante un lanzamiento importante. Capturé inmediatamente perfiles de heap e identifiqué una caché en memoria sin caducidad TTL. Mitigué la caída ajustando los límites de los contenedores y desplegando un parche que sustituyó la caché local por un clúster de Redis con desalojo LRU, eliminando los fallos y manteniendo el rendimiento.",
+    "tips": "Utiliza la estructura STAR: describe brevemente la crisis (Situation), tu acción inmediata de diagnóstico con herramientas concretas (Action) y el resultado medible de fiabilidad (Result)."
+  }
+]

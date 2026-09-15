@@ -1,0 +1,128 @@
+﻿# English Brain - English translations (identity map - returns msgid as-is)
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "auth.invalid_credentials"
+msgstr "Invalid username or password. Please check your credentials."
+
+msgid "auth.session_expired"
+msgstr "Your session has expired. Please sign in again."
+
+msgid "auth.unauthorized"
+msgstr "You are not authorized to perform this action."
+
+msgid "auth.user_not_found"
+msgstr "User not found."
+
+msgid "auth.token_invalid"
+msgstr "Invalid authentication token."
+
+msgid "auth.password_too_short"
+msgstr "Password must be at least 8 characters long."
+
+msgid "error.not_found"
+msgstr "Resource not found."
+
+msgid "error.internal"
+msgstr "Internal server error. Please try again."
+
+msgid "error.validation"
+msgstr "Validation error in submitted data."
+
+msgid "error.timeout"
+msgstr "Request timed out. Please try again."
+
+msgid "error.service_unavailable"
+msgstr "Service is temporarily unavailable."
+
+msgid "session.created"
+msgstr "Session started successfully."
+
+msgid "session.completed"
+msgstr "Session completed. Great work!"
+
+msgid "session.not_found"
+msgstr "Session not found."
+
+msgid "session.already_completed"
+msgstr "This session has already been completed."
+
+msgid "session.feedback_processing"
+msgstr "Processing your response with AI..."
+
+msgid "session.feedback_ready"
+msgstr "Feedback is ready."
+
+msgid "session.no_audio"
+msgstr "No audio received. Please record your answer."
+
+msgid "question.not_found"
+msgstr "Question not found."
+
+msgid "question.no_questions_for_category"
+msgstr "No questions available for this category."
+
+msgid "question.category_required"
+msgstr "Category is required."
+
+msgid "pronunciation.analyzing"
+msgstr "Analyzing your pronunciation..."
+
+msgid "pronunciation.excellent"
+msgstr "Excellent pronunciation!"
+
+msgid "pronunciation.good"
+msgstr "Good pronunciation. Keep practicing!"
+
+msgid "pronunciation.needs_improvement"
+msgstr "Your pronunciation needs improvement. Listen to the model audio and try again."
+
+msgid "pronunciation.service_unavailable"
+msgstr "Pronunciation service is unavailable. Please try later."
+
+msgid "pronunciation.audio_too_short"
+msgstr "Audio is too short. Please speak for at least 2 seconds."
+
+msgid "tts.generating"
+msgstr "Generating audio..."
+
+msgid "tts.service_unavailable"
+msgstr "Text-to-speech service is unavailable."
+
+msgid "tts.text_too_long"
+msgstr "Text is too long to synthesize."
+
+msgid "card.created"
+msgstr "Card added to your review deck."
+
+msgid "card.reviewed"
+msgstr "Card reviewed successfully."
+
+msgid "card.not_found"
+msgstr "Card not found."
+
+msgid "card.exported"
+msgstr "Deck exported to Anki format successfully."
+
+msgid "sync.queued"
+msgstr "Action saved offline. Will sync when connected."
+
+msgid "sync.completed"
+msgstr "Sync completed."
+
+msgid "sync.error"
+msgstr "Sync error. Will retry automatically."
+
+msgid "profile.updated"
+msgstr "Profile updated successfully."
+
+msgid "profile.not_found"
+msgstr "User profile not found."
+
+msgid "profile.achievement_unlocked"
+msgstr "New achievement unlocked!"

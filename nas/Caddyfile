@@ -1,0 +1,51 @@
+# ==============================================================================
+# Plantilla Caddyfile para despliegue en NAS con dominio propio
+# Sustituye ingles.tudominio.com por tu dominio o subdominio real
+# ==============================================================================
+
+ingles.tudominio.com {
+    # Compresión gzip y zstd
+    encode gzip zstd
+
+    # Cabeceras de seguridad
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+
+    # API Backend (FastAPI)
+    handle /api/* {
+        reverse_proxy backend:8000 {
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    # Health check
+    handle /health {
+        reverse_proxy backend:8000
+    }
+
+    # Swagger / OpenAPI docs del Backend
+    handle /docs* {
+        reverse_proxy backend:8000
+    }
+    handle /openapi.json {
+        reverse_proxy backend:8000
+    }
+
+    # Archivos estáticos de audio cacheados
+    handle /audio/* {
+        reverse_proxy backend:8000
+    }
+
+    # App Web de Flutter (si compilas con `flutter build web` y montas /app/web)
+    handle {
+        root * /var/www/html
+        file_server
+        try_files {path} /index.html
+    }
+}

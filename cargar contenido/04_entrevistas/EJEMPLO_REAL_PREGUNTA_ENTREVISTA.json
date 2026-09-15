@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "category": "hr",
+    "difficulty": "junior",
+    "title": "Tell me about yourself",
+    "text": "Can you walk me through your background, your main technical interests, and what brings you to this role?",
+    "model_answer": "I have been focusing on full-stack software development with Python and Flutter, building scalable backend services and responsive client interfaces. I thrive when solving complex architectural problems and delivering clean, well-tested code.",
+    "tips": "Use the Present, Past, Future structure: what you do now, past relevant projects, and why this role matches your career trajectory.",
+    "cefr": "B1"
+  },
+  {
+    "id": 2,
+    "category": "hr",
+    "difficulty": "junior",
+    "title": "Greatest Strength",
+    "text": "What would you say is your greatest technical or professional strength?",
+    "model_answer": "My greatest strength is my systematic problem-solving mindset. When faced with an unfamiliar bug or legacy codebase, I isolate root causes with reproducible benchmarks rather than guessing.",
+    "tips": "Back your claim with a concrete, concise technical story.",
+    "cefr": "B1"
+  }
+]

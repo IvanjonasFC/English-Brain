@@ -1,0 +1,7 @@
+# ==============================================================================
+# Raíz del Monorepo - Reenvío hacia la configuración centralizada de NAS
+# La configuración completa y personalizable reside en /nas/docker-compose.yml
+# ==============================================================================
+
+include:
+  - nas/docker-compose.yml

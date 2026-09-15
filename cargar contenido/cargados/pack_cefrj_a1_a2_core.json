@@ -1,0 +1,145 @@
+[
+  {
+    "id": "cefrj_a1_a2_core",
+    "title": "CEFR-J Core Vocabulary (A1-A2)",
+    "description": "Términos esenciales de alta frecuencia nivel A1-A2 extraídos del estándar CEFR-J y Octanove.",
+    "iconCodePoint": 983105,
+    "iconFontFamily": "MaterialIcons",
+    "level": "A1-A2 • General",
+    "accentColorValue": 4283839880,
+    "terms": [
+      {
+        "term": "ability",
+        "ipa": "/ability/",
+        "definition": "Essential noun term in CEFR A2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'ability' in practical communication.",
+        "spanishHint": "término (A2)",
+        "category": "core_curriculum",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "about",
+        "ipa": "/about/",
+        "definition": "Essential adverb term in CEFR A1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'about' in practical communication.",
+        "spanishHint": "término (A1)",
+        "category": "core_curriculum",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "abroad",
+        "ipa": "/abroad/",
+        "definition": "Essential adverb term in CEFR A2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'abroad' in practical communication.",
+        "spanishHint": "término (A2)",
+        "category": "core_curriculum",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "accept",
+        "ipa": "/accept/",
+        "definition": "Essential verb term in CEFR A2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'accept' in practical communication.",
+        "spanishHint": "término (A2)",
+        "category": "core_curriculum",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "acceptable",
+        "ipa": "/acceptable/",
+        "definition": "Essential adjective term in CEFR A2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'acceptable' in practical communication.",
+        "spanishHint": "término (A2)",
+        "category": "core_curriculum",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "accident",
+        "ipa": "/accident/",
+        "definition": "Essential noun term in CEFR A2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'accident' in practical communication.",
+        "spanishHint": "término (A2)",
+        "category": "core_curriculum",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "account",
+        "ipa": "/account/",
+        "definition": "Essential noun term in CEFR A2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'account' in practical communication.",
+        "spanishHint": "término (A2)",
+        "category": "core_curriculum",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "achieve",
+        "ipa": "/achieve/",
+        "definition": "Essential verb term in CEFR A2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'achieve' in practical communication.",
+        "spanishHint": "término (A2)",
+        "category": "core_curriculum",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "across",
+        "ipa": "/across/",
+        "definition": "Essential adverb term in CEFR A2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'across' in practical communication.",
+        "spanishHint": "término (A2)",
+        "category": "core_curriculum",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "act",
+        "ipa": "/act/",
+        "definition": "Essential noun term in CEFR A2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'act' in practical communication.",
+        "spanishHint": "término (A2)",
+        "category": "core_curriculum",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "action",
+        "ipa": "/action/",
+        "definition": "Essential noun term in CEFR A1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'action' in practical communication.",
+        "spanishHint": "término (A1)",
+        "category": "core_curriculum",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "activity",
+        "ipa": "/activity/",
+        "definition": "Essential noun term in CEFR A1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'activity' in practical communication.",
+        "spanishHint": "término (A1)",
+        "category": "core_curriculum",
+        "difficulty": "junior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      }
+    ]
+  }
+]

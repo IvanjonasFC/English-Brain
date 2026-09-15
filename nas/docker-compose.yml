@@ -1,0 +1,85 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: english_coach_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:11434/api/tags || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+    # Ejecutar tras iniciar: docker compose exec ollama ollama pull qwen2.5:7b
+
+  speaches:
+    image: ghcr.io/speaches-ai/speaches:latest
+    container_name: english_coach_speaches
+    ports:
+      - "8001:8000"
+    environment:
+      - WHISPER_MODEL=base
+      - PIPER_VOICE=en_US-lessac-medium
+    volumes:
+      - models_cache:/cache
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/v1/models || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: english_coach_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_URL=http://ollama:11434
+      - SPEACHES_URL=http://speaches:8000/v1
+      - DB_PATH=/data/coach.db
+      - AUDIO_CACHE_DIR=/audio
+      - API_KEY=${API_KEY:-super-secret-key-123}
+      - JWT_SECRET=${JWT_SECRET:-super-secret-jwt-key-xyz-789-secure-token}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - LOG_FILE_PATH=/data/logs/app.log
+    volumes:
+      - backend_data:/data
+      - audio_cache:/audio
+    depends_on:
+      ollama:
+        condition: service_healthy
+      speaches:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # ============================================================================
+  # CADDY (Opcional: Si configuras dominio público con HTTPS y certificados automáticos)
+  # ============================================================================
+  # caddy:
+  #   image: caddy:2-alpine
+  #   container_name: english_coach_caddy
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./Caddyfile:/etc/caddy/Caddyfile:ro
+  #     - caddy_data:/data
+  #     - caddy_config:/config
+  #   depends_on:
+  #     - backend
+  #   restart: unless-stopped
+
+volumes:
+  ollama_data:
+  models_cache:
+  backend_data:
+  audio_cache:
+  # caddy_data:
+  # caddy_config:

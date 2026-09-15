@@ -1,0 +1,27 @@
+[
+  {
+    "id": "tech_b2c1_canary_rollout",
+    "domain": "tech",
+    "band": "B2-C1",
+    "category": "Workplace",
+    "title": "Mitigating High-Stakes Deployments with Canary Releases",
+    "estMinutes": 4,
+    "body": "When rolling out critical database migration patches across multiple geographical regions, high-concurrency platforms cannot afford full outages. By directing just 2% of incoming live user requests to the newly deployed canary instance, the site reliability engineering team can monitor error telemetry, garbage collection pauses, and response latency anomalies before authorizing global fleet promotion. If unexpected HTTP 500 error rates spike above the agreed threshold, automated circuit breakers immediately rollback traffic to the previous stable revision within milliseconds.",
+    "bodyEs": "Al desplegar parches críticos de migración de bases de datos en múltiples regiones geográficas, las plataformas de alta concurrencia no pueden permitirse caídas totales del servicio. Al dirigir únicamente el 2% de las peticiones reales entrantes a la instancia canaria recién desplegada, el equipo de ingeniería de fiabilidad del sitio puede supervisar la telemetría de errores, las pausas de recolección de basura y las anomalías de latencia antes de autorizar la promoción a toda la flota global. Si la tasa de errores HTTP 500 supera el umbral acordado, los disyuntores automáticos revierten el tráfico a la versión estable anterior en milisegundos.",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mcq",
+        "question": "What is the primary advantage of directing 2% of traffic to a canary instance?",
+        "options": [
+          "To reduce cloud hosting expenses permanently",
+          "To test telemetry and anomaly detection before full global rollout",
+          "To force database backups during peak traffic hours",
+          "To replace all regional clusters at the exact same moment"
+        ],
+        "correctIndex": 1,
+        "explanation": "El texto explica que el 2% de tráfico permite supervisar errores y latencia antes de autorizar el despliegue a la flota completa."
+      }
+    ]
+  }
+]

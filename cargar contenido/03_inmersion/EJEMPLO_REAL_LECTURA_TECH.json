@@ -1,0 +1,58 @@
+[
+  {
+    "id": "tech_b1_standup",
+    "domain": "tech",
+    "band": "B1",
+    "category": "Agile & Standups",
+    "title": "A standup update with a blocker",
+    "estMinutes": 4,
+    "body": "Morning, everyone. Yesterday I finished the login screen and opened a pull request, so if someone has ten minutes to review it, that would really help. Today I am moving on to the password reset flow. I do have one blocker: I am still waiting for the design team to confirm the wording of the error messages, and I do not want to guess and redo the work later. My plan is this — if I have not heard back by lunchtime, I will use placeholders, ship the logic, and swap the final text in once design replies. That way the feature is not stuck on a decision that is out of my hands. Nothing else from me; back to you.",
+    "bodyEs": "Buenos días a todos. Ayer terminé la pantalla de login y abrí un pull request, así que si alguien tiene diez minutos para revisarlo, me vendría muy bien. Hoy paso al flujo de restablecer contraseña. Tengo un impedimento: sigo esperando a que el equipo de diseño confirme el texto de los mensajes de error, y no quiero adivinar y rehacer el trabajo luego. Mi plan es este — si no tengo respuesta antes de comer, usaré placeholders, subiré la lógica y cambiaré el texto final cuando diseño responda. Así la funcionalidad no se queda atascada por una decisión que no depende de mí. Nada más por mi parte; te devuelvo la palabra.",
+    "questions": [
+      {
+        "type": "mcq",
+        "prompt": "What does the speaker ask the team for?",
+        "explanationEs": "\"if someone has ten minutes to review it\".",
+        "options": [
+          "More time",
+          "A code review of the pull request",
+          "A new laptop"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "mcq",
+        "prompt": "Why won\\'t the speaker just guess the error wording?",
+        "explanationEs": "\"I do not want to guess and redo the work later\".",
+        "options": [
+          "To avoid redoing the work later",
+          "Because they forgot it",
+          "It is not important"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "type": "mcq",
+        "prompt": "What is the purpose of the placeholder plan?",
+        "explanationEs": "\"the feature is not stuck on a decision that is out of my hands\".",
+        "options": [
+          "To skip the feature",
+          "To keep progress despite a decision out of their hands",
+          "To blame the design team"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "type": "spoken",
+        "prompt": "Give your own standup update: what you did, what you will do, and one blocker.",
+        "explanationEs": "Estructura clásica: ayer (yesterday), hoy (today), y un impedimento (blocker).",
+        "keywords": [
+          "yesterday",
+          "today",
+          "blocker"
+        ],
+        "modelAnswer": "Yesterday I finished the API tests, today I will start the payment flow, and my blocker is that I am waiting for access to the staging server."
+      }
+    ]
+  }
+]

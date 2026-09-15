@@ -1,0 +1,145 @@
+[
+  {
+    "id": "cefrj_c1_core",
+    "title": "CEFR-J Core Vocabulary (C1)",
+    "description": "Términos esenciales de alta frecuencia nivel C1 extraídos del estándar CEFR-J y Octanove.",
+    "iconCodePoint": 983105,
+    "iconFontFamily": "MaterialIcons",
+    "level": "C1 • General",
+    "accentColorValue": 4283839880,
+    "terms": [
+      {
+        "term": "exterior",
+        "ipa": "/exterior/",
+        "definition": "Essential noun term in CEFR C1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'exterior' in practical communication.",
+        "spanishHint": "término (C1)",
+        "category": "core_curriculum",
+        "difficulty": "senior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "cloak",
+        "ipa": "/cloak/",
+        "definition": "Essential noun term in CEFR C1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'cloak' in practical communication.",
+        "spanishHint": "término (C1)",
+        "category": "core_curriculum",
+        "difficulty": "senior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "timid",
+        "ipa": "/timid/",
+        "definition": "Essential adjective term in CEFR C1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'timid' in practical communication.",
+        "spanishHint": "término (C1)",
+        "category": "core_curriculum",
+        "difficulty": "senior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "reluctantly",
+        "ipa": "/reluctantly/",
+        "definition": "Essential adverb term in CEFR C1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'reluctantly' in practical communication.",
+        "spanishHint": "término (C1)",
+        "category": "core_curriculum",
+        "difficulty": "senior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "concur",
+        "ipa": "/concur/",
+        "definition": "Essential verb term in CEFR C1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'concur' in practical communication.",
+        "spanishHint": "término (C1)",
+        "category": "core_curriculum",
+        "difficulty": "senior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "avid",
+        "ipa": "/avid/",
+        "definition": "Essential adjective term in CEFR C1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'avid' in practical communication.",
+        "spanishHint": "término (C1)",
+        "category": "core_curriculum",
+        "difficulty": "senior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "marvel",
+        "ipa": "/marvel/",
+        "definition": "Essential verb term in CEFR C1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'marvel' in practical communication.",
+        "spanishHint": "término (C1)",
+        "category": "core_curriculum",
+        "difficulty": "senior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "enviable",
+        "ipa": "/enviable/",
+        "definition": "Essential adverb term in CEFR C1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'enviable' in practical communication.",
+        "spanishHint": "término (C1)",
+        "category": "core_curriculum",
+        "difficulty": "senior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "organizational",
+        "ipa": "/organizational/",
+        "definition": "Essential adjective term in CEFR C1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'organizational' in practical communication.",
+        "spanishHint": "término (C1)",
+        "category": "core_curriculum",
+        "difficulty": "senior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "psychiatrist",
+        "ipa": "/psychiatrist/",
+        "definition": "Essential noun term in CEFR C1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'psychiatrist' in practical communication.",
+        "spanishHint": "término (C1)",
+        "category": "core_curriculum",
+        "difficulty": "senior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "psychiatric",
+        "ipa": "/psychiatric/",
+        "definition": "Essential adjective term in CEFR C1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'psychiatric' in practical communication.",
+        "spanishHint": "término (C1)",
+        "category": "core_curriculum",
+        "difficulty": "senior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "clinical",
+        "ipa": "/clinical/",
+        "definition": "Essential adjective term in CEFR C1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'clinical' in practical communication.",
+        "spanishHint": "término (C1)",
+        "category": "core_curriculum",
+        "difficulty": "senior",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      }
+    ]
+  }
+]

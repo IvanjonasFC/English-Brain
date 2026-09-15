@@ -1,0 +1,35 @@
+[
+  {
+    "id": "unit-concessive-clauses-c1",
+    "level": "Level 4: Staff",
+    "title": "Concessive Clauses in Executive Negotiation",
+    "tag": "C1",
+    "subtitle": "Cómo ceder tácticamente ('Although', 'Even though', 'Notwithstanding') manteniendo tu postura arquitectónica",
+    "ruleSummary": "Usa cláusulas concesivas para reconocer los argumentos de la otra parte ('Although this vendor offers lower upfront licensing costs...') antes de introducir tu conclusión estratégica ('...its proprietary lock-in poses severe long-term risks'). Muestra empatía ejecutiva y rigor analítico.",
+    "comparisonExamples": [
+      {
+        "wrong": "We shouldn't use this tool but it is cheaper.",
+        "right": "Although the tool offers a lower initial price point, its total cost of ownership is significantly higher due to maintenance.",
+        "tip": "'Although' al inicio estructura un argumento maduro y convincente."
+      },
+      {
+        "wrong": "Despite we have few servers, the load is high.",
+        "right": "Despite having limited compute nodes, our cluster maintained 99.99% uptime.",
+        "tip": "'Despite' y 'In spite of' exigen sustantivo o gerundio (-ing), nunca oración completa con verbo conjugado directo."
+      }
+    ],
+    "questions": [
+      {
+        "id": 401,
+        "level": "Level 4: Staff",
+        "unitTitle": "Concessive Clauses in Executive Negotiation",
+        "prompt": "_____ the tight project deadline, our team refused to bypass the automated security audit.",
+        "contextSentence": "Executive trade-off: Concession followed by a principled stance.",
+        "options": ["Although", "Despite", "Even though", "However"],
+        "correctAnswer": "Despite",
+        "spanishExplanation": "Ante un sintagma nominal ('the tight project deadline'), la preposición correcta es 'Despite' o 'In spite of' (no 'Although' ni 'Even though', que requieren sujeto y verbo).",
+        "audioText": "Despite the tight project deadline, our team refused to bypass the automated security audit."
+      }
+    ]
+  }
+]

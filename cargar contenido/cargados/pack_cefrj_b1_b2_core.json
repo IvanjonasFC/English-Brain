@@ -1,0 +1,145 @@
+[
+  {
+    "id": "cefrj_b1_b2_core",
+    "title": "CEFR-J Core Vocabulary (B1-B2)",
+    "description": "Términos esenciales de alta frecuencia nivel B1-B2 extraídos del estándar CEFR-J y Octanove.",
+    "iconCodePoint": 983105,
+    "iconFontFamily": "MaterialIcons",
+    "level": "B1-B2 • General",
+    "accentColorValue": 4283839880,
+    "terms": [
+      {
+        "term": "abandon",
+        "ipa": "/abandon/",
+        "definition": "Essential verb term in CEFR B1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'abandon' in practical communication.",
+        "spanishHint": "término (B1)",
+        "category": "core_curriculum",
+        "difficulty": "mid",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "abandoned",
+        "ipa": "/abandoned/",
+        "definition": "Essential adjective term in CEFR B2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'abandoned' in practical communication.",
+        "spanishHint": "término (B2)",
+        "category": "core_curriculum",
+        "difficulty": "mid",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "able",
+        "ipa": "/able/",
+        "definition": "Essential adjective term in CEFR B1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'able' in practical communication.",
+        "spanishHint": "término (B1)",
+        "category": "core_curriculum",
+        "difficulty": "mid",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "abnormal",
+        "ipa": "/abnormal/",
+        "definition": "Essential adjective term in CEFR B1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'abnormal' in practical communication.",
+        "spanishHint": "término (B1)",
+        "category": "core_curriculum",
+        "difficulty": "mid",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "abnormally",
+        "ipa": "/abnormally/",
+        "definition": "Essential adverb term in CEFR B2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'abnormally' in practical communication.",
+        "spanishHint": "término (B2)",
+        "category": "core_curriculum",
+        "difficulty": "mid",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "aboard",
+        "ipa": "/aboard/",
+        "definition": "Essential adverb term in CEFR B1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'aboard' in practical communication.",
+        "spanishHint": "término (B1)",
+        "category": "core_curriculum",
+        "difficulty": "mid",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "abolish",
+        "ipa": "/abolish/",
+        "definition": "Essential verb term in CEFR B2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'abolish' in practical communication.",
+        "spanishHint": "término (B2)",
+        "category": "core_curriculum",
+        "difficulty": "mid",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "aboriginal",
+        "ipa": "/aboriginal/",
+        "definition": "Essential adjective term in CEFR B2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'aboriginal' in practical communication.",
+        "spanishHint": "término (B2)",
+        "category": "core_curriculum",
+        "difficulty": "mid",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "aborigine",
+        "ipa": "/aborigine/",
+        "definition": "Essential noun term in CEFR B1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'aborigine' in practical communication.",
+        "spanishHint": "término (B1)",
+        "category": "core_curriculum",
+        "difficulty": "mid",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "above",
+        "ipa": "/above/",
+        "definition": "Essential adjective term in CEFR B1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'above' in practical communication.",
+        "spanishHint": "término (B1)",
+        "category": "core_curriculum",
+        "difficulty": "mid",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "abruptly",
+        "ipa": "/abruptly/",
+        "definition": "Essential adverb term in CEFR B2 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'abruptly' in practical communication.",
+        "spanishHint": "término (B2)",
+        "category": "core_curriculum",
+        "difficulty": "mid",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      },
+      {
+        "term": "absence",
+        "ipa": "/absence/",
+        "definition": "Essential noun term in CEFR B1 standard vocabulary.",
+        "exampleSentence": "We frequently use the term 'absence' in practical communication.",
+        "spanishHint": "término (B1)",
+        "category": "core_curriculum",
+        "difficulty": "mid",
+        "relatedTerms": [],
+        "origin": "CEFR-J / Octanove"
+      }
+    ]
+  }
+]

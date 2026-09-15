@@ -1,0 +1,125 @@
+# Robust Content Pipeline: Ingestion, Provenance, CEFR Validation & Versioned Snapshots
+
+This document outlines the architecture and execution plan for the **Robust Content Pipeline** for English Brain. It enables controlled importation of external and local LLM-generated material, strict CEFR classification, license enforcement, and offline-first delta synchronization between the NAS/backend and the mobile app.
+
+---
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Key Architecture Decisions:**
+> 1. **State Machine (`source` → `raw` → `normalized` → `reviewed` → `published`)**: No content ever enters the published snapshot without human review (`reviewedBy`, timestamp, verified CEFR level).
+> 2. **License Enforcement**: Content with `license != 'own'` (e.g. materials from BBC, British Council, Cambridge) is strictly restricted to external reference URLs/metadata; embedding copied text under proprietary licenses is rejected by the pipeline validator.
+> 3. **Versioned Snapshots & Deltas**: Every publication increments the snapshot version (`v1.0.0`, `v1.1.0`...) and generates a `manifest.json` with SHA-256 checksums. The mobile app queries `GET /api/content/delta?since=vN` and applies incremental updates directly into Drift SQLite without requiring full redownloads.
+> 4. **Review Interfaces**: Both a REST API (`/api/content/...`) and an interactive Python CLI tool (`tools/content_cli.py`) will be provided so you can approve batches in seconds.
+
+---
+
+## Proposed Changes
+
+### Backend Database & Models
+
+#### [MODIFY] [`backend/app/models.py`](file:///c:/Users/IvN/Desktop/Ingles/backend/app/models.py)
+- Add `ContentItem` model:
+  - `id`: string PK (e.g. `q_sys_021`, `vocab_b2_018`, `gram_b1_004`)
+  - `content_type`: `interview_question`, `vocabulary_term`, `grammar_unit`, `shadowing_phrase`
+  - `status`: `raw`, `normalized`, `reviewed`, `published`, `rejected`
+  - `cefr`: mandatory on review (`A1`, `A2`, `B1`, `B2`, `C1`, `C2`)
+  - `scenario`, `objective`, `difficulty`, `source_type`
+  - `payload_json`: full payload (prompts, answers, definitions, IPA, context sentences, STAR tips)
+  - `source_origin`: `original`, `generated`, `referenced`
+  - `source_url`, `license`, `imported_at`, `reviewed_by`, `review_notes`
+  - `snapshot_version`: version string when published
+  - `created_at`, `updated_at`
+- Add `ContentSnapshot` model:
+  - `version`: string (e.g. `v1.1.0`)
+  - `manifest_json`: version, created_at, sha256_hash, item_counts
+  - `snapshot_json`: serialized list of published items
+  - `created_at`: datetime
+
+---
+
+### Ingestion, Validation & Workflow Engine
+
+#### [NEW] [`backend/app/content_pipeline/__init__.py`](file:///c:/Users/IvN/Desktop/Ingles/backend/app/content_pipeline/__init__.py)
+#### [NEW] [`backend/app/content_pipeline/schemas.py`](file:///c:/Users/IvN/Desktop/Ingles/backend/app/content_pipeline/schemas.py)
+- Pydantic models for `ContentItemIn`, `ContentItemReviewIn`, `BatchIngestIn`, `ContentManifest`, and `ContentDeltaResponse`.
+
+#### [NEW] [`backend/app/content_pipeline/validator.py`](file:///c:/Users/IvN/Desktop/Ingles/backend/app/content_pipeline/validator.py)
+- **CEFR Validation**: Strictly checks against CEFR scale (`A1`, `A2`, `B1`, `B2`, `C1`, `C2`).
+- **License Enforcement**: If `license != 'own'`, content cannot contain full copied lessons or questions; it is marked as `reference_only`.
+- **Consistency Auditor**: Checks packs and tracks for level disparities (e.g., flag warning if A2 and C1 are mixed in a single unit without bridge steps).
+
+#### [NEW] [`backend/app/content_pipeline/workflow.py`](file:///c:/Users/IvN/Desktop/Ingles/backend/app/content_pipeline/workflow.py)
+- State transitions manager (`raw` → `normalized` → `reviewed` → `published`).
+- Rejection handler (`rejected` with reason).
+- Snapshot builder: compiles published items, computes SHA-256, generates manifest, and writes snapshot to disk and DB.
+- Delta calculator: diffs snapshots between version `since` and current latest.
+
+---
+
+### Backend API Endpoints
+
+#### [NEW] [`backend/app/routers/content.py`](file:///c:/Users/IvN/Desktop/Ingles/backend/app/routers/content.py)
+- `POST /api/content/ingest/batch`: Ingests JSON/CSV batches from user or local LLM (Ollama) into `normalized` state.
+- `GET /api/content/pending`: Lists items pending review, filterable by `content_type` and `scenario`.
+- `POST /api/content/items/{id}/review`: Approves (with CEFR validation), modifies, or rejects items with notes.
+- `POST /api/content/publish`: Bundles all reviewed items into a new versioned snapshot (`vN`), updates manifest.
+- `GET /api/content/latest`: Returns current manifest and active snapshot.
+- `GET /api/content/delta`: Incremental delta query (`?since=v1.0.0`).
+- `GET /api/content/audit`: Returns consistency check report.
+
+#### [MODIFY] [`backend/app/main.py`](file:///c:/Users/IvN/Desktop/Ingles/backend/app/main.py)
+- Register `content_router` in FastAPI application.
+
+---
+
+### Admin CLI Review & Ingestion Tool
+
+#### [NEW] [`tools/content_cli.py`](file:///c:/Users/IvN/Desktop/Ingles/tools/content_cli.py)
+- Interactive command-line utility for managing content:
+  - `python tools/content_cli.py import <path.json>`: Ingests raw batch into `normalized`.
+  - `python tools/content_cli.py list-pending`: Lists pending items with summary.
+  - `python tools/content_cli.py review <id> --cefr B2 --approve`: Quick approval.
+  - `python tools/content_cli.py publish --bump minor`: Publishes new snapshot.
+  - `python tools/content_cli.py audit`: Runs consistency and licensing audit.
+
+---
+
+### Mobile App Offline Delta Sync Service
+
+#### [NEW] [`app/lib/core/content/content_sync_service.dart`](file:///c:/Users/IvN/Desktop/Ingles/app/lib/core/content/content_sync_service.dart)
+- Stores current local snapshot version in local preferences.
+- Polls/checks `GET /api/content/delta?since={localVersion}`.
+- Applies updates to Drift SQLite (`cards_local`, questions, vocabulary) in an atomic transaction.
+- Updates local version to match the latest snapshot.
+
+---
+
+### Documentation & Test Suite
+
+#### [NEW] [`backend/tests/test_content_pipeline.py`](file:///c:/Users/IvN/Desktop/Ingles/backend/tests/test_content_pipeline.py)
+- Test 1: State machine integrity (cannot publish unreviewed items).
+- Test 2: CEFR validation and pack consistency auditor.
+- Test 3: License enforcement (reject copying with external licenses).
+- Test 4: Snapshot versioning and delta calculation.
+- Test 5: End-to-end batch ingestion, review, publish, and delta sync.
+
+#### [MODIFY] [`docs/PEDAGOGY.md`](file:///c:/Users/IvN/Desktop/Ingles/docs/PEDAGOGY.md)
+- Add comprehensive Section 7 documenting the Content Ingestion Pipeline, CEFR validation against Cambridge EVP, the weekly Ollama workflow, and synchronization architecture.
+
+---
+
+## Verification Plan
+
+### Automated Tests
+- Run `backend\.venv\Scripts\python.exe -m pytest backend/tests/test_content_pipeline.py`
+- Run `cd app && flutter analyze`
+- Run `cd app && flutter test`
+
+### Manual & Integration Verification
+1. **Batch Ingestion**: Ingest a sample JSON file containing 5 interview questions and 5 vocabulary terms with the CLI tool.
+2. **Review Step**: Review and approve them, specifying CEFR levels.
+3. **Publish**: Run publish to create `v1.1.0` snapshot with checksums.
+4. **Delta API**: Query `GET /api/content/delta?since=v1.0.0` and verify that exactly the newly published items are returned.
+5. **App Sync**: Verify that the Flutter sync service receives the delta and updates the local state.

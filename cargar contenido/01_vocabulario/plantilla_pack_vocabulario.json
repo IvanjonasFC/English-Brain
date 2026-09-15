@@ -1,0 +1,46 @@
+[
+  {
+    "id": "devops_observability_b2",
+    "title": "DevOps & Observability",
+    "description": "Métricas, trazas distribuidas, logs y monitorización de sistemas de alta disponibilidad.",
+    "iconCodePoint": 983105,
+    "iconFontFamily": "MaterialIcons",
+    "level": "B2-C1 • Tech",
+    "accentColorValue": 4284897480,
+    "terms": [
+      {
+        "term": "distributed tracing",
+        "ipa": "/dɪˈstrɪb.jʊ.tɪd ˈtreɪ.sɪŋ/",
+        "definition": "A method used to profile and monitor applications, especially those built using a microservices architecture.",
+        "exampleSentence": "Distributed tracing helped us pinpoint the exact latency bottleneck in our payment gateway.",
+        "spanishHint": "rastreo o traza distribuida",
+        "category": "observability",
+        "difficulty": "senior",
+        "relatedTerms": ["telemetry", "span", "latency"],
+        "origin": null
+      },
+      {
+        "term": "backpressure",
+        "ipa": "/ˈbækˌpreʃ.ər/",
+        "definition": "Resistance or force opposing the desired flow of data in a software system when a consumer cannot keep up with a producer.",
+        "exampleSentence": "We implemented backpressure to prevent the message queue worker from running out of memory.",
+        "spanishHint": "contrapresión / amortiguación de flujo",
+        "category": "observability",
+        "difficulty": "senior",
+        "relatedTerms": ["rate limiting", "buffer", "throttling"],
+        "origin": null
+      },
+      {
+        "term": "observability pipeline",
+        "ipa": "/əbˌzɜː.vəˈbɪl.ə.ti ˈpaɪp.laɪn/",
+        "definition": "The end-to-end architecture that collects, transforms, and routes logs, metrics, and traces.",
+        "exampleSentence": "Our observability pipeline processes over two terabytes of telemetry data daily.",
+        "spanishHint": "flujo de observabilidad y telemetría",
+        "category": "observability",
+        "difficulty": "senior",
+        "relatedTerms": ["OpenTelemetry", "exporter", "collector"],
+        "origin": null
+      }
+    ]
+  }
+]
